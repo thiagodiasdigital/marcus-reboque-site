@@ -4,8 +4,10 @@ import { siteImages } from "@/content/images";
 import { siteConfig } from "@/content/site";
 import { buildWhatsappUrl, conversionAttributes } from "@/lib/whatsapp";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { SocialLinks } from "@/components/ui/SocialLinks";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
   const whatsappHref = buildWhatsappUrl({
     origin: "footer",
     message: "Olá, preciso falar com a Marcus Reboque.",
@@ -28,6 +30,7 @@ export function Footer() {
               Guincho, reboque e auto socorro 24h em Fortaleza e Região
               Metropolitana.
             </p>
+            <p>{siteConfig.service.hoursLabel}</p>
           </div>
         </div>
 
@@ -40,6 +43,7 @@ export function Footer() {
         </nav>
 
         <address className="site-footer__contact">
+          <span>{siteConfig.location.address.label}</span>
           <span>{siteConfig.location.serviceAreaLabel}</span>
           <a href={siteConfig.contact.phoneHref}>{siteConfig.contact.phoneFormatted}</a>
           <ButtonLink
@@ -50,10 +54,23 @@ export function Footer() {
           >
             Chamar no WhatsApp
           </ButtonLink>
+          <a
+            className="site-footer__map"
+            href={siteConfig.socials.googleBusinessProfile}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Ver endereço no Google
+          </a>
         </address>
+
+        <div className="site-footer__social">
+          <strong>Redes oficiais</strong>
+          <SocialLinks compact />
+        </div>
       </div>
       <div className="site-footer__bottom">
-        <span>{siteConfig.name}</span>
+        <span>© {currentYear} {siteConfig.name}</span>
         <span>Domínio oficial: marcusreboque.com.br</span>
       </div>
     </footer>

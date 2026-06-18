@@ -1,16 +1,13 @@
 import { faqItems } from "@/content/home";
 import { siteImages } from "@/content/images";
-import { siteConfig } from "@/content/site";
+import { officialSocialProfiles, siteConfig } from "@/content/site";
 import { absoluteUrl } from "@/lib/site-url";
 
 export function buildHomeJsonLd(): Record<string, unknown> {
   const homeUrl = absoluteUrl("/");
   const logoUrl = absoluteUrl(siteImages.logo.src);
   const heroUrl = absoluteUrl(siteImages.homepageHeroDesktop.src);
-  const socialProfiles = Object.values(siteConfig.socials) as Array<string | null>;
-  const sameAs = socialProfiles.filter(
-    (profile): profile is string => typeof profile === "string" && profile.length > 0,
-  );
+  const sameAs = officialSocialProfiles.map((profile) => profile.url);
 
   const organization: Record<string, unknown> = {
     "@type": "Organization",
@@ -19,11 +16,15 @@ export function buildHomeJsonLd(): Record<string, unknown> {
     url: homeUrl,
     logo: logoUrl,
     telephone: siteConfig.contact.phoneRaw,
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: siteConfig.location.address.locality,
+      addressRegion: siteConfig.location.address.region,
+      addressCountry: siteConfig.location.country,
+    },
   };
 
-  if (sameAs.length > 0) {
-    organization.sameAs = sameAs;
-  }
+  organization.sameAs = sameAs;
 
   return {
     "@context": "https://schema.org",
@@ -36,7 +37,14 @@ export function buildHomeJsonLd(): Record<string, unknown> {
         url: homeUrl,
         image: heroUrl,
         telephone: siteConfig.contact.phoneRaw,
+        hasMap: siteConfig.socials.googleBusinessProfile,
         openingHours: siteConfig.service.openingHours,
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: siteConfig.location.address.locality,
+          addressRegion: siteConfig.location.address.region,
+          addressCountry: siteConfig.location.country,
+        },
         serviceType: [
           "Guincho 24h",
           "Reboque",

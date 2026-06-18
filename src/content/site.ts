@@ -1,3 +1,22 @@
+export const officialSocialOrder = [
+  "instagram",
+  "facebook",
+  "youtube",
+  "tiktok",
+  "pinterest",
+  "linkedin",
+  "x",
+] as const;
+
+export type OfficialSocialKey = (typeof officialSocialOrder)[number];
+
+export type OfficialSocialProfile = {
+  key: OfficialSocialKey;
+  label: string;
+  shortLabel: string;
+  url: string;
+};
+
 export type SiteConfig = {
   name: string;
   legalName: string | null;
@@ -21,7 +40,12 @@ export type SiteConfig = {
     state: string;
     country: "BR";
     serviceAreaLabel: string;
-    address: null;
+    address: {
+      label: string;
+      locality: string;
+      region: string;
+      countryName: string;
+    };
     coordinates: null;
   };
   service: {
@@ -29,11 +53,14 @@ export type SiteConfig = {
     openingHours: string;
   };
   socials: {
-    instagram: null;
-    facebook: null;
-    youtube: null;
-    linkedin: null;
-    googleBusinessProfile: null;
+    instagram: string;
+    facebook: string;
+    youtube: string;
+    x: string;
+    linkedin: string;
+    tiktok: string;
+    pinterest: string;
+    googleBusinessProfile: string;
   };
   siteUrlEnv: "NEXT_PUBLIC_SITE_URL";
   indexableEnv: "NEXT_PUBLIC_INDEXABLE";
@@ -67,7 +94,12 @@ export const siteConfig = {
     state: "CE",
     country: "BR",
     serviceAreaLabel: "Fortaleza e Região Metropolitana",
-    address: null,
+    address: {
+      label: "Fortaleza, CE",
+      locality: "Fortaleza",
+      region: "CE",
+      countryName: "Brasil",
+    },
     coordinates: null,
   },
   service: {
@@ -75,13 +107,37 @@ export const siteConfig = {
     openingHours: "Mo-Su 00:00-23:59",
   },
   socials: {
-    instagram: null,
-    facebook: null,
-    youtube: null,
-    linkedin: null,
-    googleBusinessProfile: null,
+    instagram: "https://www.instagram.com/marcus_reboque_oficial/",
+    facebook: "https://www.facebook.com/marcusreboque/",
+    youtube: "https://www.youtube.com/@MarcusReboqueFortaleza24h/shorts",
+    x: "https://x.com/Marcus_Reboque",
+    linkedin:
+      "https://www.linkedin.com/in/marcus-reboque-fortaleza-24h-984450383/",
+    tiktok: "https://www.tiktok.com/@marcus_reboque_fortaleza",
+    pinterest: "https://br.pinterest.com/marcusreboquefortaleza24h/",
+    googleBusinessProfile: "https://maps.app.goo.gl/Xxv9XfzphbuHkZGC9",
   },
   siteUrlEnv: "NEXT_PUBLIC_SITE_URL",
   indexableEnv: "NEXT_PUBLIC_INDEXABLE",
   analyticsEnv: "NEXT_PUBLIC_GA_ID",
 } as const satisfies SiteConfig;
+
+export const officialSocialProfiles: OfficialSocialProfile[] =
+  officialSocialOrder.map((key) => {
+    const labels: Record<OfficialSocialKey, Pick<OfficialSocialProfile, "label" | "shortLabel">> = {
+      instagram: { label: "Instagram", shortLabel: "IG" },
+      facebook: { label: "Facebook", shortLabel: "FB" },
+      youtube: { label: "YouTube", shortLabel: "YT" },
+      tiktok: { label: "TikTok", shortLabel: "TK" },
+      pinterest: { label: "Pinterest", shortLabel: "PT" },
+      linkedin: { label: "LinkedIn", shortLabel: "IN" },
+      x: { label: "X", shortLabel: "X" },
+    };
+
+    return {
+      key,
+      label: labels[key].label,
+      shortLabel: labels[key].shortLabel,
+      url: siteConfig.socials[key],
+    };
+  });

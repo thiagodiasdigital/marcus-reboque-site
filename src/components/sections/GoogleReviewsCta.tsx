@@ -14,15 +14,16 @@ export function GoogleReviewsCta() {
           title="Confira a reputação da Marcus Reboque no Google"
           text="Avaliações públicas devem ser consultadas apenas no perfil oficial confirmado, sem reproduzir notas ou depoimentos no site."
         />
-        {googleProfile ? (
-          <ButtonLink href={googleProfile} icon="external" variant="primary">
-            Ver avaliações no Google
-          </ButtonLink>
-        ) : (
-          <span className="button-link button-link--disabled" aria-disabled="true">
-            Ver avaliações no Google
-          </span>
-        )}
+        <ButtonLink
+          aria-label="Ver avaliações da Marcus Reboque no Google em nova aba"
+          href={googleProfile}
+          icon="external"
+          rel="noopener noreferrer"
+          target="_blank"
+          variant="primary"
+        >
+          Ver avaliações no Google
+        </ButtonLink>
       </div>
     </section>
   );

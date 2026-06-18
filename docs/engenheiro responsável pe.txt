@@ -1,0 +1,628 @@
+Atue como engenheiro responsável pelo FECHAMENTO TÉCNICO E VISUAL DA HOMEPAGE V1 da Marcus Reboque.
+
+A homepage já foi implementada no commit:
+
+00bfdda feat: implement Marcus Reboque commercial homepage
+
+Sua missão nesta etapa é:
+
+1. inserir os perfis oficiais e o Google Business Profile já fornecidos;
+2. corrigir todas as superfícies que dependem dessas URLs;
+3. auditar a implementação real do Hero;
+4. realizar inspeção visual local usando navegador existente no sistema, sem instalar dependências;
+5. corrigir problemas encontrados;
+6. validar novamente lint, typecheck e build;
+7. gerar documentação;
+8. criar novo commit local.
+
+Não criar páginas internas nesta fase.
+
+Não fazer deploy.
+
+Não configurar GitHub remoto.
+
+Não liberar indexação.
+
+## 1. ESTADO INICIAL
+
+Antes de alterar qualquer arquivo:
+
+* confirme que o Git está limpo;
+* confirme o commit atual `00bfdda`;
+* execute lint, typecheck e build;
+* registre a estrutura atual da homepage;
+* identifique todos os arquivos relacionados a:
+
+  * configuração da empresa;
+  * redes sociais;
+  * Google Business Profile;
+  * Footer;
+  * seção social;
+  * avaliações;
+  * JSON-LD;
+  * Hero;
+  * imagens;
+  * metadados.
+
+Não descarte alterações existentes.
+
+## 2. PERFIS OFICIAIS
+
+Insira exatamente estas URLs na configuração central:
+
+Instagram:
+https://www.instagram.com/marcus_reboque_oficial/
+
+Facebook:
+https://www.facebook.com/marcusreboque/
+
+YouTube:
+https://www.youtube.com/@MarcusReboqueFortaleza24h/shorts
+
+X:
+https://x.com/Marcus_Reboque
+
+LinkedIn:
+https://www.linkedin.com/in/marcus-reboque-fortaleza-24h-984450383/
+
+TikTok:
+https://www.tiktok.com/@marcus_reboque_fortaleza
+
+Pinterest:
+https://br.pinterest.com/marcusreboquefortaleza24h/
+
+Google Business Profile:
+https://maps.app.goo.gl/Xxv9XfzphbuHkZGC9
+
+Não pesquise alternativas.
+
+Não modifique usernames.
+
+Não substitua URLs por perfis semelhantes.
+
+Não invente outras redes.
+
+## 3. CONFIGURAÇÃO CENTRAL
+
+Atualize `src/content/site.ts`, ou o arquivo central equivalente, com estrutura tipada contendo:
+
+* instagram;
+* facebook;
+* youtube;
+* x;
+* linkedin;
+* tiktok;
+* pinterest;
+* googleBusinessProfile.
+
+Evite espalhar as URLs diretamente pelos componentes.
+
+Todos os componentes devem consumir a configuração central.
+
+Remova placeholders, arrays vazios e comentários que indiquem ausência desses dados.
+
+## 4. SEÇÃO DE REDES SOCIAIS
+
+Revise a seção “Marcus Reboque nas redes”.
+
+Ela deve exibir:
+
+* Instagram;
+* Facebook;
+* YouTube;
+* TikTok;
+* Pinterest;
+* LinkedIn;
+* X.
+
+Cada item deve possuir:
+
+* nome visível;
+* link correto;
+* SVG acessível ou representação visual leve;
+* `aria-label`;
+* foco visível;
+* área de toque adequada;
+* indicação de link externo;
+* `target="_blank"` somente quando coerente;
+* `rel="noopener noreferrer"` quando abrir nova aba.
+
+Não adicionar `nofollow` aos perfis oficiais.
+
+Não usar biblioteca externa de ícones.
+
+Não carregar widgets ou scripts das redes.
+
+## 5. GOOGLE BUSINESS PROFILE
+
+Use o GBP oficial em:
+
+* CTA “Ver avaliações no Google”;
+* link do endereço ou mapa, quando aplicável;
+* Footer;
+* seção de reputação;
+* configuração central;
+* schema `hasMap`, quando tecnicamente adequado.
+
+Não invente:
+
+* nota;
+* quantidade de avaliações;
+* textos de avaliações;
+* estrelas;
+* AggregateRating.
+
+O CTA deve apontar exatamente para:
+
+https://maps.app.goo.gl/Xxv9XfzphbuHkZGC9
+
+## 6. SCHEMA
+
+Revise:
+
+* Organization;
+* TowingService;
+* WebSite;
+* FAQPage.
+
+No `sameAs`, inclua somente os sete perfis sociais oficiais:
+
+* Instagram;
+* Facebook;
+* YouTube;
+* TikTok;
+* Pinterest;
+* LinkedIn;
+* X.
+
+Use o Google Business Profile preferencialmente em `hasMap`.
+
+Não duplique URLs.
+
+Não inserir o GBP como rede social visual.
+
+Confirme que:
+
+* URLs são absolutas;
+* não há localhost;
+* não há array vazio;
+* não há `undefined`;
+* não há CNPJ;
+* não há AggregateRating;
+* não há preço;
+* não há serviço inventado.
+
+## 7. FOOTER
+
+O Footer deve apresentar:
+
+* Marcus Reboque;
+* telefone;
+* WhatsApp;
+* atendimento 24 horas;
+* Fortaleza, CE;
+* endereço consolidado;
+* link para o GBP;
+* redes oficiais;
+* domínio oficial;
+* copyright dinâmico.
+
+Não criar links para páginas internas inexistentes.
+
+## 8. AUDITORIA DO HERO
+
+O resumo anterior deixou a seção “Hero” sem detalhes.
+
+Audite e registre:
+
+* arquivo desktop utilizado;
+* arquivo mobile utilizado;
+* dimensões dos dois arquivos;
+* tamanho em bytes;
+* alt text;
+* `sizes`;
+* `object-position`;
+* ponto focal;
+* comportamento mobile;
+* componente responsável pelo scroll motion;
+* quantidade de JavaScript enviada;
+* comportamento com `prefers-reduced-motion`;
+* comportamento sem JavaScript;
+* imagem considerada LCP;
+* estratégia de carregamento.
+
+### Next.js 16
+
+Verifique o componente `next/image`.
+
+Não use a propriedade depreciada:
+
+`priority`
+
+Use apenas uma estratégia atual e coerente para o Hero:
+
+* `preload`;
+* ou `fetchPriority="high"`;
+* ou `loading="eager"`.
+
+Não combine `preload` com `fetchPriority`.
+
+Não combine `preload` com `loading`.
+
+Nenhuma outra imagem deve receber prioridade equivalente.
+
+Registre a decisão e a justificativa.
+
+## 9. SCROLL MOTION
+
+Confirme que:
+
+* o H1 existe no HTML inicial;
+* CTAs existem no HTML inicial;
+* a imagem existe sem depender do efeito;
+* o movimento é apenas progressivo;
+* não há animação agressiva;
+* não existe atualização de estado React em cada frame sem necessidade;
+* listener de scroll é passivo;
+* `requestAnimationFrame` é usado de modo controlado, quando aplicável;
+* transformações usam `transform`;
+* não existe alteração contínua de propriedades que provoquem layout;
+* `prefers-reduced-motion` desativa o efeito;
+* mobile recebe efeito reduzido ou estático;
+* o componente cliente está isolado;
+* nenhuma seção adicional foi transformada em Client Component sem necessidade.
+
+Corrija qualquer problema encontrado.
+
+## 10. INSPEÇÃO VISUAL SEM INSTALAR DEPENDÊNCIA
+
+O ambiente informou ausência de `agent-browser`.
+
+Não instale Playwright, Puppeteer ou navegador adicional.
+
+Procure navegadores já instalados no sistema, incluindo:
+
+* Microsoft Edge;
+* Google Chrome;
+* Chromium.
+
+Em Windows, verifique caminhos comuns e comandos disponíveis.
+
+Exemplos de executáveis possíveis:
+
+* msedge.exe
+* chrome.exe
+* chromium.exe
+
+Não presuma o caminho. Detecte antes.
+
+## 11. SERVIDOR LOCAL PERSISTENTE
+
+Inicie o site em modo de produção local:
+
+1. `npm run build`;
+2. `npm run start -- -p 3011`.
+
+Use processo que permaneça ativo durante a auditoria.
+
+Espere o servidor responder.
+
+Valide:
+
+* http://127.0.0.1:3011/
+* http://127.0.0.1:3011/robots.txt
+* http://127.0.0.1:3011/sitemap.xml
+
+Finalize o processo ao terminar.
+
+Não deixe processo órfão.
+
+## 12. CAPTURAS VISUAIS
+
+Se Edge, Chrome ou Chromium estiver disponível com modo headless, gere:
+
+qa/homepage-desktop-1440.png
+qa/homepage-mobile-390.png
+qa/homepage-tablet-768.png
+qa/homepage-completa.pdf
+
+Configurações:
+
+Desktop:
+
+* 1440 × 1000
+
+Mobile:
+
+* 390 × 844
+
+Tablet:
+
+* 768 × 1024
+
+PDF:
+
+* página completa;
+* plano de fundo habilitado, quando suportado.
+
+Use tempo suficiente para:
+
+* carregar fontes;
+* carregar Hero;
+* executar o layout;
+* estabilizar a página.
+
+Não instale bibliotecas.
+
+Adicione `qa/` ao `.gitignore`, salvo se o projeto já possuir política diferente para artefatos de QA.
+
+As capturas não precisam entrar no commit.
+
+## 13. ANÁLISE VISUAL
+
+Analise as capturas geradas.
+
+Verifique:
+
+### Header
+
+* logotipo;
+* contraste;
+* alinhamento;
+* navegação;
+* CTAs;
+* menu mobile;
+* altura excessiva;
+* sobreposição.
+
+### Hero
+
+* corte do caminhão;
+* corte da caminhonete;
+* legibilidade do H1;
+* contraste;
+* largura do texto;
+* CTAs;
+* sinais rápidos;
+* espaço acima da dobra;
+* consistência desktop/mobile;
+* dobra inicial;
+* excesso de sobreposição escura;
+* imagem borrada ou ampliada excessivamente.
+
+### Cards
+
+* 12 serviços;
+* alinhamento;
+* altura;
+* proporção;
+* imagem;
+* ausência de falsa imagem de utilitários;
+* legibilidade;
+* botão;
+* quebra responsiva;
+* espaçamento.
+
+### Demais seções
+
+* ritmo visual;
+* excesso de texto;
+* fundos;
+* espaçamento;
+* galeria;
+* FAQ;
+* redes;
+* CTA final;
+* Footer.
+
+### Problemas gerais
+
+* overflow horizontal;
+* texto cortado;
+* botões sobrepostos;
+* elementos fora da viewport;
+* contraste;
+* repetição visual;
+* grandes espaços vazios;
+* imagens distorcidas;
+* layout quebrado;
+* conteúdo escondido;
+* problemas de 320 a 1440 px.
+
+Corrija os problemas objetivos encontrados.
+
+Não redesenhe a homepage inteira sem motivo.
+
+## 14. TESTES DOS LINKS
+
+Valide no HTML renderizado:
+
+* Instagram correto;
+* Facebook correto;
+* YouTube correto;
+* TikTok correto;
+* Pinterest correto;
+* LinkedIn correto;
+* X correto;
+* GBP correto;
+* telefone correto;
+* WhatsApp correto.
+
+Confirme que não existem:
+
+* `href="#"`;
+* URLs vazias;
+* URLs `undefined`;
+* links de exemplo;
+* localhost em links públicos;
+* links internos inexistentes.
+
+## 15. TESTE DO JSON-LD
+
+Extraia e valide sintaticamente todos os blocos JSON-LD.
+
+Confirme:
+
+* JSON válido;
+* domínio correto;
+* URLs sociais corretas;
+* GBP em `hasMap`;
+* telefone correto;
+* endereço correto;
+* nenhuma propriedade vazia;
+* FAQ igual ao conteúdo visível;
+* nenhum dado inventado.
+
+## 16. VALIDAÇÕES FINAIS
+
+Execute:
+
+* npm run lint;
+* npm run typecheck;
+* npm run build;
+* verificação de Git;
+* HTTP da homepage;
+* HTTP do robots;
+* HTTP do sitemap;
+* inspeção do HTML;
+* inspeção de canonical;
+* inspeção de meta robots;
+* inspeção de Open Graph;
+* inspeção de Twitter Card;
+* inspeção do JSON-LD;
+* inspeção dos links externos;
+* inspeção do Hero;
+* inspeção de imagens quebradas.
+
+Confirme:
+
+* `NEXT_PUBLIC_INDEXABLE=false`;
+* `noindex,nofollow`;
+* `robots.txt` com bloqueio;
+* sitemap vazio ou coerentemente bloqueado;
+* domínio oficial;
+* nenhuma pendência publicada;
+* nenhuma rota inexistente;
+* nenhuma imagem ausente;
+* Git limpo após commit.
+
+## 17. DOCUMENTAÇÃO
+
+Crie:
+
+docs/RELATORIO_FECHAMENTO_HOMEPAGE_V1_MARCUS_REBOQUE.md
+
+Inclua:
+
+1. resumo executivo;
+2. perfis configurados;
+3. GBP configurado;
+4. componentes alterados;
+5. schema;
+6. `sameAs`;
+7. `hasMap`;
+8. Footer;
+9. Hero;
+10. estratégia de carregamento;
+11. scroll motion;
+12. inspeção visual;
+13. capturas realizadas;
+14. correções visuais;
+15. links validados;
+16. acessibilidade;
+17. lint;
+18. typecheck;
+19. build;
+20. HTTP;
+21. indexação;
+22. limitações;
+23. pendências;
+24. próximo passo.
+
+Crie:
+
+docs/MATRIZ_LINKS_OFICIAIS_MARCUS_REBOQUE.csv
+
+Colunas:
+
+plataforma,url,arquivo_configuracao,componente_consumidor,uso_schema,uso_visual,status,observacoes
+
+Crie:
+
+docs/AUDITORIA_VISUAL_HOMEPAGE_V1_MARCUS_REBOQUE.md
+
+Inclua:
+
+* viewport;
+* componente;
+* problema observado;
+* severidade;
+* correção realizada;
+* status;
+* evidência ou captura correspondente.
+
+## 18. COMMIT
+
+Somente após todos os testes passarem:
+
+git add controlado
+
+Não adicione:
+
+* `.env.local`;
+* imagens de QA;
+* PDF de QA;
+* processos temporários;
+* arquivos de navegador.
+
+Crie:
+
+git commit -m "fix: complete official links and homepage visual QA"
+
+Não fazer push.
+
+Não criar remote.
+
+Não fazer deploy.
+
+## 19. SAÍDA FINAL
+
+Apresente:
+
+* commit anterior;
+* novo commit;
+* Instagram;
+* Facebook;
+* YouTube;
+* TikTok;
+* Pinterest;
+* LinkedIn;
+* X;
+* GBP;
+* quantidade de links validados;
+* `sameAs`;
+* `hasMap`;
+* Hero desktop;
+* Hero mobile;
+* estratégia de carregamento;
+* uso ou não de propriedade depreciada;
+* componente do scroll motion;
+* capturas realizadas;
+* navegador utilizado;
+* correções visuais;
+* resultado do lint;
+* resultado do typecheck;
+* resultado do build;
+* HTTP da homepage;
+* robots;
+* sitemap;
+* canonical;
+* noindex;
+* JSON-LD;
+* conflitos;
+* erros;
+* pendências;
+* arquivos de documentação;
+* estado final do Git.
+
+Execute o fechamento da homepage V1 sem deploy e mantendo a indexação bloqueada.

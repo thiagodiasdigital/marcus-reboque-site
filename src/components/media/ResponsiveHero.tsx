@@ -15,7 +15,6 @@ export function ResponsiveHero() {
     src: desktop.src,
     width: desktop.width,
     height: desktop.height,
-    loading: "eager",
   });
   const {
     props: { srcSet: mobileSrcSet },
@@ -25,12 +24,19 @@ export function ResponsiveHero() {
     width: mobile.width,
     height: mobile.height,
   });
+  const heroImageProps = { ...imageProps };
+  delete heroImageProps.loading;
 
   return (
     <picture className="hero-picture">
       <source media="(max-width: 767px)" srcSet={mobileSrcSet} />
       <source media="(min-width: 768px)" srcSet={desktopSrcSet} />
-      <img {...imageProps} alt={desktop.alt} fetchPriority="high" decoding="async" />
+      <img
+        {...heroImageProps}
+        alt={desktop.alt}
+        decoding="async"
+        fetchPriority="high"
+      />
     </picture>
   );
 }

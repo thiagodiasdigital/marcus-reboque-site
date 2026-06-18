@@ -1,0 +1,278 @@
+Atue como responsável pela PAUSA SEGURA E CONTINUIDADE OPERACIONAL do projeto Marcus Reboque.
+
+O usuário precisa desligar o computador agora.
+
+Sua missão não é continuar desenvolvendo o site. Sua missão é congelar o estado atual do projeto, preservar tudo o que já foi feito e preparar uma retomada inequívoca para a próxima sessão do Codex.
+
+## REGRA PRINCIPAL
+
+PARE toda implementação nova.
+
+Não inicie novas funcionalidades.
+
+Não faça deploy.
+
+Não faça push.
+
+Não configure GitHub, Vercel, DNS ou domínio.
+
+Não libere indexação.
+
+Não descarte, reverta ou sobrescreva nenhuma alteração atual.
+
+Não use `git reset --hard`, `git clean`, checkout destrutivo ou comandos equivalentes.
+
+## 1. IDENTIFICAR O ESTADO ATUAL
+
+Registre:
+
+* diretório raiz do projeto;
+* data e hora local;
+* branch atual;
+* HEAD atual;
+* último commit;
+* `git status`;
+* arquivos modificados;
+* arquivos novos;
+* arquivos removidos;
+* arquivos ignorados relevantes;
+* existência de `.env.local`;
+* processos relacionados ao projeto;
+* portas locais usadas pelo Next.js;
+* tarefa que estava sendo executada;
+* último objetivo recebido;
+* o que já foi concluído;
+* o que ainda não foi concluído;
+* erros ou limitações encontradas;
+* próximo passo exato.
+
+O último commit confirmado antes da implementação de fechamento era:
+
+00bfdda feat: implement Marcus Reboque commercial homepage
+
+Não presuma que ele ainda é o HEAD. Verifique.
+
+## 2. NÃO CONTINUAR A TAREFA ATIVA
+
+Se a tarefa de fechamento da homepage V1 estiver em andamento, interrompa-a em um ponto seguro.
+
+Não comece:
+
+* novas correções visuais;
+* novas páginas;
+* novos testes demorados;
+* instalação de navegadores;
+* instalação de dependências;
+* geração de novo layout;
+* deploy.
+
+Preserve todo o trabalho parcial existente.
+
+## 3. PROCESSOS LOCAIS
+
+Identifique processos iniciados especificamente para este projeto, como:
+
+* `next dev`;
+* `next start`;
+* Node associado ao diretório atual;
+* servidores nas portas 3000, 3011 ou outra porta registrada.
+
+Finalize apenas processos comprovadamente pertencentes ao projeto Marcus Reboque.
+
+Não encerre processos Node de outros projetos ou programas.
+
+Registre:
+
+* PID;
+* comando;
+* porta;
+* resultado da finalização.
+
+Confirme que não ficou servidor órfão.
+
+## 4. CHECKPOINT DOCUMENTAL
+
+Crie:
+
+docs/CHECKPOINT_PAUSA_MARCUS_REBOQUE.md
+
+O documento deve conter:
+
+1. data e hora da pausa;
+2. objetivo atual da fase;
+3. estado técnico do projeto;
+4. branch;
+5. commit-base;
+6. HEAD antes do checkpoint;
+7. arquivos alterados;
+8. arquivos criados;
+9. trabalho concluído;
+10. trabalho parcial;
+11. trabalho ainda não iniciado;
+12. testes já executados;
+13. testes ainda necessários;
+14. domínio canônico;
+15. estado de indexação;
+16. estado das redes sociais e GBP;
+17. estado do Hero;
+18. estado da inspeção visual;
+19. processos encerrados;
+20. riscos;
+21. pendências;
+22. próximo passo exato;
+23. comandos recomendados para retomada.
+
+Domínio canônico:
+
+https://marcusreboque.com.br
+
+A indexação deve continuar bloqueada:
+
+NEXT_PUBLIC_INDEXABLE=false
+
+## 5. ARQUIVO DE RETOMADA RÁPIDA
+
+Crie na raiz:
+
+RETOMAR_AQUI_MARCUS_REBOQUE.md
+
+Esse arquivo deve ser curto e conter:
+
+* branch correta;
+* último commit de checkpoint;
+* documento principal a ler;
+* tarefa que deverá ser retomada;
+* primeiro comando de validação;
+* instrução explícita para não repetir etapas já concluídas;
+* instrução explícita para continuar exatamente do ponto registrado.
+
+## 6. PROMPT AUTOMÁTICO DE RETOMADA
+
+Crie:
+
+docs/PROMPT_RETOMADA_CODEX_MARCUS_REBOQUE.md
+
+O conteúdo deve ser um prompt autossuficiente para uma nova sessão do Codex.
+
+Esse prompt deverá instruir a futura sessão a:
+
+1. confirmar que está na raiz correta;
+2. ler `AGENTS.md`, caso exista;
+3. ler `RETOMAR_AQUI_MARCUS_REBOQUE.md`;
+4. ler `docs/CHECKPOINT_PAUSA_MARCUS_REBOQUE.md`;
+5. ler os relatórios citados no checkpoint;
+6. verificar branch e commit;
+7. executar `git status`;
+8. confirmar que `.env.local` continua ignorado;
+9. confirmar que `NEXT_PUBLIC_INDEXABLE=false`;
+10. não refazer trabalho concluído;
+11. validar arquivos parcialmente alterados;
+12. retomar exatamente a próxima ação registrada;
+13. executar lint, typecheck e build no momento apropriado;
+14. não fazer deploy ou push sem nova autorização.
+
+O prompt deve diferenciar claramente:
+
+* concluído;
+* parcialmente concluído;
+* não iniciado;
+* bloqueado;
+* pendência não bloqueante.
+
+## 7. AGENTS.MD
+
+Se existir `AGENTS.md`, não o substitua.
+
+Adicione somente se necessário uma seção curta chamada:
+
+## Continuidade do projeto
+
+Essa seção deve instruir qualquer nova sessão a verificar primeiro:
+
+* `RETOMAR_AQUI_MARCUS_REBOQUE.md`;
+* `docs/CHECKPOINT_PAUSA_MARCUS_REBOQUE.md`.
+
+Não copie todo o checkpoint para o `AGENTS.md`.
+
+Não crie instruções conflitantes.
+
+## 8. PRESERVAÇÃO COM GIT
+
+Verifique cuidadosamente o estado do repositório.
+
+### Se houver alterações de código ou documentação não commitadas
+
+1. confirme que nenhum segredo será adicionado;
+2. confirme que `.env.local` está ignorado;
+3. não adicione artefatos de QA ignorados;
+4. não adicione processos, caches, `.next` ou `node_modules`;
+5. adicione somente arquivos legítimos do projeto;
+6. faça um commit local de checkpoint.
+
+Mensagem:
+
+chore: checkpoint project before shutdown
+
+O commit pode conter trabalho parcial, desde que o checkpoint documente claramente que ainda não está finalizado.
+
+### Se o repositório estiver limpo
+
+Crie e versione somente os arquivos de checkpoint e retomada.
+
+Não crie commit vazio.
+
+## 9. TAG LOCAL DE SEGURANÇA
+
+Após o commit de checkpoint, crie uma tag local anotada com nome baseado na data e hora, por exemplo:
+
+checkpoint-pausa-marcus-reboque-2026-06-18
+
+Caso o nome já exista, acrescente hora e minuto.
+
+Mensagem da tag:
+
+Checkpoint seguro antes do desligamento
+
+Não envie a tag para remoto.
+
+## 10. VALIDAÇÃO FINAL
+
+Confirme:
+
+* nenhuma alteração foi descartada;
+* nenhum arquivo foi excluído indevidamente;
+* nenhum segredo foi commitado;
+* `.env.local` permanece ignorado;
+* imagens-fonte permanecem preservadas;
+* imagens pendentes continuam fora de `public`;
+* indexação continua bloqueada;
+* nenhum deploy foi feito;
+* nenhum push foi feito;
+* nenhum remote foi criado;
+* processos locais do projeto foram encerrados;
+* Git está limpo após o checkpoint;
+* os três arquivos de continuidade existem;
+* commit e tag foram criados;
+* a retomada pode ser feita em uma nova sessão.
+
+## 11. SAÍDA FINAL NO TERMINAL
+
+Apresente somente um resumo claro com:
+
+* branch;
+* commit antes da pausa;
+* commit de checkpoint;
+* tag criada;
+* estado final do Git;
+* quantidade de arquivos preservados;
+* alterações parciais preservadas;
+* processos encerrados;
+* indexação;
+* deploy;
+* push;
+* arquivo `RETOMAR_AQUI_MARCUS_REBOQUE.md`;
+* arquivo `docs/CHECKPOINT_PAUSA_MARCUS_REBOQUE.md`;
+* arquivo `docs/PROMPT_RETOMADA_CODEX_MARCUS_REBOQUE.md`;
+* primeiro passo para a próxima sessão.
+
+Após concluir esse resumo, PARE e não execute mais nenhuma tarefa.
