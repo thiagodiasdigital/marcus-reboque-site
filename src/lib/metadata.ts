@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import { siteImages } from "@/content/images";
 import { siteConfig } from "@/content/site";
-import { getSiteUrl, isIndexable } from "@/lib/site-url";
+import { absoluteUrl, getSiteUrl, isIndexable } from "@/lib/site-url";
 
 export function buildBaseMetadata(): Metadata {
   const indexable = isIndexable();
-  const title = "Marcus Reboque | Fundacao tecnica";
-  const description = siteConfig.description;
+  const title = siteConfig.seoTitle;
+  const description = siteConfig.seoDescription;
+  const hero = siteImages.homepageHeroDesktop;
 
   return {
     metadataBase: getSiteUrl(),
@@ -14,7 +15,7 @@ export function buildBaseMetadata(): Metadata {
     description,
     applicationName: siteConfig.name,
     alternates: {
-      canonical: "/",
+      canonical: absoluteUrl("/"),
     },
     icons: {
       icon: siteImages.logo.src,
@@ -24,16 +25,16 @@ export function buildBaseMetadata(): Metadata {
     openGraph: {
       title,
       description,
-      url: "/",
+      url: absoluteUrl("/"),
       siteName: siteConfig.name,
       locale: "pt_BR",
       type: "website",
       images: [
         {
-          url: siteImages.homepageHero.src,
-          width: siteImages.homepageHero.width,
-          height: siteImages.homepageHero.height,
-          alt: siteImages.homepageHero.alt,
+          url: absoluteUrl(hero.src),
+          width: hero.width,
+          height: hero.height,
+          alt: hero.alt,
         },
       ],
     },
@@ -41,7 +42,7 @@ export function buildBaseMetadata(): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: [siteImages.homepageHero.src],
+      images: [absoluteUrl(hero.src)],
     },
     robots: {
       index: indexable,
@@ -49,6 +50,7 @@ export function buildBaseMetadata(): Metadata {
       googleBot: {
         index: indexable,
         follow: indexable,
+        noimageindex: !indexable,
       },
     },
   };

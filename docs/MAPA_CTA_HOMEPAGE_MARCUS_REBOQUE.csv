@@ -1,0 +1,14 @@
+ordem,local,label,tipo,href_ou_helper,mensagem,data_conversion,data_location
+1,Header,WhatsApp,WhatsApp,buildWhatsappUrl,"Olá, preciso de atendimento da Marcus Reboque.",whatsapp,header
+2,Header,Telefone,Telefone,tel:+5585986007392,,,
+3,Menu movel,Chamar no WhatsApp,WhatsApp,buildWhatsappUrl,"Olá, preciso de atendimento da Marcus Reboque.",whatsapp,menu-movel
+4,Hero,Chamar no WhatsApp,WhatsApp,buildWhatsappUrl,"Olá, preciso de guincho, reboque ou auto socorro 24h em Fortaleza.",whatsapp,hero
+5,Hero,Ligar agora,Telefone,tel:+5585986007392,,,
+6,Servicos,Consultar no WhatsApp,WhatsApp,buildWhatsappUrl,mensagem especifica por servico,whatsapp,servico-*
+7,Emergencia,Chamar no WhatsApp,WhatsApp,buildWhatsappUrl,"Olá, preciso de guincho agora em Fortaleza.",whatsapp,emergencia
+8,Emergencia,Telefone,Telefone,tel:+5585986007392,,,
+9,Google,Ver avaliações no Google,Link externo,siteConfig.socials.googleBusinessProfile,desabilitado ate validacao oficial,,
+10,Presenca oficial,WhatsApp oficial,WhatsApp,buildWhatsappUrl,"Olá, vim pelo site oficial da Marcus Reboque.",whatsapp,presenca-oficial
+11,CTA final,Chamar no WhatsApp,WhatsApp,buildWhatsappUrl,"Olá, preciso solicitar atendimento da Marcus Reboque.",whatsapp,cta-final
+12,CTA final,Ligar agora,Telefone,tel:+5585986007392,,,
+13,Footer,Chamar no WhatsApp,WhatsApp,buildWhatsappUrl,"Olá, preciso falar com a Marcus Reboque.",whatsapp,footer

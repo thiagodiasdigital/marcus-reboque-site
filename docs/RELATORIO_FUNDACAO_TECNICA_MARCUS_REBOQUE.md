@@ -55,7 +55,7 @@ Fundacao tecnica Next.js criada na raiz do projeto, sem implementar o layout com
 
 - Idioma configurado como `pt-BR`.
 - Metadata centralizada com titulo e descricao provisorios.
-- `metadataBase` depende de `NEXT_PUBLIC_SITE_URL`; fallback local: `http://localhost:3000`.
+- `metadataBase` depende de `NEXT_PUBLIC_SITE_URL`; fallback atual: `https://marcusreboque.com.br`.
 - `NEXT_PUBLIC_INDEXABLE=false` bloqueia indexacao por padrao.
 - `robots.txt` retorna `Disallow: /` por padrao.
 - `sitemap.xml` nao expoe URLs quando indexacao esta bloqueada.
@@ -126,7 +126,7 @@ Fundacao tecnica Next.js criada na raiz do projeto, sem implementar o layout com
 
 ## Pendencias tecnicas recomendadas
 
-1. Definir dominio real e preencher `NEXT_PUBLIC_SITE_URL`.
-2. Gerar derivada mobile da imagem hero `#064`.
+1. Dominio real definido em `NEXT_PUBLIC_SITE_URL`: `https://marcusreboque.com.br`.
+2. Derivada mobile da imagem hero `#064` gerada em `public/images/marcus-reboque/hero/`.
 3. Produzir imagens Open Graph 1200x630 no fluxo visual futuro.
 4. Implementar layout comercial final e paginas internas somente na proxima etapa.

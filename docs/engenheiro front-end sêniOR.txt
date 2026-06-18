@@ -1,0 +1,1147 @@
+Atue como engenheiro front-end sênior, arquiteto de SEO Local e especialista em UX para serviços emergenciais.
+
+Sua missão é executar a FASE DE IMPLEMENTAÇÃO DA HOMEPAGE COMERCIAL da Marcus Reboque sobre a fundação Next.js existente.
+
+O domínio oficial e canônico da empresa é:
+
+https://marcusreboque.com.br
+
+## OBJETIVO DESTA FASE
+
+Executar:
+
+1. canonização técnica do domínio;
+2. preparação responsiva do Hero;
+3. definição dos tokens visuais da marca;
+4. implementação completa da homepage comercial;
+5. implementação do scroll motion do Hero;
+6. implementação da segunda seção com os 12 cards;
+7. implementação dos demais blocos comerciais;
+8. SEO, GEO e AIO da homepage;
+9. acessibilidade e performance;
+10. testes e commit local.
+
+Não implementar ainda:
+
+* páginas internas completas;
+* páginas de bairros;
+* páginas de cidades;
+* blog ou guias;
+* analytics;
+* consentimento;
+* integração com CMS;
+* formulário com backend;
+* deploy;
+* GitHub remoto;
+* Vercel;
+* liberação para indexação.
+
+## 1. LEITURA OBRIGATÓRIA
+
+Antes de alterar qualquer arquivo, leia integralmente:
+
+* docs/DIAGNOSTICO_TECNICO_PRE_IMPLEMENTACAO_MARCUS_REBOQUE.md
+* docs/RELATORIO_FUNDACAO_TECNICA_MARCUS_REBOQUE.md
+* docs/MAPA_DE_APLICACAO_VISUAL_SITE_MARCUS_REBOQUE.md
+* docs/MAPA_IMAGEM_PAGINA_SECAO_MARCUS_REBOQUE.csv
+* docs/MATRIZ_VISUAL_POR_PAGINA_MARCUS_REBOQUE.csv
+* docs/GUIA_ALT_TEXT_E_LEGENDAS_MARCUS_REBOQUE.md
+* docs/MAPA_FINAL_ATIVOS_VISUAIS_MARCUS_REBOQUE.csv
+* docs/PENDENCIAS_VISUAIS_MARCUS_REBOQUE.md
+* docs/MAPA_MIGRACAO_DOCUMENTOS_E_ATIVOS.csv
+* src/content/site.ts
+* src/content/images.ts
+* src/content/navigation.ts
+* src/lib/metadata.ts
+* src/lib/schema.ts
+* src/app/layout.tsx
+* src/app/page.tsx
+* src/app/robots.ts
+* src/app/sitemap.ts
+* src/app/globals.css
+* package.json
+* next.config.ts ou equivalente atual
+
+Inspecione também:
+
+* logotipo;
+* Hero principal;
+* imagens classificadas como P1 e P2;
+* imagens destinadas aos cards;
+* imagens previstas para a homepage.
+
+Não use imagens em:
+
+IMAGENS_MARCUS_REBOQUE/99_PENDENTES_DE_REVISAO/
+
+## 2. PROTEÇÃO E ESTADO INICIAL
+
+Antes de alterar:
+
+* confirme que o Git está limpo;
+* registre o commit-base atual: 8d8c509;
+* confirme que lint, typecheck e build passam;
+* confirme que existem 69 imagens em public;
+* confirme que as 14 pendentes não estão em public;
+* confirme o checksum do Hero original;
+* registre os arquivos que serão modificados.
+
+Se o Git não estiver limpo, não descarte alterações. Analise e registre.
+
+## 3. DOMÍNIO CANÔNICO
+
+Adote como URL oficial:
+
+https://marcusreboque.com.br
+
+Atualize a configuração central para usar esse domínio.
+
+Crie ou ajuste:
+
+.env.example
+
+Com:
+
+NEXT_PUBLIC_SITE_URL=https://marcusreboque.com.br
+NEXT_PUBLIC_INDEXABLE=false
+NEXT_PUBLIC_GA_ID=
+
+Crie ou ajuste `.env.local`, preservando o `.gitignore`, com:
+
+NEXT_PUBLIC_SITE_URL=https://marcusreboque.com.br
+NEXT_PUBLIC_INDEXABLE=false
+
+Não inclua `.env.local` no Git.
+
+Garanta que:
+
+* `metadataBase` use `https://marcusreboque.com.br`;
+* canonical da homepage seja `https://marcusreboque.com.br/`;
+* Open Graph use o domínio oficial;
+* Twitter/X Card use o domínio oficial;
+* JSON-LD use o domínio oficial;
+* WebSite schema use o domínio oficial;
+* Organization/TowingService use o domínio oficial;
+* sitemap use o domínio oficial;
+* robots use o domínio oficial quando aplicável;
+* nenhuma URL antiga, provisória ou localhost apareça nos metadados de produção.
+
+Mantenha:
+
+NEXT_PUBLIC_INDEXABLE=false
+
+O projeto deve continuar em:
+
+noindex,nofollow
+
+Não libere indexação nesta fase.
+
+## 4. ESTRATÉGIA FUTURA DE WWW
+
+Não configure Vercel ou DNS nesta fase.
+
+Registre em documentação que, no deploy futuro:
+
+* `marcusreboque.com.br` será o domínio canônico;
+* `www.marcusreboque.com.br` será adicionado;
+* `www` deverá redirecionar permanentemente para o domínio sem `www`;
+* todas as URLs internas usarão o domínio sem `www`.
+
+Não implemente redirecionamento local desnecessário agora.
+
+## 5. HERO MOBILE DERIVADO
+
+Hero original:
+
+public/images/marcus-reboque/hero/marcus-reboque-hero-guincho-caminhonete-fortaleza-ce-03.webp
+
+Não altere ou sobrescreva o Hero original.
+
+Analise:
+
+* dimensões;
+* composição;
+* ponto focal;
+* lado adequado para texto;
+* caminhão;
+* caminhonete;
+* áreas seguras de recorte.
+
+Gere uma versão derivada mobile com proporção preferencial 4:5:
+
+marcus-reboque-hero-guincho-caminhonete-fortaleza-ce-03-mobile.webp
+
+Destino:
+
+public/images/marcus-reboque/hero/
+
+Requisitos:
+
+* largura recomendada entre 960 e 1080 px;
+* preservar o ponto focal;
+* não cortar partes essenciais do caminhão;
+* não cortar o veículo transportado;
+* preservar qualidade visual;
+* manter WebP;
+* remover somente metadados desnecessários se a ferramenta fizer isso automaticamente;
+* não modificar o original;
+* registrar dimensões e tamanho antes/depois.
+
+Use uma ferramenta local já disponível e confiável.
+
+Não instale dependência permanente no projeto apenas para realizar o recorte.
+
+Se não houver ferramenta segura disponível:
+
+* não invente o arquivo;
+* mantenha o Hero original;
+* implemente recorte responsivo controlado com `object-position`;
+* registre a pendência.
+
+Atualize `src/content/images.ts` com:
+
+* versão desktop;
+* versão mobile;
+* dimensões;
+* alt text;
+* ponto focal;
+* object-position;
+* função.
+
+## 6. IDENTIDADE VISUAL
+
+Analise o logotipo oficial presente no projeto.
+
+Extraia e documente:
+
+* cor primária;
+* cor secundária;
+* cor de destaque;
+* cor de fundo escuro;
+* cor de fundo claro;
+* cor de texto;
+* cor de borda;
+* estados de hover;
+* estados de foco.
+
+Não escolha cores arbitrárias que contradigam o logotipo.
+
+Crie tokens CSS em `globals.css`, usando variáveis claras, por exemplo:
+
+--brand-primary
+--brand-secondary
+--brand-accent
+--brand-dark
+--brand-light
+--surface
+--surface-muted
+--text-primary
+--text-secondary
+--border
+--focus-ring
+
+Registre os valores HEX em:
+
+docs/GUIA_VISUAL_IMPLEMENTADO_MARCUS_REBOQUE.md
+
+Não transforme essa etapa em um design system gigantesco. O objetivo é consistência funcional.
+
+## 7. TIPOGRAFIA
+
+Use `next/font`.
+
+Escolha uma família:
+
+* profissional;
+* legível;
+* forte para títulos;
+* adequada a serviços automotivos;
+* eficiente em carregamento;
+* disponível pelo mecanismo atual do Next.js.
+
+Pode combinar no máximo duas famílias, somente se houver justificativa real.
+
+Não carregue fonte por `<link>` externo.
+
+Não use tipografia decorativa que comprometa leitura.
+
+## 8. ARQUITETURA DA HOMEPAGE
+
+Substitua a homepage técnica provisória por uma homepage comercial real com esta ordem:
+
+1. Header
+2. Hero com scroll motion
+3. Cards dos 12 serviços
+4. Bloco de atendimento emergencial
+5. Como solicitar o atendimento
+6. Soluções de transporte
+7. Áreas atendidas
+8. Diferenciais
+9. Galeria de atendimentos
+10. Avaliações no Google
+11. Perguntas frequentes
+12. Presença oficial e redes sociais
+13. CTA final
+14. Footer
+
+Use HTML semântico.
+
+A homepage deve continuar majoritariamente composta por Server Components.
+
+Crie Client Components apenas onde a interação exigir.
+
+## 9. HEADER
+
+Criar header:
+
+* logotipo;
+* navegação desktop;
+* navegação mobile;
+* link Início;
+* link Serviços;
+* link Como funciona;
+* link Áreas atendidas;
+* link Avaliações;
+* link Perguntas frequentes;
+* link Contato;
+* CTA “Ligar agora”;
+* CTA “Chamar no WhatsApp”.
+
+Comportamento:
+
+* sticky;
+* contraste adequado;
+* mobile acessível;
+* menu operável por teclado;
+* botão com aria-expanded;
+* foco visível;
+* fechamento por Escape;
+* impedir armadilhas de foco;
+* sem biblioteca externa de menu.
+
+## 10. HERO
+
+### H1
+
+Guincho, Reboque e Auto Socorro 24h em Fortaleza
+
+### Texto de apoio
+
+Atendimento emergencial e transporte programado para motos, carros, caminhonetes, vans, barcos, máquinas, veículos especiais e pequenas cargas em Fortaleza e Região Metropolitana.
+
+### CTAs
+
+Primário:
+
+Chamar no WhatsApp
+
+Secundário:
+
+Ligar agora
+
+### Sinais rápidos
+
+* Atendimento 24 horas
+* Fortaleza e Região Metropolitana
+* Emergencial e programado
+
+### Imagem
+
+Desktop:
+
+marcus-reboque-hero-guincho-caminhonete-fortaleza-ce-03.webp
+
+Mobile:
+
+usar a derivada mobile, se gerada com segurança.
+
+### Performance
+
+No Next.js 16:
+
+* não usar a propriedade depreciada `priority`;
+* usar estratégia adequada para imagem LCP;
+* preferir `fetchPriority="high"` ou solução oficialmente compatível;
+* imagem acima da dobra;
+* dimensões explícitas;
+* `sizes` correto;
+* evitar preload concorrente desnecessário;
+* nenhuma outra imagem com prioridade alta.
+
+### Scroll motion
+
+Criar movimento progressivo e discreto:
+
+* deslocamento suave da imagem;
+* leve alteração de escala;
+* opcionalmente linha gráfica de rota;
+* texto principal permanece estável;
+* CTA permanece estável;
+* conteúdo existe no HTML inicial;
+* nenhuma informação depende do movimento.
+
+Requisitos:
+
+* componente cliente isolado;
+* JavaScript mínimo;
+* `requestAnimationFrame` ou abordagem eficiente;
+* listener passivo;
+* evitar setState a cada frame quando possível;
+* usar variável CSS;
+* limitar transformação;
+* nenhum layout thrashing;
+* nenhum efeito exagerado.
+
+Com `prefers-reduced-motion: reduce`:
+
+* desativar movimento;
+* apresentar Hero estático;
+* preservar todo o conteúdo.
+
+Em dispositivos de baixa largura:
+
+* reduzir ou desativar o efeito quando necessário;
+* priorizar legibilidade e performance.
+
+## 11. SEGUNDA SEÇÃO: CARDS DOS SERVIÇOS
+
+Título:
+
+Reboque e transporte para diferentes tipos de veículos
+
+Texto:
+
+A Marcus Reboque atende desde veículos leves até equipamentos e transportes especiais, conforme as condições de cada operação.
+
+Criar exatamente 12 cards:
+
+1. Guincho para motos
+2. Guincho para carros
+3. Guincho para caminhonetes
+4. Guincho para vans
+5. Transporte de utilitários
+6. Transporte de veículos especiais
+7. Transporte de barcos e jet skis
+8. Transporte de máquinas agrícolas
+9. Transporte de veículos antigos
+10. Transporte de empilhadeiras
+11. Guincho para pequenos caminhões
+12. Transporte de pequenas cargas
+
+Cada card deve conter:
+
+* imagem aprovada;
+* título;
+* descrição curta;
+* CTA;
+* alt text aprovado;
+* proporção consistente;
+* foco visível;
+* hover discreto;
+* foco por teclado;
+* nenhuma animação excessiva.
+
+### Utilitários
+
+Não existe imagem dedicada validada.
+
+Portanto:
+
+* não reutilize outra categoria fingindo representar utilitário;
+* crie um card institucional sem fotografia;
+* use fundo derivado da identidade visual;
+* use símbolo, logotipo ou SVG semântico simples;
+* registre “imagem real pendente” apenas em documentação interna;
+* não mostre ao público aviso de pendência.
+
+### Empilhadeiras
+
+A cobertura é fraca.
+
+Use apenas a melhor imagem aprovada.
+
+Não apresente galeria específica de empilhadeiras na homepage.
+
+### Links dos cards
+
+Como as páginas internas ainda não estão implementadas:
+
+* não crie links quebrados;
+* não direcione para URLs inexistentes;
+* use CTA de WhatsApp com mensagem específica para cada serviço;
+* prepare no objeto de dados o futuro slug interno;
+* marque o slug como não ativo nesta fase.
+
+Exemplo de mensagem:
+
+Olá, encontrei a Marcus Reboque pelo site e preciso de atendimento para uma moto.
+
+Não invente preços ou prazos.
+
+## 12. ATENDIMENTO EMERGENCIAL
+
+Título:
+
+Precisa de guincho agora?
+
+Conteúdo:
+
+Informe sua localização, o tipo de veículo, a situação e o destino desejado. A equipe avalia as condições do atendimento e orienta os próximos passos.
+
+Exibir:
+
+* botão WhatsApp;
+* botão de ligação;
+* telefone formatado;
+* atendimento 24 horas;
+* imagem aprovada de operação;
+* instruções simples.
+
+Não prometer:
+
+* chegada em 30 minutos;
+* tempo fixo;
+* menor preço;
+* disponibilidade universal;
+* qualquer prazo não comprovado.
+
+## 13. COMO FUNCIONA
+
+Criar quatro passos:
+
+1. Envie sua localização
+2. Informe o veículo e a situação
+3. Informe o destino
+4. Receba a orientação para o atendimento
+
+Cada passo deve ser curto e compreensível.
+
+Não exigir formulário.
+
+Os CTAs devem abrir WhatsApp ou telefone.
+
+## 14. SOLUÇÕES DE TRANSPORTE
+
+Criar três blocos:
+
+### Auto socorro 24 horas
+
+Suporte para remoção e transporte em situações de pane, acidente ou imobilização.
+
+### Transporte emergencial
+
+Atendimento para veículos que precisam ser removidos com rapidez e segurança após imprevistos.
+
+### Transporte programado
+
+Agendamento para deslocamento até oficina, residência, evento ou outro destino previamente combinado.
+
+Não afirmar serviços mecânicos específicos não comprovados, como:
+
+* troca de pneu;
+* carga de bateria;
+* pane seca;
+* chaveiro;
+* mecânica no local.
+
+## 15. ÁREAS ATENDIDAS
+
+Título:
+
+Atendimento em Fortaleza e Região Metropolitana
+
+Texto:
+
+A Marcus Reboque atende Fortaleza e municípios da Região Metropolitana conforme disponibilidade, tipo de veículo, origem e destino.
+
+Exibir:
+
+* Fortaleza;
+* Região Metropolitana;
+* outras localidades sob consulta.
+
+Não criar lista extensa de cidades ainda.
+
+Não criar páginas locais nesta fase.
+
+Não inventar cobertura garantida.
+
+CTA:
+
+Consultar atendimento pelo WhatsApp
+
+## 16. DIFERENCIAIS
+
+Usar somente diferenciais sustentáveis:
+
+* atendimento 24 horas;
+* variedade de veículos transportados;
+* atendimento emergencial e programado;
+* contato direto por telefone e WhatsApp;
+* operação em Fortaleza e Região Metropolitana;
+* cuidado no embarque e transporte.
+
+Não usar:
+
+* “o melhor de Fortaleza”;
+* “menor preço”;
+* “chegada garantida”;
+* “100% seguro”;
+* “líder absoluto”;
+* afirmações sem prova.
+
+## 17. GALERIA
+
+Usar até 6 imagens no carregamento inicial.
+
+Selecionar diversidade:
+
+* moto;
+* carro;
+* caminhonete;
+* máquina;
+* veículo antigo;
+* pequena carga ou atendimento noturno.
+
+Requisitos:
+
+* não usar imagens quase idênticas;
+* lazy loading;
+* alt text aprovado;
+* dimensões definidas;
+* layout responsivo;
+* expansão opcional sem carregar tudo imediatamente;
+* sem biblioteca pesada de lightbox.
+
+As demais imagens mapeadas para a homepage podem permanecer preparadas, mas não precisam ser renderizadas inicialmente.
+
+## 18. AVALIAÇÕES NO GOOGLE
+
+Não invente:
+
+* depoimentos;
+* nomes;
+* estrelas;
+* média;
+* volume de avaliações;
+* frases atribuídas a clientes.
+
+Criar seção institucional:
+
+Título:
+
+Confira a reputação da Marcus Reboque no Google
+
+Texto:
+
+Consulte avaliações publicadas por clientes e veja informações atualizadas no Perfil da Empresa no Google.
+
+CTA:
+
+Ver avaliações no Google
+
+Use o link oficial do GBP configurado em `site.ts`.
+
+Não implementar `AggregateRating`.
+
+Não copiar avaliações sem fonte documentada.
+
+## 19. FAQ
+
+Criar FAQ visível e útil com perguntas:
+
+1. A Marcus Reboque atende 24 horas?
+2. Quais veículos podem ser transportados?
+3. Como solicitar um guincho?
+4. Quais informações devo enviar pelo WhatsApp?
+5. É possível agendar o transporte?
+6. A Marcus Reboque atende fora de Fortaleza?
+7. O que influencia o valor do reboque?
+8. É possível transportar veículos antigos?
+9. Vocês transportam barcos e máquinas?
+10. O veículo precisa estar funcionando?
+
+Respostas:
+
+* diretas;
+* cautelosas;
+* sem preços inventados;
+* sem promessas não confirmadas;
+* com contexto suficiente;
+* adequadas para humanos e mecanismos generativos.
+
+Pode implementar acordeão acessível com `<details>` e `<summary>`.
+
+Não depende de JavaScript.
+
+Implemente FAQPage schema somente se:
+
+* todas as perguntas e respostas estiverem visíveis;
+* o schema refletir exatamente o conteúdo;
+* a infraestrutura atual estiver preparada.
+
+## 20. REDES SOCIAIS
+
+Criar seção:
+
+Marcus Reboque nas redes
+
+Usar os perfis oficiais configurados:
+
+* Instagram;
+* Facebook;
+* YouTube;
+* TikTok;
+* Pinterest;
+* LinkedIn;
+* X;
+* Google Business Profile.
+
+Não instalar biblioteca de ícones.
+
+Use:
+
+* SVGs próprios e acessíveis;
+* texto visível;
+* `aria-label`;
+* links externos seguros.
+
+Não usar `nofollow` nos perfis oficiais.
+
+## 21. CTA FINAL
+
+Título:
+
+Precisa transportar um veículo ou equipamento?
+
+Texto:
+
+Envie as informações pelo WhatsApp ou ligue para consultar as condições do atendimento.
+
+Botões:
+
+* Chamar no WhatsApp
+* Ligar agora
+
+Incluir:
+
+* telefone;
+* atendimento 24 horas;
+* Fortaleza e Região Metropolitana.
+
+## 22. FOOTER
+
+Incluir:
+
+* logotipo;
+* nome Marcus Reboque;
+* telefone;
+* WhatsApp;
+* atendimento 24 horas;
+* Fortaleza, CE;
+* endereço consolidado;
+* links para redes oficiais;
+* links institucionais futuros;
+* copyright dinâmico;
+* link do Google Maps/GBP.
+
+Como páginas internas ainda não existem:
+
+* não criar links quebrados;
+* marcar itens futuros sem navegação;
+* ou omiti-los até implementação.
+
+## 23. SEO DA HOMEPAGE
+
+### Title
+
+Guincho 24h em Fortaleza | Reboque e Auto Socorro | Marcus Reboque
+
+### Meta description
+
+Guincho, reboque e auto socorro 24h em Fortaleza para motos, carros, vans, caminhonetes, barcos, máquinas e pequenas cargas. Atendimento pelo WhatsApp.
+
+### H1
+
+Guincho, Reboque e Auto Socorro 24h em Fortaleza
+
+### Canonical
+
+https://marcusreboque.com.br/
+
+### Open Graph
+
+* título próprio;
+* descrição própria;
+* URL canônica;
+* nome do site;
+* locale `pt_BR`;
+* imagem Hero ou imagem OG apropriada;
+* alt text.
+
+### Twitter/X
+
+* `summary_large_image`;
+* título;
+* descrição;
+* imagem;
+* URL oficial.
+
+Mantenha robots:
+
+* noindex;
+* nofollow;
+
+porque `NEXT_PUBLIC_INDEXABLE=false`.
+
+## 24. SCHEMA DA HOMEPAGE
+
+Implementar ou revisar:
+
+* WebSite;
+* Organization;
+* TowingService;
+* FAQPage, quando elegível;
+* ImageObject quando útil.
+
+Usar:
+
+* domínio oficial;
+* telefone;
+* endereço consolidado;
+* coordenadas;
+* atendimento 24 horas;
+* perfis oficiais em `sameAs`;
+* GBP oficial;
+* Fortaleza;
+* Região Metropolitana como área geral.
+
+Não usar:
+
+* CNPJ antigo;
+* AggregateRating;
+* avaliações inventadas;
+* faixa de preço inventada;
+* métodos de pagamento não confirmados;
+* capacidades de carga não confirmadas;
+* tempo de chegada;
+* lista de cidades não comprovada.
+
+O conteúdo visível deve corresponder ao schema.
+
+## 25. LINKS DE WHATSAPP
+
+Centralize a geração dos links.
+
+Crie helper tipado para:
+
+* telefone;
+* mensagem;
+* origem da CTA;
+* serviço quando aplicável.
+
+Mensagens devem ser curtas e naturais.
+
+Exemplos:
+
+Homepage:
+
+Olá, encontrei a Marcus Reboque pelo site e preciso de atendimento.
+
+Moto:
+
+Olá, encontrei a Marcus Reboque pelo site e preciso de atendimento para uma moto.
+
+Barco:
+
+Olá, encontrei a Marcus Reboque pelo site e preciso consultar o transporte de um barco.
+
+Codifique corretamente a URL.
+
+Não criar UTMs fictícias.
+
+Prepare atributo de dados para analytics futuro, como:
+
+data-conversion="whatsapp"
+data-location="hero"
+
+Sem instalar analytics.
+
+## 26. COMPONENTES RECOMENDADOS
+
+Crie somente componentes com função real, por exemplo:
+
+src/components/layout/
+
+* Header.tsx
+* MobileMenu.tsx
+* Footer.tsx
+
+src/components/sections/
+
+* Hero.tsx
+* ServicesGrid.tsx
+* EmergencyCta.tsx
+* HowItWorks.tsx
+* TransportSolutions.tsx
+* ServiceArea.tsx
+* Differentials.tsx
+* OperationsGallery.tsx
+* GoogleReviewsCta.tsx
+* Faq.tsx
+* SocialPresence.tsx
+* FinalCta.tsx
+
+src/components/ui/
+
+* ButtonLink.tsx
+* SectionHeading.tsx
+* ServiceCard.tsx
+
+src/components/media/
+
+* ResponsiveHero.tsx
+* ScrollMotionHero.tsx
+
+Evite fragmentação excessiva.
+
+Não crie um componente para cada parágrafo.
+
+## 27. DADOS E CONTEÚDO CENTRALIZADOS
+
+Centralize:
+
+* serviços;
+* mensagens de WhatsApp;
+* redes;
+* FAQ;
+* passos;
+* diferenciais;
+* imagens;
+* links;
+* metadados.
+
+Use arquivos em `src/content`.
+
+Não espalhe textos repetidos em múltiplos componentes.
+
+Mantenha tipagem.
+
+## 28. PERFORMANCE
+
+Obrigatório:
+
+* Hero como única imagem de alta prioridade;
+* não usar `priority`, pois o projeto está em Next.js 16;
+* usar mecanismo atual apropriado, como `fetchPriority="high"` quando necessário;
+* cards com `sizes` responsivo;
+* imagens abaixo da dobra com lazy loading;
+* dimensões explícitas;
+* nenhuma imagem causar CLS;
+* no máximo 6 imagens na galeria inicial;
+* sem vídeo no Hero;
+* sem biblioteca de animação;
+* JavaScript mínimo;
+* Server Components por padrão;
+* Client Component restrito ao menu e scroll motion;
+* evitar hidratação desnecessária;
+* evitar efeitos pesados;
+* evitar filtros CSS caros;
+* evitar sombras excessivas em mobile.
+
+## 29. ACESSIBILIDADE
+
+Validar:
+
+* hierarquia de headings;
+* um único H1;
+* navegação por teclado;
+* foco visível;
+* contraste;
+* menu mobile;
+* botões e links;
+* alt texts;
+* `aria-label` quando necessário;
+* `aria-expanded`;
+* redução de movimento;
+* tamanho de toque;
+* conteúdo sem dependência de cor;
+* links externos identificáveis;
+* FAQ acessível;
+* ausência de texto embutido em imagem.
+
+## 30. RESPONSIVIDADE
+
+Testar no mínimo:
+
+* 320 px;
+* 375 px;
+* 390 px;
+* 768 px;
+* 1024 px;
+* 1280 px;
+* 1440 px.
+
+Verificar:
+
+* Hero;
+* corte da imagem;
+* legibilidade;
+* CTAs;
+* cards;
+* menu;
+* FAQ;
+* galeria;
+* footer;
+* nenhum overflow horizontal;
+* nenhum texto cortado;
+* nenhum botão sobreposto.
+
+## 31. VALIDAÇÕES TÉCNICAS
+
+Executar:
+
+* npm run lint;
+* npm run typecheck, se disponível;
+* npm run build;
+* servidor local;
+* teste HTTP da homepage;
+* teste HTTP do robots.txt;
+* teste HTTP do sitemap.xml;
+* inspeção do HTML renderizado;
+* inspeção de title;
+* inspeção de meta description;
+* inspeção de canonical;
+* inspeção de robots meta;
+* inspeção de Open Graph;
+* inspeção de JSON-LD;
+* verificação dos links tel;
+* verificação dos links wa.me;
+* verificação de links externos;
+* verificação de imagens inexistentes;
+* verificação de console;
+* verificação básica de acessibilidade.
+
+Confirme que:
+
+* homepage retorna 200;
+* imagens retornam 200;
+* nenhuma rota inexistente é usada;
+* nenhuma imagem pendente é publicada;
+* domínio oficial foi aplicado;
+* noindex permanece ativo;
+* sitemap está coerente;
+* nenhuma URL localhost aparece nos metadados canônicos;
+* nenhum segredo foi exposto.
+
+## 32. INSPEÇÃO VISUAL
+
+Se houver navegador automatizado ou ferramenta disponível no ambiente sem instalar dependência pesada:
+
+* capture homepage desktop;
+* capture homepage mobile;
+* revise corte do Hero;
+* revise contraste;
+* revise alinhamento;
+* revise espaçamento;
+* revise cards;
+* revise overflow.
+
+Não instalar Playwright apenas para esta etapa se ele não estiver disponível.
+
+Se não houver captura automática, registrar a limitação.
+
+## 33. DOCUMENTAÇÃO
+
+Crie:
+
+docs/RELATORIO_IMPLEMENTACAO_HOMEPAGE_MARCUS_REBOQUE.md
+
+Incluir:
+
+1. resumo;
+2. arquivos alterados;
+3. arquivos criados;
+4. domínio aplicado;
+5. indexação;
+6. identidade visual;
+7. Hero desktop;
+8. Hero mobile;
+9. scroll motion;
+10. componentes;
+11. seções implementadas;
+12. imagens utilizadas;
+13. imagens reutilizadas;
+14. schema;
+15. metadados;
+16. acessibilidade;
+17. performance;
+18. testes;
+19. lint;
+20. typecheck;
+21. build;
+22. limitações;
+23. pendências;
+24. próximo passo.
+
+Crie:
+
+docs/MATRIZ_COMPONENTES_HOMEPAGE_MARCUS_REBOQUE.csv
+
+Colunas:
+
+componente,arquivo,funcao,tipo_server_client,imagens,dados,interatividade,acessibilidade,status,observacoes
+
+Crie:
+
+docs/MAPA_CTA_HOMEPAGE_MARCUS_REBOQUE.csv
+
+Colunas:
+
+cta,secao,destino,mensagem_whatsapp,data_conversion,data_location,status
+
+## 34. COMMIT
+
+Somente após todos os testes passarem:
+
+git add controlado
+
+git commit -m "feat: implement Marcus Reboque commercial homepage"
+
+Não criar remote.
+
+Não fazer push.
+
+Não fazer deploy.
+
+## 35. SAÍDA FINAL NO TERMINAL
+
+Apresente:
+
+* domínio canônico;
+* commit anterior;
+* novo commit;
+* arquivos criados;
+* arquivos alterados;
+* Hero desktop;
+* Hero mobile;
+* ferramenta usada para derivação;
+* dimensões do Hero mobile;
+* seções implementadas;
+* imagens usadas na homepage;
+* imagens carregadas acima da dobra;
+* Client Components;
+* resultado do lint;
+* resultado do typecheck;
+* resultado do build;
+* HTTP da homepage;
+* estado de robots;
+* estado de sitemap;
+* canonical;
+* JSON-LD;
+* conflitos;
+* erros;
+* pendências;
+* próximo passo.
+
+Execute a homepage comercial completa sem deploy e mantendo noindex.

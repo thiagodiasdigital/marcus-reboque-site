@@ -1,13 +1,15 @@
-const LOCAL_SITE_URL = "http://localhost:3000";
+const DEFAULT_SITE_URL = "https://marcusreboque.com.br";
 
 export function getSiteUrl(): URL {
-  const configuredUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+  const configuredUrl =
+    process.env.NEXT_PUBLIC_SITE_URL?.trim() || DEFAULT_SITE_URL;
+  const siteUrl = new URL(configuredUrl);
 
-  if (!configuredUrl) {
-    return new URL(LOCAL_SITE_URL);
-  }
+  siteUrl.pathname = "/";
+  siteUrl.search = "";
+  siteUrl.hash = "";
 
-  return new URL(configuredUrl);
+  return siteUrl;
 }
 
 export function absoluteUrl(pathname: string): string {

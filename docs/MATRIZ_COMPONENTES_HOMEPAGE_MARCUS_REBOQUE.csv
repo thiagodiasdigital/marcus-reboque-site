@@ -1,0 +1,19 @@
+ordem,secao,componente,arquivo,tipo,imagem_principal,observacao
+1,Header,Header,src/components/layout/Header.tsx,Server,logo,Navegacao sticky com CTA de WhatsApp e telefone
+1,Header,MobileMenu,src/components/layout/MobileMenu.tsx,Client,logo,Menu acessivel com aria-expanded e Escape
+2,Hero,Hero,src/components/sections/Hero.tsx,Server,homepageHeroDesktop + homepageHeroMobile,H1 oficial e CTAs primarios
+2,Hero,ScrollMotionHero,src/components/media/ScrollMotionHero.tsx,Client,homepageHeroDesktop,Movimento por CSS var e requestAnimationFrame
+2,Hero,ResponsiveHero,src/components/media/ResponsiveHero.tsx,Server,homepageHeroDesktop + homepageHeroMobile,Art direction com getImageProps e fetchPriority
+3,Servicos,ServicesGrid,src/components/sections/ServicesGrid.tsx,Server,12 imagens/visual institucional,Grid de 12 servicos
+3,Servicos,ServiceCard,src/components/ui/ServiceCard.tsx,Server,imagem por servico,Utilitarios usa visual institucional sem foto falsa
+4,Emergencia,EmergencyCta,src/components/sections/EmergencyCta.tsx,Server,emergencyCaminhonete,Bloco Precisa de guincho agora?
+5,Como funciona,HowItWorks,src/components/sections/HowItWorks.tsx,Server,howItWorksCaminhonete,Quatro etapas de atendimento
+6,Solucoes,TransportSolutions,src/components/sections/TransportSolutions.tsx,Server,operationNight/operationCarDamaged/programmedCar,Tres solucoes sem claim mecanico
+7,Areas,ServiceArea,src/components/sections/ServiceArea.tsx,Server,serviceArea,Fortaleza e Regiao Metropolitana
+8,Diferenciais,Differentials,src/components/sections/Differentials.tsx,Server,equipmentFixation,Claims sustentaveis
+9,Galeria,OperationsGallery,src/components/sections/OperationsGallery.tsx,Server,galleryImages,Seis imagens iniciais reais
+10,Google,GoogleReviewsCta,src/components/sections/GoogleReviewsCta.tsx,Server,nenhuma,CTA sem AggregateRating e sem reviews inventadas
+11,FAQ,Faq,src/components/sections/Faq.tsx,Server,nenhuma,10 perguntas visiveis com FAQPage
+12,Presenca,SocialPresence,src/components/sections/SocialPresence.tsx,Server,nenhuma,Canais oficiais confirmados
+13,CTA final,FinalCta,src/components/sections/FinalCta.tsx,Server,finalTruck,Conversao final WhatsApp/telefone
+14,Footer,Footer,src/components/layout/Footer.tsx,Server,logo,Contato e dominio oficial

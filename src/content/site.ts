@@ -1,7 +1,11 @@
 export type SiteConfig = {
   name: string;
   legalName: string | null;
+  url: string;
+  canonicalUrl: string;
   description: string;
+  seoTitle: string;
+  seoDescription: string;
   contact: {
     phoneRaw: string;
     phoneFormatted: string;
@@ -10,6 +14,7 @@ export type SiteConfig = {
   whatsapp: {
     number: string;
     url: string;
+    defaultMessage: string;
   };
   location: {
     city: string;
@@ -26,16 +31,26 @@ export type SiteConfig = {
   socials: {
     instagram: null;
     facebook: null;
+    youtube: null;
+    linkedin: null;
     googleBusinessProfile: null;
   };
   siteUrlEnv: "NEXT_PUBLIC_SITE_URL";
+  indexableEnv: "NEXT_PUBLIC_INDEXABLE";
+  analyticsEnv: "NEXT_PUBLIC_GA_ID";
 };
 
 export const siteConfig = {
   name: "Marcus Reboque",
   legalName: null,
+  url: "https://marcusreboque.com.br",
+  canonicalUrl: "https://marcusreboque.com.br/",
   description:
-    "Fundacao tecnica do site da Marcus Reboque para atendimento 24 horas de reboque em Fortaleza.",
+    "Guincho, reboque e auto socorro 24h em Fortaleza para motos, carros, vans, caminhonetes, barcos, máquinas e pequenas cargas.",
+  seoTitle:
+    "Guincho 24h em Fortaleza | Reboque e Auto Socorro | Marcus Reboque",
+  seoDescription:
+    "Guincho, reboque e auto socorro 24h em Fortaleza para motos, carros, vans, caminhonetes, barcos, máquinas e pequenas cargas. Atendimento pelo WhatsApp.",
   contact: {
     phoneRaw: "+55 85 98600-7392",
     phoneFormatted: "(85) 98600-7392",
@@ -44,12 +59,14 @@ export const siteConfig = {
   whatsapp: {
     number: "5585986007392",
     url: "https://wa.me/5585986007392",
+    defaultMessage:
+      "Olá, preciso de atendimento da Marcus Reboque em Fortaleza.",
   },
   location: {
     city: "Fortaleza",
     state: "CE",
     country: "BR",
-    serviceAreaLabel: "Fortaleza e Regiao Metropolitana",
+    serviceAreaLabel: "Fortaleza e Região Metropolitana",
     address: null,
     coordinates: null,
   },
@@ -60,7 +77,11 @@ export const siteConfig = {
   socials: {
     instagram: null,
     facebook: null,
+    youtube: null,
+    linkedin: null,
     googleBusinessProfile: null,
   },
   siteUrlEnv: "NEXT_PUBLIC_SITE_URL",
+  indexableEnv: "NEXT_PUBLIC_INDEXABLE",
+  analyticsEnv: "NEXT_PUBLIC_GA_ID",
 } as const satisfies SiteConfig;
