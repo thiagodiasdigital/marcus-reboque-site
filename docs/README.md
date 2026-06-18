@@ -1,0 +1,38 @@
+# Documentacao Marcus Reboque
+
+Indice dos documentos tecnicos, visuais e operacionais do projeto.
+
+## Fundacao tecnica
+
+- `BACKUP_ESTADO_PRE_SCAFFOLD_MARCUS_REBOQUE.md`
+- `DIAGNOSTICO_TECNICO_PRE_IMPLEMENTACAO_MARCUS_REBOQUE.md`
+- `INVENTARIO_TECNICO_PROJETO_MARCUS_REBOQUE.csv`
+- `MAPA_MIGRACAO_DOCUMENTOS_E_ATIVOS.csv`
+- `RELATORIO_FUNDACAO_TECNICA_MARCUS_REBOQUE.md`
+
+## Arquitetura visual e conteudo
+
+- `MAPA_DE_APLICACAO_VISUAL_SITE_MARCUS_REBOQUE.md`
+- `MAPA_IMAGEM_PAGINA_SECAO_MARCUS_REBOQUE.csv`
+- `MATRIZ_VISUAL_POR_PAGINA_MARCUS_REBOQUE.csv`
+- `MATRIZ_COBERTURA_VISUAL_PAGINAS_MARCUS_REBOQUE.csv`
+- `GUIA_ALT_TEXT_E_LEGENDAS_MARCUS_REBOQUE.md`
+- `PENDENCIAS_VISUAIS_MARCUS_REBOQUE.md`
+
+## Curadoria e renomeacao de imagens
+
+- `BACKUP_COMPLETO_NOMES_E_CAMINHOS_ORIGINAIS_MARCUS_REBOQUE.csv`
+- `AUDITORIA_PRE_RENOMEACAO_IMAGENS_MARCUS_REBOQUE.md`
+- `MAPA_DE_RENOMEACAO_MARCUS_REBOQUE.csv`
+- `MAPA_FINAL_ATIVOS_VISUAIS_MARCUS_REBOQUE.csv`
+- `RELATORIO_DE_ANALISE_E_RENOMEACAO_DE_IMAGENS_MARCUS_REBOQUE.md`
+- `RELATORIO_FINAL_RENOMEACAO_E_ORGANIZACAO_MARCUS_REBOQUE.md`
+
+## Briefings recebidos
+
+- `Você deve atuar como curador técnic.txt`
+- `Analise novamente os arquivos.txt`
+- `Execute agora a RENOMEAÇÃO CONTROLA.txt`
+- `Atue agora como arquiteto de conteú.txt`
+- `Atue como arquiteto técnico respons.txt`
+- `Atue como engenheiro de software re.txt`

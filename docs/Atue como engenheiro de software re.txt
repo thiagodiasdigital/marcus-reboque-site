@@ -1,0 +1,601 @@
+Atue como engenheiro de software responsável pela FUNDAÇÃO TÉCNICA CONTROLADA do novo site da Marcus Reboque.
+
+Leia integralmente antes de executar:
+
+* DIAGNOSTICO_TECNICO_PRE_IMPLEMENTACAO_MARCUS_REBOQUE.md
+* INVENTARIO_TECNICO_PROJETO_MARCUS_REBOQUE.csv
+* MAPA_DE_APLICACAO_VISUAL_SITE_MARCUS_REBOQUE.md
+* MAPA_IMAGEM_PAGINA_SECAO_MARCUS_REBOQUE.csv
+* MATRIZ_VISUAL_POR_PAGINA_MARCUS_REBOQUE.csv
+* GUIA_ALT_TEXT_E_LEGENDAS_MARCUS_REBOQUE.md
+* MAPA_FINAL_ATIVOS_VISUAIS_MARCUS_REBOQUE.csv
+* PENDENCIAS_VISUAIS_MARCUS_REBOQUE.md
+
+## OBJETIVO DESTA FASE
+
+Inicializar, na raiz atual, uma fundação limpa e funcional em Next.js para o futuro site da Marcus Reboque.
+
+Nesta fase, você deve:
+
+1. criar a estrutura técnica do projeto;
+2. instalar somente as dependências essenciais;
+3. preservar integralmente documentos e imagens existentes;
+4. organizar os ativos operacionais sem apagar seus caminhos originais;
+5. configurar lint, TypeScript, Tailwind e build;
+6. preparar a estrutura de rotas e componentes;
+7. criar apenas uma página inicial técnica mínima;
+8. inicializar Git localmente;
+9. validar a fundação com lint e build.
+
+Nesta fase, você NÃO deve:
+
+* implementar o design final;
+* escrever todas as páginas comerciais;
+* criar scroll motion definitivo;
+* criar páginas de bairros;
+* publicar na Vercel;
+* criar repositório remoto;
+* configurar domínio;
+* instalar analytics;
+* instalar bibliotecas de animação;
+* alterar ou comprimir imagens;
+* usar arquivos pendentes no site;
+* improvisar conteúdo comercial definitivo.
+
+## 1. PROTEÇÃO PRÉVIA
+
+Antes de qualquer mudança:
+
+1. registre a árvore completa atual;
+2. conte os arquivos;
+3. confirme a existência das 83 imagens;
+4. calcule ou reutilize os checksums existentes;
+5. crie:
+
+BACKUP_ESTADO_PRE_SCAFFOLD_MARCUS_REBOQUE.md
+
+O backup deve registrar:
+
+* data e hora;
+* total de arquivos;
+* estrutura de pastas;
+* documentos existentes;
+* imagens existentes;
+* checksums relevantes;
+* arquivos que serão criados;
+* arquivos que poderão ser movidos;
+* arquivos protegidos.
+
+Não copie arquivos binários para um backup duplicado sem necessidade.
+
+## 2. ESTRATÉGIA SEGURA DE SCAFFOLD
+
+A pasta raiz não está vazia.
+
+Não execute `create-next-app .` diretamente sem proteção.
+
+Crie um scaffold temporário em:
+
+_NEXT_SCAFFOLD_TEMP/
+
+Utilize npm e uma versão estável atual do Next.js.
+
+Configuração obrigatória:
+
+* TypeScript;
+* ESLint;
+* Tailwind CSS;
+* App Router;
+* diretório src;
+* Turbopack;
+* alias @/*;
+* projeto vazio ou template mínimo;
+* sem React Compiler nesta fase;
+* sem biblioteca de UI;
+* sem biblioteca de animação;
+* sem analytics.
+
+Use opções não interativas sempre que forem suportadas.
+
+Exemplo conceitual, ajustado à sintaxe atual disponível:
+
+npx create-next-app@latest _NEXT_SCAFFOLD_TEMP --typescript --eslint --tailwind --app --src-dir --turbopack --import-alias "@/*" --use-npm --empty --yes --disable-git
+
+Antes de executar:
+
+* confirme as opções disponíveis com `--help`;
+* não assuma sintaxe incompatível;
+* registre a versão exata instalada.
+
+Após gerar o scaffold:
+
+1. valide o projeto temporário;
+2. copie para a raiz somente os arquivos técnicos necessários;
+3. não substitua documentos ou imagens existentes;
+4. não copie `.git` do scaffold;
+5. remova a pasta temporária somente após a validação completa;
+6. registre tudo o que foi integrado.
+
+## 3. ESTRUTURA TÉCNICA NA RAIZ
+
+A raiz deverá conter, no mínimo:
+
+* package.json
+* package-lock.json
+* next.config.ts ou equivalente atual
+* tsconfig.json
+* eslint.config.mjs ou equivalente atual
+* postcss.config.mjs
+* public/
+* src/
+* .gitignore
+* README.md
+* AGENTS.md, se criado pela versão atual e realmente útil
+
+Estrutura recomendada:
+
+src/
+├── app/
+│   ├── layout.tsx
+│   ├── page.tsx
+│   ├── globals.css
+│   ├── not-found.tsx
+│   ├── robots.ts
+│   └── sitemap.ts
+│
+├── components/
+│   ├── layout/
+│   ├── sections/
+│   ├── ui/
+│   ├── media/
+│   ├── seo/
+│   └── tracking/
+│
+├── content/
+│   ├── site.ts
+│   ├── navigation.ts
+│   ├── services.ts
+│   ├── social-links.ts
+│   └── images.ts
+│
+├── lib/
+│   ├── metadata.ts
+│   ├── schema.ts
+│   ├── urls.ts
+│   └── utils.ts
+│
+└── types/
+└── site.ts
+
+Não crie componentes vazios sem função.
+
+Crie somente os diretórios e arquivos necessários para estabelecer uma arquitetura clara.
+
+## 4. DOCUMENTOS OPERACIONAIS
+
+Crie a pasta:
+
+docs/
+
+Mova para ela somente os documentos técnicos e operacionais relacionados ao projeto, como:
+
+* relatórios `.md`;
+* mapas `.csv`;
+* diagnósticos;
+* inventários;
+* guias;
+* backups textuais.
+
+Não mova:
+
+* package.json;
+* configurações do Next.js;
+* README.md do projeto;
+* imagens;
+* arquivos que precisem permanecer na raiz por funcionamento técnico.
+
+Antes de mover documentos:
+
+* registre o caminho antigo;
+* registre o caminho novo;
+* atualize referências internas quando necessário;
+* não perca nenhum arquivo;
+* valide que os documentos continuam acessíveis.
+
+Crie:
+
+docs/README.md
+
+Esse índice deve explicar, de forma breve:
+
+* o que existe em `/docs`;
+* quais documentos são canônicos;
+* quais são históricos;
+* quais governam as imagens;
+* quais governam a implementação.
+
+## 5. BIBLIOTECA DE IMAGENS
+
+Mantenha intacta a biblioteca-fonte:
+
+IMAGENS_MARCUS_REBOQUE/
+
+Ela deve continuar sendo o arquivo operacional mestre.
+
+Não altere, converta, renomeie ou comprima seus arquivos.
+
+Crie dentro de `public`:
+
+public/images/marcus-reboque/
+
+Copie para essa pasta somente os 69 arquivos aprovados.
+
+Não copie:
+
+* os 14 pendentes;
+* relatórios;
+* CSVs;
+* imagens inadequadas;
+* arquivos não aprovados.
+
+Organize as cópias publicáveis com estrutura coerente, por exemplo:
+
+public/images/marcus-reboque/
+├── hero/
+├── servicos/
+│   ├── motos/
+│   ├── carros/
+│   ├── caminhonetes/
+│   ├── vans/
+│   ├── utilitarios/
+│   ├── veiculos-especiais/
+│   ├── barcos/
+│   ├── maquinas-agricolas/
+│   ├── veiculos-antigos/
+│   ├── empilhadeiras/
+│   ├── pequenos-caminhoes/
+│   └── pequenas-cargas/
+├── operacao/
+├── equipamentos/
+├── equipe/
+├── institucional/
+└── localidades/
+
+A pasta de utilitários deve permanecer vazia.
+
+Preserve:
+
+* nome do arquivo;
+* extensão;
+* conteúdo binário;
+* checksum.
+
+Confirme que as cópias possuem SHA-256 idêntico às fontes.
+
+## 6. CONFIGURAÇÃO DO PROJETO
+
+Configure:
+
+* `lang="pt-BR"`;
+* título técnico provisório;
+* descrição técnica provisória;
+* metadataBase preparada por variável de ambiente futura;
+* viewport adequado;
+* ícone provisório baseado no logotipo aprovado, somente se possível sem editar o arquivo;
+* fontes via `next/font`;
+* sem fontes externas carregadas por `<link>`;
+* sem scripts externos;
+* sem analytics;
+* sem cookies de rastreamento;
+* sem formulário funcional nesta fase.
+
+Use uma fonte segura e profissional disponível por `next/font`.
+
+Não transforme a escolha tipográfica em sistema visual definitivo.
+
+## 7. CONFIGURAÇÃO DE SITE
+
+Crie um objeto central em:
+
+src/content/site.ts
+
+Com estrutura tipada para:
+
+* nome: Marcus Reboque;
+* nome legal, se ainda não confirmado: não preencher;
+* descrição provisória;
+* telefone: +55 85 98600-7392;
+* telefone formatado: (85) 98600-7392;
+* WhatsApp;
+* cidade: Fortaleza;
+* estado: CE;
+* país: BR;
+* atendimento: 24 horas;
+* endereço público já consolidado;
+* coordenadas consolidadas;
+* redes sociais oficiais;
+* URL do GBP;
+* URL do site por variável de ambiente futura.
+
+Não espalhe esses dados em múltiplos componentes.
+
+A página deve consumir essa configuração central.
+
+## 8. VARIÁVEIS DE AMBIENTE
+
+Crie:
+
+.env.example
+
+Sem valores secretos.
+
+Inclua apenas:
+
+NEXT_PUBLIC_SITE_URL=
+NEXT_PUBLIC_INDEXABLE=false
+NEXT_PUBLIC_GA_ID=
+
+Não crie `.env.local` com valores inventados.
+
+Implemente uma função para controlar indexação:
+
+* quando `NEXT_PUBLIC_INDEXABLE=true`, permitir indexação;
+* quando ausente ou diferente de true, usar `noindex,nofollow`;
+* `robots.ts` deve refletir a mesma lógica;
+* sitemap não deve expor URLs quando o ambiente estiver bloqueado, ou deve ser tratado de maneira coerente e documentada.
+
+O projeto deve iniciar bloqueado contra indexação acidental.
+
+## 9. PÁGINA INICIAL TÉCNICA MÍNIMA
+
+Crie uma página inicial simples, não definitiva, contendo:
+
+* logotipo ou nome da empresa;
+* H1: “Marcus Reboque”;
+* indicação de que o novo site está em preparação;
+* telefone;
+* link de WhatsApp;
+* informação de atendimento 24 horas;
+* indicação de Fortaleza e Região Metropolitana;
+* uma única imagem aprovada;
+* aviso interno visível de que se trata de fundação técnica, não layout final.
+
+A página deve:
+
+* funcionar em mobile;
+* possuir HTML semântico;
+* ter contraste suficiente;
+* não depender de JavaScript;
+* usar Server Component;
+* ter CTA de telefone;
+* ter CTA de WhatsApp;
+* não conter scroll motion;
+* não usar textos comerciais definitivos.
+
+## 10. HERO
+
+Não implemente o Hero final.
+
+Registre a imagem:
+
+/images/marcus-reboque/hero/marcus-reboque-hero-guincho-caminhonete-fortaleza-ce-03.webp
+
+em:
+
+src/content/images.ts
+
+Como futuro Hero principal.
+
+Inclua:
+
+* caminho;
+* alt text aprovado;
+* largura;
+* altura;
+* ponto focal;
+* prioridade futura;
+* indicação de que exigirá versão mobile derivada.
+
+Não gere a versão mobile nesta fase.
+
+## 11. ROTAS FUTURAS
+
+Não crie todas as páginas comerciais.
+
+Crie apenas um registro de rotas futuras em:
+
+src/content/navigation.ts
+
+Inclua as rotas já aprovadas:
+
+* homepage;
+* hub de serviços;
+* áreas atendidas;
+* sobre;
+* avaliações;
+* contato;
+* guias;
+* políticas;
+* páginas centrais;
+* 12 páginas de veículos e cargas.
+
+Marque-as como futuras.
+
+Não crie páginas vazias para inflar o projeto.
+
+## 12. SITEMAP, ROBOTS E METADADOS
+
+Implemente uma base funcional para:
+
+* metadata global;
+* canonical;
+* Open Graph provisório;
+* Twitter/X card provisório;
+* robots;
+* sitemap;
+* favicon, quando tecnicamente possível;
+* página 404.
+
+Não implemente ainda metadados específicos de todas as páginas futuras.
+
+Tudo deve respeitar `NEXT_PUBLIC_INDEXABLE`.
+
+## 13. SCHEMA
+
+Crie somente a infraestrutura tipada para JSON-LD.
+
+Implemente na página inicial técnica, quando seguro:
+
+* Organization;
+* LocalBusiness ou TowingService;
+* WebSite.
+
+Não inclua:
+
+* avaliações;
+* AggregateRating;
+* preços;
+* áreas não confirmadas;
+* CNPJ antigo;
+* serviços não confirmados;
+* dados inventados.
+
+O schema deve ser gerado a partir da configuração central.
+
+## 14. GIT LOCAL
+
+Após integrar e validar o scaffold:
+
+1. inicialize Git na raiz;
+2. verifique `.gitignore`;
+3. confirme que `.env*`, exceto `.env.example`, está ignorado;
+4. confirme que `node_modules`, `.next` e arquivos locais estão ignorados;
+5. confirme que as 14 imagens pendentes não entram em `public`;
+6. faça o commit inicial apenas se lint e build passarem.
+
+Mensagem de commit:
+
+chore: initialize Marcus Reboque website foundation
+
+Não crie repositório no GitHub nesta fase.
+
+Não configure remote.
+
+## 15. TESTES E VALIDAÇÕES
+
+Execute:
+
+* npm install, quando necessário;
+* npm run lint;
+* npm run build.
+
+Também valide:
+
+* TypeScript sem erros;
+* nenhuma imagem-fonte alterada;
+* 83 imagens preservadas na biblioteca mestre;
+* 69 cópias aprovadas em `public`;
+* 14 pendentes fora de `public`;
+* Hero registrado;
+* utilitários sem imagem falsa;
+* página inicial renderizando;
+* links de telefone e WhatsApp corretos;
+* robots coerente;
+* sitemap coerente;
+* noindex por padrão;
+* nenhum segredo exposto;
+* nenhuma dependência desnecessária;
+* Git inicializado;
+* commit criado somente após sucesso total.
+
+Não use “ignorar erro” para concluir.
+
+Corrija erros relacionados ao scaffold dentro do escopo desta fase.
+
+## 16. DEPENDÊNCIAS PERMITIDAS
+
+Nesta fase, instale somente o conjunto gerado e necessário para:
+
+* Next.js;
+* React;
+* React DOM;
+* TypeScript;
+* Tailwind;
+* PostCSS;
+* ESLint;
+* tipos necessários.
+
+Não instalar:
+
+* Framer Motion;
+* GSAP;
+* bibliotecas de UI;
+* bibliotecas de formulário;
+* bibliotecas de ícones;
+* analytics;
+* consent manager;
+* CMS;
+* banco de dados;
+* bibliotecas de schema.
+
+JSON-LD pode ser implementado sem dependência externa.
+
+## 17. DOCUMENTAÇÃO FINAL
+
+Crie:
+
+docs/RELATORIO_FUNDACAO_TECNICA_MARCUS_REBOQUE.md
+
+Inclua:
+
+1. versão do Node;
+2. versão do npm;
+3. versão do Next.js;
+4. versão do React;
+5. versão do Tailwind;
+6. arquivos criados;
+7. arquivos movidos;
+8. dependências instaladas;
+9. estrutura final;
+10. configuração de indexação;
+11. configuração de imagens;
+12. schema implementado;
+13. testes executados;
+14. resultado do lint;
+15. resultado do build;
+16. estado do Git;
+17. hash do commit;
+18. pendências;
+19. riscos;
+20. próximo passo recomendado.
+
+Crie também:
+
+docs/MAPA_MIGRACAO_DOCUMENTOS_E_ATIVOS.csv
+
+Com:
+
+tipo,caminho_original,caminho_final,status,checksum,observacoes
+
+## 18. SAÍDA FINAL NO TERMINAL
+
+Apresente:
+
+* versão instalada do Next.js;
+* versão do Node;
+* versão do npm;
+* total de arquivos antes e depois;
+* documentos movidos;
+* imagens-fonte preservadas;
+* imagens copiadas para public;
+* pendentes fora de public;
+* resultado do lint;
+* resultado do build;
+* Git inicializado;
+* hash do commit;
+* conflitos;
+* erros;
+* arquivos de relatório gerados;
+* próximo passo técnico.
+
+Execute a fundação técnica completa descrita acima.

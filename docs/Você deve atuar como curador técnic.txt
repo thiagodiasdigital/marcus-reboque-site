@@ -1,0 +1,168 @@
+Você deve atuar como curador técnico de imagens e organizador de ativos digitais para o projeto do site da empresa Marcus Reboque, localizada em Fortaleza-CE.
+
+OBJETIVO
+
+Analisar visualmente todas as imagens existentes nesta pasta e subpastas, identificar o conteúdo principal de cada arquivo, classificar cada imagem e propor nomes padronizados para SEO, organização interna e uso posterior no site.
+
+IMPORTANTE
+
+Nesta primeira etapa, NÃO renomeie, não mova, não converta, não exclua e não altere nenhum arquivo.
+
+Faça apenas inventário, análise visual e proposta de nomenclatura.
+
+CONTEXTO DA EMPRESA
+
+Nome da empresa: Marcus Reboque
+Cidade principal: Fortaleza
+Estado: Ceará
+Serviços principais:
+- guincho e reboque para motos;
+- guincho para carros;
+- guincho para caminhonetes;
+- guincho para vans;
+- transporte de utilitários;
+- transporte de veículos especiais;
+- transporte de barcos e jet skis;
+- transporte de máquinas agrícolas;
+- transporte de veículos antigos;
+- transporte de empilhadeiras;
+- guincho para pequenos caminhões;
+- transporte de pequenas cargas;
+- auto socorro 24 horas;
+- transporte emergencial;
+- transporte programado.
+
+CATEGORIAS PERMITIDAS
+
+Classifique cada imagem em uma destas categorias:
+
+01_LOGOTIPOS
+02_HERO
+03_MOTOS
+04_CARROS
+05_CAMINHONETES
+06_VANS
+07_UTILITARIOS
+08_VEICULOS_ESPECIAIS
+09_BARCOS_E_JET_SKIS
+10_MAQUINAS_AGRICOLAS
+11_VEICULOS_ANTIGOS
+12_EMPILHADEIRAS
+13_PEQUENOS_CAMINHOES
+14_PEQUENAS_CARGAS
+15_CAMINHOES_E_PLATAFORMAS
+16_EQUIPAMENTOS_E_FIXACAO
+17_EQUIPE
+18_FACHADA_E_BASE
+19_ATENDIMENTO_NOTURNO
+20_ATENDIMENTOS_REAIS
+21_LOCALIDADES
+22_INSTITUCIONAL
+23_NAO_IDENTIFICADO
+24_DUPLICADAS_OU_SEMELHANTES
+25_INADEQUADAS_PARA_PUBLICACAO
+
+PADRÃO DOS NOMES
+
+Use:
+- apenas letras minúsculas;
+- sem acentos;
+- sem caracteres especiais;
+- palavras separadas por hífen;
+- manter a extensão original;
+- incluir “marcus-reboque”;
+- incluir o serviço ou conteúdo principal;
+- incluir “fortaleza-ce” quando adequado;
+- usar numeração sequencial com dois dígitos.
+
+Exemplos:
+
+marcus-reboque-guincho-moto-fortaleza-ce-01.jpg
+marcus-reboque-guincho-carro-fortaleza-ce-01.jpg
+marcus-reboque-transporte-barco-fortaleza-ce-01.jpg
+marcus-reboque-transporte-empilhadeira-fortaleza-ce-01.jpg
+marcus-reboque-caminhao-plataforma-fortaleza-ce-01.jpg
+marcus-reboque-equipe-fortaleza-ce-01.jpg
+marcus-reboque-atendimento-noturno-fortaleza-ce-01.jpg
+
+REGRAS DE IDENTIFICAÇÃO
+
+1. Analise o conteúdo visual de cada imagem individualmente.
+2. Não use somente o nome atual do arquivo para classificar.
+3. Identifique, quando possível:
+   - tipo de veículo;
+   - tipo de equipamento;
+   - momento do atendimento;
+   - embarque;
+   - fixação;
+   - transporte concluído;
+   - atendimento diurno ou noturno;
+   - equipe;
+   - fachada;
+   - logotipo;
+   - imagem institucional.
+4. Não invente bairro, cidade, modelo de veículo ou situação que não estejam visualmente comprovados.
+5. Quando não houver segurança suficiente, classifique como 23_NAO_IDENTIFICADO.
+6. Identifique imagens duplicadas, quase duplicadas ou muito semelhantes.
+7. Identifique imagens inadequadas para publicação, como:
+   - baixa resolução;
+   - muito borradas;
+   - placas ou dados sensíveis expostos;
+   - pessoas feridas;
+   - situação visualmente insegura;
+   - prints;
+   - imagens com textos, stickers ou marca d’água de terceiros;
+   - imagens sem relação clara com os serviços.
+8. Não classifique uma imagem como HERO apenas por ser horizontal. Ela deve ter boa qualidade, composição ampla, veículo ou caminhão claramente visível e espaço adequado para texto.
+9. Uma imagem pode ter apenas uma categoria principal.
+10. Evite nomes excessivamente longos ou repetição artificial de palavras-chave.
+
+FORMATO DE SAÍDA
+
+Crie na pasta raiz o arquivo:
+
+RELATORIO_DE_ANALISE_E_RENOMEACAO_DE_IMAGENS_MARCUS_REBOQUE.md
+
+O relatório deve conter uma tabela com as colunas:
+
+1. número;
+2. caminho atual;
+3. nome atual;
+4. extensão;
+5. dimensões;
+6. tamanho do arquivo;
+7. conteúdo visual identificado;
+8. categoria proposta;
+9. qualidade visual: alta, média ou baixa;
+10. orientação: horizontal, vertical ou quadrada;
+11. possível uso no site;
+12. nome novo proposto;
+13. nível de confiança: alto, médio ou baixo;
+14. observações;
+15. possível duplicidade.
+
+Crie também o arquivo:
+
+MAPA_DE_RENOMEACAO_MARCUS_REBOQUE.csv
+
+Com as colunas:
+
+caminho_atual,nome_atual,nome_proposto,categoria,confianca,duplicidade,observacoes
+
+VALIDAÇÕES FINAIS
+
+Antes de concluir:
+
+- confirme que todos os arquivos de imagem foram inventariados;
+- confirme que nenhum arquivo foi alterado;
+- confirme que nenhum nome proposto está duplicado;
+- confirme que as extensões originais foram preservadas;
+- liste a quantidade de imagens por categoria;
+- liste imagens com baixa confiança;
+- liste imagens duplicadas ou quase duplicadas;
+- liste imagens inadequadas para publicação;
+- destaque as 5 melhores candidatas para o HERO;
+- destaque as melhores imagens de cada serviço;
+- informe quantas páginas de serviço já possuem cobertura visual suficiente.
+
+Ao final, apresente um resumo executivo da análise, mas não execute nenhuma renomeação.

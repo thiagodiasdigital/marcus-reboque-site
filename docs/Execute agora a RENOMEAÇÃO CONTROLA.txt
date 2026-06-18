@@ -1,0 +1,286 @@
+Execute agora a RENOMEAÇÃO CONTROLADA E A ORGANIZAÇÃO DOS ATIVOS VISUAIS da Marcus Reboque, com base nos arquivos:
+
+* RELATORIO_DE_ANALISE_E_RENOMEACAO_DE_IMAGENS_MARCUS_REBOQUE.md
+* MAPA_DE_RENOMEACAO_MARCUS_REBOQUE.csv
+* AUDITORIA_PRE_RENOMEACAO_IMAGENS_MARCUS_REBOQUE.md
+* MATRIZ_COBERTURA_VISUAL_PAGINAS_MARCUS_REBOQUE.csv
+
+## OBJETIVO
+
+Renomear e organizar somente os 69 arquivos classificados como seguros quanto a:
+
+* identificação visual;
+* categoria;
+* confiança;
+* qualidade mínima;
+* adequação para publicação.
+
+Os 14 arquivos pendentes devem permanecer com o nome original e não podem ser alterados.
+
+## REGRA PRINCIPAL
+
+Não exclua, converta, redimensione, comprima, sobrescreva ou edite nenhuma imagem.
+
+Nesta etapa, execute apenas:
+
+1. backup dos nomes e caminhos originais;
+2. renomeação dos 69 arquivos seguros;
+3. organização em pastas por categoria;
+4. separação lógica dos 14 arquivos pendentes;
+5. geração de relatórios completos de rastreabilidade.
+
+## 1. BACKUP OBRIGATÓRIO
+
+Antes de qualquer alteração, crie:
+
+BACKUP_COMPLETO_NOMES_E_CAMINHOS_ORIGINAIS_MARCUS_REBOQUE.csv
+
+O arquivo deve conter:
+
+id,caminho_original,nome_original,extensao,nome_proposto,categoria,status_antes_da_execucao,sha256
+
+O backup deve incluir os 83 arquivos, inclusive:
+
+* as 82 imagens da pasta Photos-3-001;
+* o arquivo logotipo-520x520.png.
+
+Calcule SHA-256 antes da renomeação para garantir rastreabilidade.
+
+## 2. ARQUIVOS QUE PODEM SER RENOMEADOS
+
+Renomeie somente os 69 arquivos classificados pela auditoria como seguros para renomeação.
+
+Um arquivo só pode ser renomeado se:
+
+* possuir categoria claramente identificada;
+* possuir confiança alta ou média;
+* não estiver classificado como inadequado;
+* não estiver pendente;
+* não possuir conflito de destino;
+* possuir nome proposto único.
+
+Não reinterprete ou reclassifique imagens nesta etapa.
+
+Use exclusivamente as decisões já registradas nos relatórios e no CSV.
+
+## 3. ARQUIVOS QUE NÃO PODEM SER RENOMEADOS
+
+Não renomeie os 14 arquivos pendentes.
+
+Eles devem permanecer com:
+
+* nome original;
+* extensão original;
+* conteúdo original;
+* checksum original.
+
+Copie ou mova esses arquivos apenas para uma pasta de pendências se isso puder ser feito sem perder o caminho original no relatório.
+
+Pasta recomendada:
+
+IMAGENS_MARCUS_REBOQUE/
+└── 99_PENDENTES_DE_REVISAO/
+
+Dentro dela, separe quando possível:
+
+* BAIXA_CONFIANCA/
+* INADEQUADAS_PUBLICACAO/
+* CLASSIFICACAO_INCONCLUSA/
+* QUASE_DUPLICADAS/
+* OUTRAS_PENDENCIAS/
+
+Não exclua nenhum arquivo pendente.
+
+## 4. ESTRUTURA DE PASTAS
+
+Organize os arquivos seguros nesta estrutura:
+
+IMAGENS_MARCUS_REBOQUE/
+│
+├── 01_IDENTIDADE_VISUAL/
+├── 02_HERO/
+├── 03_SERVICOS/
+│   ├── 01_MOTOS/
+│   ├── 02_CARROS/
+│   ├── 03_CAMINHONETES/
+│   ├── 04_VANS/
+│   ├── 05_UTILITARIOS/
+│   ├── 06_VEICULOS_ESPECIAIS/
+│   ├── 07_BARCOS_E_JET_SKIS/
+│   ├── 08_MAQUINAS_AGRICOLAS/
+│   ├── 09_VEICULOS_ANTIGOS/
+│   ├── 10_EMPILHADEIRAS/
+│   ├── 11_PEQUENOS_CAMINHOES/
+│   └── 12_PEQUENAS_CARGAS/
+│
+├── 04_OPERACIONAIS/
+│   ├── AUTO_SOCORRO_24H/
+│   ├── TRANSPORTE_EMERGENCIAL/
+│   └── TRANSPORTE_PROGRAMADO/
+│
+├── 05_CAMINHOES_E_PLATAFORMAS/
+├── 06_EQUIPAMENTOS_E_FIXACAO/
+├── 07_EQUIPE/
+├── 08_FACHADA_E_BASE/
+├── 09_ATENDIMENTO_NOTURNO/
+├── 10_ATENDIMENTOS_REAIS/
+├── 11_LOCALIDADES/
+├── 12_INSTITUCIONAL/
+└── 99_PENDENTES_DE_REVISAO/
+
+Crie todas as pastas, mesmo que alguma permaneça vazia.
+
+A pasta:
+
+03_SERVICOS/05_UTILITARIOS/
+
+deve permanecer vazia caso não exista imagem dedicada validada.
+
+Não coloque outra categoria nela apenas para preencher o diretório.
+
+## 5. HERO PRINCIPAL
+
+A imagem atualmente identificada como:
+
+Photos-3-001/unnamed (57).webp
+
+foi classificada como melhor candidata ao Hero.
+
+Após renomeá-la, garanta que seja organizada na pasta:
+
+IMAGENS_MARCUS_REBOQUE/02_HERO/
+
+Use o nome aprovado no mapa de renomeação.
+
+Não duplique fisicamente o arquivo nesta etapa.
+
+Caso a mesma imagem também seja útil em outra página, registre a possibilidade no relatório, mas mantenha um único arquivo físico como fonte principal.
+
+## 6. NOMENCLATURA
+
+Aplique os nomes já validados na auditoria.
+
+Regras obrigatórias:
+
+* letras minúsculas;
+* sem acentos;
+* sem espaços;
+* palavras separadas por hífen;
+* extensão original preservada;
+* nomes únicos;
+* sem sobrescrita;
+* sem keyword stuffing;
+* sequência numérica coerente por categoria.
+
+Quando a auditoria tiver identificado a cena, preserve termos úteis como:
+
+* embarque;
+* plataforma;
+* fixacao;
+* transporte;
+* atendimento;
+* atendimento-noturno;
+* veiculo-transportado;
+* equipe;
+* fachada.
+
+Não substitua nomes específicos por nomes genéricos apenas para simplificar.
+
+## 7. PROTEÇÃO CONTRA CONFLITOS
+
+Antes de renomear cada arquivo:
+
+1. confirme que o destino não existe;
+2. confirme que o nome não foi usado por outro arquivo;
+3. confirme que a extensão está preservada;
+4. confirme que o arquivo de origem ainda existe;
+5. registre qualquer conflito sem tentar sobrescrever.
+
+Se houver conflito:
+
+* não renomeie o arquivo;
+* mantenha o original;
+* registre como pendente;
+* inclua no relatório final.
+
+## 8. VALIDAÇÃO DE INTEGRIDADE
+
+Depois da execução, valide:
+
+* total inicial: 83 arquivos de imagem;
+* total final: 83 arquivos de imagem;
+* 69 arquivos seguros renomeados e organizados, salvo conflito comprovado;
+* 14 arquivos pendentes preservados;
+* nenhum arquivo excluído;
+* nenhum arquivo sobrescrito;
+* nenhuma extensão alterada;
+* nenhum conteúdo binário alterado;
+* SHA-256 antes e depois idêntico para cada imagem;
+* logotipo preservado;
+* pasta de utilitários vazia, se não houver imagem dedicada;
+* imagem Hero localizada corretamente.
+
+## 9. ARQUIVOS DE SAÍDA
+
+Crie:
+
+RELATORIO_FINAL_RENOMEACAO_E_ORGANIZACAO_MARCUS_REBOQUE.md
+
+O relatório deve conter:
+
+1. resumo executivo;
+2. quantidade total antes e depois;
+3. quantidade renomeada;
+4. quantidade não renomeada;
+5. arquivos movidos por categoria;
+6. conflitos encontrados;
+7. erros encontrados;
+8. pendências;
+9. estrutura final de pastas;
+10. localização e nome final da imagem Hero;
+11. categorias com cobertura forte;
+12. categorias com cobertura suficiente;
+13. categorias com cobertura fraca;
+14. categoria utilitários sem cobertura;
+15. confirmação da integridade por SHA-256;
+16. confirmação de que nenhum arquivo foi excluído ou alterado internamente.
+
+Crie também:
+
+MAPA_FINAL_ATIVOS_VISUAIS_MARCUS_REBOQUE.csv
+
+Com as colunas:
+
+id,caminho_original,nome_original,caminho_final,nome_final,categoria,pagina_associada,qualidade,orientacao,confianca,status,sha256,observacoes
+
+E:
+
+PENDENCIAS_VISUAIS_MARCUS_REBOQUE.md
+
+Com:
+
+* os 14 arquivos pendentes;
+* motivo da pendência;
+* ação recomendada;
+* possibilidade de recuperação;
+* necessidade ou não de edição;
+* prioridade de revisão.
+
+## 10. RESUMO NO TERMINAL
+
+Ao terminar, apresente:
+
+* total de imagens antes;
+* total depois;
+* quantidade renomeada;
+* quantidade pendente;
+* quantidade de conflitos;
+* quantidade de erros;
+* nome final da imagem Hero;
+* caminho da imagem Hero;
+* confirmação de integridade;
+* localização dos três arquivos gerados.
+
+Não inicie otimização, conversão para WebP/AVIF, redimensionamento ou implementação no site.
+
+Execute somente a renomeação e organização controladas descritas acima.

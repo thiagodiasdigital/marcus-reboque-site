@@ -1,0 +1,302 @@
+Atue como arquiteto técnico responsável pela preparação do projeto do novo site da Marcus Reboque.
+
+Sua missão nesta etapa é inspecionar integralmente a pasta raiz atual, compreender o estado técnico do projeto e produzir um diagnóstico para a futura implementação.
+
+NÃO implemente o site ainda.
+
+NÃO instale dependências.
+
+NÃO crie, altere, renomeie, mova ou exclua arquivos.
+
+NÃO modifique as imagens.
+
+NÃO execute deploy.
+
+## 1. FONTES OBRIGATÓRIAS DO PROJETO
+
+Leia integralmente todos os documentos relacionados aos ativos visuais:
+
+* BACKUP_COMPLETO_NOMES_E_CAMINHOS_ORIGINAIS_MARCUS_REBOQUE.csv
+* RELATORIO_FINAL_RENOMEACAO_E_ORGANIZACAO_MARCUS_REBOQUE.md
+* MAPA_FINAL_ATIVOS_VISUAIS_MARCUS_REBOQUE.csv
+* PENDENCIAS_VISUAIS_MARCUS_REBOQUE.md
+* AUDITORIA_PRE_RENOMEACAO_IMAGENS_MARCUS_REBOQUE.md
+* MATRIZ_COBERTURA_VISUAL_PAGINAS_MARCUS_REBOQUE.csv
+* MAPA_DE_APLICACAO_VISUAL_SITE_MARCUS_REBOQUE.md
+* MAPA_IMAGEM_PAGINA_SECAO_MARCUS_REBOQUE.csv
+* MATRIZ_VISUAL_POR_PAGINA_MARCUS_REBOQUE.csv
+* GUIA_ALT_TEXT_E_LEGENDAS_MARCUS_REBOQUE.md
+
+Considere como biblioteca visual oficial:
+
+IMAGENS_MARCUS_REBOQUE/
+
+Não considere como publicáveis nesta fase os arquivos existentes em:
+
+IMAGENS_MARCUS_REBOQUE/99_PENDENTES_DE_REVISAO/
+
+## 2. INSPEÇÃO DA PASTA RAIZ
+
+Identifique:
+
+* se existe projeto web;
+* se a pasta está vazia fora dos documentos e imagens;
+* framework;
+* linguagem;
+* versão do framework;
+* gerenciador de pacotes;
+* estrutura de diretórios;
+* dependências instaladas;
+* arquivos de configuração;
+* presença de Git;
+* branch atual;
+* existência de repositório remoto;
+* presença de configuração da Vercel;
+* variáveis de ambiente;
+* arquivos de segurança;
+* arquivos protegidos;
+* resíduos de projetos anteriores;
+* possíveis conflitos de nomes;
+* presença de componentes reutilizáveis;
+* presença de biblioteca de animação;
+* presença de sistema de estilos;
+* presença de testes;
+* estado de lint e TypeScript.
+
+Não exponha valores secretos encontrados em arquivos de ambiente. Informe apenas os nomes das variáveis.
+
+## 3. CLASSIFICAÇÃO DO ESTADO DO PROJETO
+
+Classifique o cenário como um destes:
+
+A. pasta vazia, pronta para projeto novo;
+B. projeto novo parcialmente iniciado;
+C. projeto existente aproveitável;
+D. projeto existente com conflitos;
+E. pasta inadequada para iniciar o site.
+
+Explique os critérios usados.
+
+## 4. STACK TÉCNICA RECOMENDADA
+
+Com base no estado encontrado, avalie a adequação desta stack:
+
+* Next.js atual estável com App Router;
+* TypeScript;
+* React;
+* Tailwind CSS;
+* componentes próprios;
+* next/image;
+* next/font;
+* Metadata API;
+* JSON-LD;
+* sitemap e robots gerados pelo projeto;
+* animações leves e controladas;
+* suporte a prefers-reduced-motion;
+* deploy na Vercel.
+
+Não assuma que todas as dependências devem ser instaladas.
+
+Avalie se há necessidade real de:
+
+* Framer Motion;
+* GSAP;
+* biblioteca de ícones;
+* biblioteca de componentes;
+* formulário externo;
+* analytics;
+* gerenciador de consentimento;
+* geração de imagens Open Graph.
+
+Prefira a solução mais simples que entregue qualidade, desempenho e manutenção.
+
+## 5. REQUISITOS TÉCNICOS NÃO NEGOCIÁVEIS
+
+O futuro projeto deverá garantir:
+
+* conteúdo crítico renderizado em HTML;
+* mobile-first;
+* acessibilidade;
+* navegação por teclado;
+* contraste adequado;
+* semântica HTML correta;
+* links rastreáveis;
+* imagens com dimensões definidas;
+* imagens responsivas;
+* lazy loading abaixo da dobra;
+* Hero priorizado;
+* prevenção de CLS;
+* bom LCP;
+* baixo custo de JavaScript;
+* scroll motion progressivo;
+* fallback estático;
+* suporte a prefers-reduced-motion;
+* metadados exclusivos;
+* canonical;
+* Open Graph;
+* Twitter/X cards;
+* sitemap;
+* robots;
+* schema coerente;
+* CTAs de telefone e WhatsApp;
+* eventos de conversão preparados;
+* nenhuma dependência desnecessária.
+
+## 6. REGRAS VISUAIS DE IMPLEMENTAÇÃO
+
+Registre desde já estas restrições:
+
+* o Hero principal deve permanecer exclusivo da homepage;
+* somente a imagem Hero pode receber prioridade máxima;
+* imagens abaixo da dobra devem usar carregamento sob demanda;
+* as 27 imagens mapeadas para a homepage não devem ser carregadas todas imediatamente;
+* no máximo 6 imagens da galeria devem aparecer no carregamento inicial;
+* cards devem usar imagens responsivas;
+* cada página de serviço deve conservar imagem principal exclusiva;
+* nenhuma imagem deve ser reutilizada em mais de três contextos visuais;
+* arquivos pendentes não podem ser publicados;
+* utilitários deve permanecer como lacuna visual;
+* empilhadeiras deve ser tratada como cobertura fraca;
+* não inventar imagens ou fatos ausentes.
+
+## 7. HERO E SCROLL MOTION
+
+Analise como implementar futuramente o Hero usando:
+
+IMAGENS_MARCUS_REBOQUE/02_HERO/marcus-reboque-hero-guincho-caminhonete-fortaleza-ce-03.webp
+
+Considere:
+
+* imagem visível imediatamente;
+* prioridade de carregamento;
+* ponto focal;
+* versão desktop;
+* necessidade de derivação mobile;
+* sobreposição para contraste;
+* texto estático e rastreável;
+* movimento suave da imagem ou elementos;
+* nenhum movimento essencial para entender o conteúdo;
+* desativação automática com prefers-reduced-motion;
+* nenhuma dependência que comprometa LCP;
+* nenhum vídeo pesado;
+* nenhum conteúdo principal carregado apenas após JavaScript.
+
+Nesta etapa, apenas recomende a estratégia. Não implemente.
+
+## 8. ARQUITETURA DE ROTAS PREVISTA
+
+Considere a futura arquitetura:
+
+### Institucionais
+
+* /
+* /servicos/
+* /areas-atendidas/
+* /sobre-a-marcus-reboque/
+* /avaliacoes/
+* /contato/
+* /guias/
+* /politica-de-privacidade/
+* /termos-de-uso/
+
+### Páginas centrais
+
+* /servicos/guincho-reboque-24h-fortaleza/
+* /servicos/auto-socorro-24h-fortaleza/
+* /servicos/transporte-emergencial-fortaleza/
+* /servicos/transporte-programado-fortaleza/
+
+### Tipos de veículos e cargas
+
+* /servicos/guincho-para-motos-fortaleza/
+* /servicos/guincho-para-carros-fortaleza/
+* /servicos/guincho-para-caminhonetes-fortaleza/
+* /servicos/guincho-para-vans-fortaleza/
+* /servicos/transporte-de-utilitarios-fortaleza/
+* /servicos/transporte-de-veiculos-especiais-fortaleza/
+* /servicos/transporte-de-barcos-fortaleza/
+* /servicos/transporte-de-maquinas-agricolas-fortaleza/
+* /servicos/transporte-de-veiculos-antigos-fortaleza/
+* /servicos/transporte-de-empilhadeiras-fortaleza/
+* /servicos/guincho-para-pequenos-caminhoes-fortaleza/
+* /servicos/transporte-de-pequenas-cargas-fortaleza/
+
+Não crie essas rotas nesta etapa.
+
+Avalie:
+
+* possíveis conflitos;
+* consistência dos slugs;
+* redundâncias;
+* canibalização;
+* necessidade de hubs;
+* possibilidade de geração por dados;
+* páginas que devem ser estáticas;
+* páginas que podem compartilhar template sem compartilhar conteúdo.
+
+## 9. ARQUIVOS DE SAÍDA
+
+Crie somente:
+
+DIAGNOSTICO_TECNICO_PRE_IMPLEMENTACAO_MARCUS_REBOQUE.md
+
+O documento deve conter:
+
+1. resumo executivo;
+2. classificação do estado da pasta;
+3. stack encontrada;
+4. estrutura atual;
+5. arquivos relevantes;
+6. dependências;
+7. riscos;
+8. conflitos;
+9. ativos preservados;
+10. estratégia recomendada;
+11. recomendação para imagens;
+12. recomendação para scroll motion;
+13. arquitetura técnica sugerida;
+14. estrutura de componentes sugerida;
+15. estratégia de metadados;
+16. estratégia de schema;
+17. estratégia de performance;
+18. estratégia de acessibilidade;
+19. estratégia de testes;
+20. passos exatos da futura implementação.
+
+Crie também:
+
+INVENTARIO_TECNICO_PROJETO_MARCUS_REBOQUE.csv
+
+Com as colunas:
+
+tipo,caminho,nome,funcao,estado,pode_alterar,risco,observacoes
+
+## 10. VALIDAÇÕES
+
+Antes de concluir:
+
+* confirme que nenhum arquivo foi alterado;
+* confirme que nenhuma dependência foi instalada;
+* confirme que nenhuma imagem foi modificada;
+* confirme que nenhum segredo foi exposto;
+* confirme que a pasta foi lida integralmente;
+* confirme a classificação do projeto;
+* informe se o projeto pode avançar para implementação;
+* liste bloqueios reais;
+* diferencie bloqueios de simples pendências.
+
+## 11. SAÍDA NO TERMINAL
+
+Apresente:
+
+* classificação do projeto;
+* framework encontrado;
+* quantidade de arquivos analisados;
+* quantidade de imagens preservadas;
+* riscos críticos;
+* bloqueios;
+* pendências não bloqueantes;
+* recomendação da stack;
+* caminho dos dois arquivos gerados.
+
+Não implemente nada nesta etapa.

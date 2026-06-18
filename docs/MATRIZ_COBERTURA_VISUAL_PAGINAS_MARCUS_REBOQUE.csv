@@ -1,0 +1,16 @@
+﻿pagina,categoria,total_imagens,qualidade_alta,qualidade_media,qualidade_baixa,horizontais,verticais,quadradas,cobertura,imagem_principal_sugerida,observacoes
+motos e motocicletas,03_MOTOS + HERO relacionado,7,4,3,0,2,0,5,FORTE,#022 Photos-3-001/unnamed (15).webp,Boa variedade para cards e pagina especifica; #022 e a melhor opcao principal.
+carros,04_CARROS + HERO relacionado,17,7,9,1,5,0,12,FORTE,#029 Photos-3-001/unnamed (22).webp,"Cobertura mais ampla do acervo; revisar nomes para distinguir sedan, hatch, esportivo e oficina."
+caminhonetes,05_CAMINHONETES + HERO relacionado,19,6,11,2,3,0,16,FORTE,#064 Photos-3-001/unnamed (57).webp,Forte para pagina comercial; #064 e a melhor candidata a principal.
+vans,06_VANS,4,1,3,0,1,0,3,FORTE,#039 Photos-3-001/unnamed (32).webp,Quatro imagens utilizaveis; algumas possuem marcas de terceiros no veiculo.
+utilitarios,07_UTILITARIOS,0,0,0,0,0,0,0,AUSENTE,pendente,"O relatorio anterior citou #050, #071 e #074 como apoio, mas elas pertencem melhor a veiculos especiais, veiculos antigos e pequenas cargas. Nao ha cobertura dedicada para 07_UTILITARIOS."
+veiculos especiais,08_VEICULOS_ESPECIAIS,3,0,3,0,0,0,3,FORTE,#070 Photos-3-001/unnamed (63).webp,Tres cenas diferentes e aproveitaveis; faltam imagens horizontais fortes para hero.
+barcos,09_BARCOS_E_JET_SKIS,2,0,2,0,0,0,2,SUFICIENTE,#059 Photos-3-001/unnamed (52).webp,"Duas imagens utilizaveis; boas para cards, mas sem hero horizontal amplo."
+maquinas agricolas,10_MAQUINAS_AGRICOLAS,5,1,4,0,0,0,5,FORTE,#065 Photos-3-001/unnamed (58).webp,"Boa variedade; algumas maquinas nao comprovam uso agricola, por isso parte da confianca e media."
+veiculos antigos,11_VEICULOS_ANTIGOS,4,1,3,0,1,0,3,FORTE,#081 Photos-3-001/unnamed (74).webp,Boa cobertura visual; #081 e a melhor imagem da pagina.
+empilhadeiras,12_EMPILHADEIRAS,1,0,1,0,0,1,0,FRACA,#024 Photos-3-001/unnamed (17).webp,"Somente uma imagem vertical; suficiente para card unico, fraca para pagina completa."
+pequenos caminhoes,13_PEQUENOS_CAMINHOES,3,2,0,1,2,0,1,SUFICIENTE,#015 Photos-3-001/unnamed (8).webp,"Duas imagens fortes e uma baixa; cobertura boa para cards, moderada para hero."
+pequenas cargas,14_PEQUENAS_CARGAS,6,0,5,1,0,1,5,FORTE,#031 Photos-3-001/unnamed (24).webp,"Boa cobertura; #051 e baixa e #074 tem marca de terceiro, mas ha alternativas fortes."
+auto socorro 24 horas,19_ATENDIMENTO_NOTURNO + 20_ATENDIMENTOS_REAIS,4,0,4,0,1,0,3,SUFICIENTE,#054 Photos-3-001/unnamed (47).webp,"Pagina adicional incluida por representar servico 24h/auto socorro, nao uma pagina de tipo de veiculo."
+transporte emergencial,20_ATENDIMENTOS_REAIS,3,0,3,0,1,0,2,SUFICIENTE,#026 Photos-3-001/unnamed (19).webp,"Utilizavel, mas com cautela por envolver veiculos avariados e contexto sensivel."
+transporte programado,14_PEQUENAS_CARGAS + 16_EQUIPAMENTOS_E_FIXACAO + servicos sem emergencia,8,0,8,0,1,0,7,FORTE,#031 Photos-3-001/unnamed (24).webp,"Pagina adicional incluida por representar transporte agendado/programado, nao tipo especifico de veiculo."

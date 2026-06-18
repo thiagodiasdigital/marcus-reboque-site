@@ -1,0 +1,196 @@
+Analise novamente os arquivos:
+
+* RELATORIO_DE_ANALISE_E_RENOMEACAO_DE_IMAGENS_MARCUS_REBOQUE.md
+* MAPA_DE_RENOMEACAO_MARCUS_REBOQUE.csv
+
+Não altere, mova, renomeie, converta ou exclua nenhuma imagem nesta etapa.
+
+Sua missão agora é executar uma AUDITORIA DE CONSISTÊNCIA antes da renomeação.
+
+## 1. DIVERGÊNCIA NA QUANTIDADE DE IMAGENS
+
+O proprietário informou que havia baixado 82 imagens, porém o inventário encontrou 83.
+
+Identifique claramente:
+
+* quais são as 83 imagens;
+* qual arquivo pode explicar a diferença;
+* se existe logotipo, imagem oculta, thumbnail, arquivo duplicado, imagem preexistente ou ativo não pertencente ao lote principal;
+* se algum arquivo foi contado indevidamente;
+* se existem arquivos com nomes diferentes, mas conteúdo visual idêntico.
+
+Crie uma seção chamada:
+
+DIVERGENCIA_82_VERSUS_83_IMAGENS
+
+Não faça suposições sem apontar o arquivo correspondente.
+
+## 2. DIVERGÊNCIA NA QUANTIDADE DE PÁGINAS
+
+O briefing original possui 12 páginas específicas por tipo de veículo:
+
+1. motos e motocicletas;
+2. carros;
+3. caminhonetes;
+4. vans;
+5. utilitários;
+6. veículos especiais;
+7. barcos;
+8. máquinas agrícolas;
+9. veículos antigos;
+10. empilhadeiras;
+11. pequenos caminhões;
+12. pequenas cargas.
+
+O relatório menciona cobertura para 15 de 15 páginas de serviço.
+
+Explique exatamente:
+
+* quais são as 15 páginas consideradas;
+* quais 3 páginas adicionais foram incluídas;
+* por que foram consideradas páginas de serviço;
+* se correspondem a guincho e reboque 24h, auto socorro, transporte programado ou outra classificação;
+* quais imagens foram associadas a cada uma dessas páginas adicionais.
+
+Crie uma tabela com:
+
+pagina,categoria,quantidade_de_imagens,qualidade_media,confianca,observacoes
+
+## 3. COBERTURA VISUAL REAL POR PÁGINA
+
+Para cada uma das 12 páginas específicas e para as 3 páginas adicionais, informe:
+
+* quantidade total de imagens;
+* quantidade com qualidade alta;
+* quantidade com qualidade média;
+* quantidade com qualidade baixa;
+* quantidade horizontal;
+* quantidade vertical;
+* quantidade quadrada;
+* variedade de cenas;
+* presença de embarque;
+* presença de veículo já transportado;
+* presença do caminhão ou plataforma;
+* possibilidade de uso como card;
+* possibilidade de uso como imagem principal da página;
+* suficiência da cobertura.
+
+Classifique a cobertura como:
+
+* FORTE: pelo menos 3 imagens boas e visualmente diferentes;
+* SUFICIENTE: 2 imagens utilizáveis e diferentes;
+* FRACA: somente 1 imagem utilizável ou imagens muito semelhantes;
+* AUSENTE: nenhuma imagem adequada.
+
+Não classifique como cobertura suficiente apenas porque existe algum arquivo relacionado.
+
+## 4. IMAGENS INADEQUADAS
+
+Para cada uma das 3 imagens consideradas inadequadas, informe:
+
+* nome atual;
+* caminho;
+* motivo exato da inadequação;
+* gravidade do problema;
+* possibilidade de recuperação;
+* correção recomendada;
+* se pode ser usada após edição;
+* se deve permanecer apenas como arquivo interno;
+* se deve ser excluída do projeto de publicação, sem apagar o original.
+
+Classifique a recuperação como:
+
+* recuperável facilmente;
+* recuperável com edição;
+* não recomendada para publicação.
+
+## 5. DUPLICIDADES E QUASE DUPLICIDADES
+
+Liste separadamente:
+
+* duplicatas exatas;
+* imagens quase idênticas;
+* sequências do mesmo atendimento;
+* imagens visualmente semelhantes, mas ainda úteis;
+* imagens que não devem receber nomes ou posições redundantes.
+
+Não marque uma sequência útil de embarque como duplicidade apenas porque mostra o mesmo veículo.
+
+## 6. CANDIDATAS A HERO
+
+Reavalie as 5 candidatas a HERO usando estes critérios:
+
+* resolução;
+* orientação horizontal;
+* composição;
+* nitidez;
+* espaço negativo para texto;
+* caminhão ou operação claramente visível;
+* identidade da Marcus Reboque;
+* ausência de dados sensíveis;
+* potencial para scroll motion;
+* uso em desktop;
+* possibilidade de recorte para mobile.
+
+Crie uma classificação de 1 a 5 somente para fins técnicos, indicando vantagens e limitações de cada arquivo.
+
+## 7. NOMES PROPOSTOS
+
+Valide se:
+
+* todos os nomes são únicos;
+* a sequência numérica está correta por categoria;
+* nenhuma imagem de serviço recebeu categoria errada;
+* não houve uso indevido de bairro ou cidade não comprovados visualmente;
+* “fortaleza-ce” foi usado apenas quando adequado ao contexto do projeto;
+* as extensões permanecem originais;
+* nomes não estão excessivamente longos;
+* não há keyword stuffing;
+* imagens semelhantes possuem nomes que distingam a cena, quando necessário.
+
+Quando a cena puder ser identificada, prefira nomes como:
+
+* embarque;
+* plataforma;
+* transporte;
+* fixacao;
+* atendimento-noturno;
+* veiculo-transportado.
+
+Exemplo:
+
+marcus-reboque-guincho-moto-embarque-fortaleza-ce-01.jpg
+
+Evite que três imagens visualmente diferentes recebam nomes genéricos que mudem apenas pelo número.
+
+## 8. ARQUIVOS A SEREM GERADOS
+
+Crie:
+
+AUDITORIA_PRE_RENOMEACAO_IMAGENS_MARCUS_REBOQUE.md
+
+E também:
+
+MATRIZ_COBERTURA_VISUAL_PAGINAS_MARCUS_REBOQUE.csv
+
+A matriz CSV deve conter:
+
+pagina,categoria,total_imagens,qualidade_alta,qualidade_media,qualidade_baixa,horizontais,verticais,quadradas,cobertura,imagem_principal_sugerida,observacoes
+
+## 9. RESUMO FINAL
+
+Apresente:
+
+* explicação da diferença entre 82 e 83 imagens;
+* explicação das 15 páginas;
+* páginas com cobertura forte;
+* páginas com cobertura suficiente;
+* páginas com cobertura fraca;
+* imagens inadequadas e possibilidade de recuperação;
+* duplicidades encontradas;
+* melhor candidata a HERO;
+* quantidade de arquivos seguros para renomeação;
+* quantidade que deve permanecer pendente;
+* confirmação de que nenhum arquivo foi alterado.
+
+Não execute a renomeação.

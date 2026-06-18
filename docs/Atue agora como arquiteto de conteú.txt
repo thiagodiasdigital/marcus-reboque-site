@@ -1,0 +1,462 @@
+Atue agora como arquiteto de conteúdo visual, especialista em SEO de imagens, acessibilidade, UX e implementação de sites locais.
+
+Sua missão é transformar os ativos visuais já renomeados da Marcus Reboque em um MAPA DEFINITIVO DE APLICAÇÃO DAS IMAGENS NO SITE.
+
+Nesta etapa:
+
+* não altere nenhuma imagem;
+* não renomeie nenhuma imagem;
+* não mova nenhuma imagem;
+* não converta formatos;
+* não comprima;
+* não redimensione;
+* não implemente ainda os componentes do site.
+
+Faça apenas análise, planejamento e documentação.
+
+## FONTES OBRIGATÓRIAS
+
+Leia integralmente:
+
+* BACKUP_COMPLETO_NOMES_E_CAMINHOS_ORIGINAIS_MARCUS_REBOQUE.csv
+* RELATORIO_FINAL_RENOMEACAO_E_ORGANIZACAO_MARCUS_REBOQUE.md
+* MAPA_FINAL_ATIVOS_VISUAIS_MARCUS_REBOQUE.csv
+* PENDENCIAS_VISUAIS_MARCUS_REBOQUE.md
+* MATRIZ_COBERTURA_VISUAL_PAGINAS_MARCUS_REBOQUE.csv
+* AUDITORIA_PRE_RENOMEACAO_IMAGENS_MARCUS_REBOQUE.md
+
+Analise também visualmente os 69 arquivos aprovados existentes em:
+
+IMAGENS_MARCUS_REBOQUE/
+
+Ignore, para publicação, os arquivos em:
+
+IMAGENS_MARCUS_REBOQUE/99_PENDENTES_DE_REVISAO/
+
+Eles podem ser mencionados somente como possíveis ativos futuros.
+
+## CONTEXTO DO SITE
+
+Empresa:
+
+Marcus Reboque
+
+Atuação:
+
+* guincho;
+* reboque;
+* auto socorro 24 horas;
+* transporte emergencial;
+* transporte programado;
+* atendimento em Fortaleza e Região Metropolitana.
+
+Homepage planejada:
+
+1. Header
+2. Hero com scroll motion
+3. Cards dos tipos de veículos e serviços
+4. Atendimento emergencial
+5. Como funciona
+6. Tipos de atendimento
+7. Áreas atendidas
+8. Diferenciais
+9. Avaliações
+10. Galeria de atendimentos
+11. FAQ
+12. Presença oficial
+13. CTA final
+14. Footer
+
+Páginas específicas:
+
+1. guincho para motos;
+2. guincho para carros;
+3. guincho para caminhonetes;
+4. guincho para vans;
+5. transporte de utilitários;
+6. transporte de veículos especiais;
+7. transporte de barcos e jet skis;
+8. transporte de máquinas agrícolas;
+9. transporte de veículos antigos;
+10. transporte de empilhadeiras;
+11. guincho para pequenos caminhões;
+12. transporte de pequenas cargas;
+13. auto socorro 24 horas;
+14. transporte emergencial;
+15. transporte programado.
+
+Outras páginas:
+
+* serviços;
+* áreas atendidas;
+* sobre a Marcus Reboque;
+* avaliações;
+* contato;
+* guias e conteúdos informacionais.
+
+## 1. MAPA IMAGEM → PÁGINA → SEÇÃO
+
+Para cada uma das 69 imagens aprovadas, defina:
+
+* caminho completo;
+* nome do arquivo;
+* categoria;
+* conteúdo visual;
+* página principal recomendada;
+* seção principal recomendada;
+* possíveis páginas secundárias;
+* função visual;
+* prioridade;
+* possibilidade de reutilização;
+* restrições de uso;
+* observações.
+
+As funções visuais permitidas são:
+
+* hero principal;
+* hero interno;
+* card de serviço;
+* imagem principal de página;
+* imagem secundária;
+* galeria;
+* prova operacional;
+* institucional;
+* equipe;
+* equipamento;
+* contexto local;
+* CTA;
+* background;
+* Open Graph;
+* conteúdo informacional.
+
+Classifique a prioridade como:
+
+* P1: essencial no lançamento;
+* P2: importante no lançamento;
+* P3: complementar;
+* P4: reserva.
+
+## 2. REGRA DE EXCLUSIVIDADE VISUAL
+
+Evite reutilização excessiva.
+
+Use estas regras:
+
+* a imagem principal de uma página de serviço não deve ser a mesma imagem principal de outra página;
+* o Hero principal deve permanecer exclusivo da homepage;
+* cards podem usar imagens diferentes das imagens principais das páginas;
+* uma imagem pode aparecer em mais de uma página somente quando houver justificativa clara;
+* não use uma mesma imagem em mais de três contextos;
+* imagens de galeria podem ser reutilizadas com mais liberdade, desde que não provoquem repetição visual perceptível;
+* priorize variedade de veículos, ângulos, horários e etapas do atendimento.
+
+Registre qualquer reutilização prevista.
+
+## 3. HOMEPAGE
+
+Defina exatamente quais imagens serão usadas em cada seção da homepage.
+
+### Hero
+
+Hero principal já definido:
+
+IMAGENS_MARCUS_REBOQUE/02_HERO/marcus-reboque-hero-guincho-caminhonete-fortaleza-ce-03.webp
+
+Avalie:
+
+* adequação para desktop;
+* adequação para mobile;
+* lado recomendado para texto;
+* ponto focal;
+* área segura para recorte;
+* viabilidade do scroll motion;
+* necessidade futura de versão mobile derivada;
+* risco de corte do caminhão ou veículo;
+* contraste necessário para leitura.
+
+### Cards de serviços
+
+Selecione uma imagem específica para cada um dos 12 cards:
+
+* motos;
+* carros;
+* caminhonetes;
+* vans;
+* utilitários;
+* veículos especiais;
+* barcos;
+* máquinas agrícolas;
+* veículos antigos;
+* empilhadeiras;
+* pequenos caminhões;
+* pequenas cargas.
+
+Como a categoria utilitários está sem cobertura dedicada:
+
+* não use foto de outra categoria como se fosse utilitário;
+* proponha placeholder institucional ou card temporário;
+* marque explicitamente como pendência visual;
+* não invente representação.
+
+### Seções operacionais
+
+Selecione imagens para:
+
+* atendimento emergencial;
+* como funciona;
+* transporte programado;
+* atendimento noturno;
+* equipamentos e fixação;
+* prova operacional;
+* galeria;
+* sobre a empresa;
+* CTA final.
+
+## 4. PÁGINAS DE SERVIÇO
+
+Para cada uma das 15 páginas, selecione:
+
+1. imagem principal;
+2. imagem para card;
+3. até três imagens secundárias;
+4. imagens de galeria;
+5. imagem de prova operacional;
+6. imagem de equipamento ou processo, quando disponível;
+7. imagem Open Graph sugerida.
+
+Quando a cobertura for:
+
+* FORTE: selecione conjunto completo;
+* SUFICIENTE: indique uso disciplinado;
+* FRACA: limite o número de imagens e registre pendência;
+* AUSENTE: não force imagem inadequada.
+
+Crie uma tabela por página com:
+
+pagina,imagem_principal,imagem_card,imagens_secundarias,imagem_prova,imagem_og,cobertura,pendencias
+
+## 5. ALT TEXT
+
+Crie alt text específico para cada imagem que será publicada.
+
+Regras:
+
+* descrever o que realmente aparece;
+* usar linguagem natural;
+* não repetir mecanicamente o nome do arquivo;
+* incluir Marcus Reboque somente quando ajudar a identificar a operação;
+* incluir Fortaleza apenas quando o contexto local for legítimo;
+* evitar keyword stuffing;
+* não usar “imagem de” ou “foto de”, salvo necessidade;
+* não inventar bairro, cidade, modelo, situação ou equipamento;
+* não afirmar emergência quando a cena não comprovar;
+* limitar preferencialmente a aproximadamente 125 caracteres;
+* alt vazio apenas para imagem puramente decorativa.
+
+Exemplo adequado:
+
+Caminhonete sendo transportada em caminhão plataforma da Marcus Reboque em Fortaleza
+
+Exemplo inadequado:
+
+Guincho Fortaleza barato 24 horas reboque perto de mim caminhonete Fortaleza Ceará
+
+## 6. LEGENDAS
+
+Crie legendas apenas quando acrescentarem contexto útil.
+
+As legendas podem informar:
+
+* tipo de veículo;
+* fase do atendimento;
+* modalidade do transporte;
+* cuidado de fixação;
+* atendimento diurno ou noturno;
+* contexto operacional.
+
+Não crie legenda para imagens puramente decorativas.
+
+Não invente localidade ou circunstância.
+
+## 7. NOMES E METADADOS EDITORIAIS
+
+Não renomeie arquivos novamente.
+
+Mas registre para cada imagem publicada:
+
+* nome atual;
+* alt text;
+* legenda;
+* título editorial interno;
+* página;
+* seção;
+* prioridade;
+* largura recomendada;
+* proporção recomendada;
+* comportamento responsivo;
+* object-position recomendado.
+
+Valores possíveis para object-position:
+
+* center;
+* left center;
+* right center;
+* center top;
+* center bottom;
+* percentuais específicos, quando necessário.
+
+## 8. DESKTOP E MOBILE
+
+Para imagens críticas, especialmente Hero e imagens principais:
+
+* indique recorte desktop;
+* indique recorte mobile;
+* indique ponto focal;
+* diga se é possível usar o mesmo arquivo;
+* indique quando será necessário gerar uma versão derivada;
+* não gere versões derivadas nesta etapa.
+
+Classifique:
+
+* mesmo arquivo funciona;
+* exige recorte controlado;
+* exige versão mobile;
+* inadequada para mobile.
+
+## 9. OPEN GRAPH
+
+Escolha imagens adequadas para:
+
+* homepage;
+* cada uma das 15 páginas de serviço;
+* página Sobre;
+* página Áreas Atendidas;
+* página Avaliações;
+* página Contato.
+
+Uma mesma imagem Open Graph pode ser reutilizada quando houver justificativa, mas prefira imagens coerentes com a página.
+
+Registre a recomendação futura de geração em 1200 × 630 px.
+
+Não crie os arquivos ainda.
+
+## 10. GALERIAS
+
+Monte uma proposta de galerias:
+
+* galeria geral de atendimentos;
+* galeria de motos;
+* galeria de carros;
+* galeria de caminhonetes;
+* galeria de máquinas;
+* galeria de veículos antigos;
+* galeria de pequenas cargas;
+* galeria de operação noturna;
+* galeria de equipamentos.
+
+Cada galeria deve:
+
+* evitar imagens muito semelhantes;
+* priorizar diversidade;
+* usar no máximo 6 imagens no carregamento inicial;
+* possuir possibilidade de expansão;
+* não misturar categorias sem razão;
+* identificar imagens que devem ficar apenas como reserva.
+
+## 11. ARQUIVOS PENDENTES
+
+Leia PENDENCIAS_VISUAIS_MARCUS_REBOQUE.md.
+
+Para cada um dos 14 arquivos pendentes, informe:
+
+* se pode ser recuperado;
+* tipo de edição necessária;
+* possível uso futuro;
+* prioridade da recuperação;
+* risco de publicação;
+* recomendação final.
+
+Não use esses arquivos no mapa principal de publicação.
+
+## 12. ARQUIVOS DE SAÍDA
+
+Crie:
+
+MAPA_DE_APLICACAO_VISUAL_SITE_MARCUS_REBOQUE.md
+
+Esse documento deve conter:
+
+1. resumo executivo;
+2. estratégia visual;
+3. distribuição na homepage;
+4. distribuição por página de serviço;
+5. distribuição em páginas institucionais;
+6. galerias;
+7. Hero desktop/mobile;
+8. Open Graph;
+9. pendências;
+10. riscos de repetição;
+11. recomendações para implementação.
+
+Crie também:
+
+MAPA_IMAGEM_PAGINA_SECAO_MARCUS_REBOQUE.csv
+
+Colunas:
+
+id,caminho,nome_arquivo,categoria,pagina_principal,secao_principal,paginas_secundarias,funcao_visual,prioridade,reutilizacao,qualidade,orientacao,alt_text,legenda,titulo_editorial,proporcao_recomendada,largura_recomendada,object_position,comportamento_mobile,status,observacoes
+
+Crie:
+
+MATRIZ_VISUAL_POR_PAGINA_MARCUS_REBOQUE.csv
+
+Colunas:
+
+pagina,imagem_principal,imagem_card,imagens_secundarias,imagem_prova,imagem_og,galeria,cobertura_visual,pendencias,observacoes
+
+Crie:
+
+GUIA_ALT_TEXT_E_LEGENDAS_MARCUS_REBOQUE.md
+
+O guia deve agrupar todas as imagens publicáveis por página e mostrar:
+
+* arquivo;
+* alt text;
+* legenda;
+* função;
+* observação de acessibilidade.
+
+## 13. VALIDAÇÕES FINAIS
+
+Antes de concluir:
+
+* confirme que as 69 imagens aprovadas foram analisadas;
+* confirme que nenhuma das 14 pendentes foi aprovada automaticamente;
+* confirme que todas as imagens usadas têm página e seção;
+* confirme que não há duas páginas de serviço usando a mesma imagem principal;
+* confirme que o Hero principal é exclusivo;
+* confirme que utilitários permanece como pendência;
+* confirme que nenhum bairro ou localidade foi inventado;
+* confirme que nenhum alt text contém keyword stuffing;
+* confirme que não há imagem reutilizada em excesso;
+* liste páginas com cobertura forte, suficiente, fraca e ausente;
+* liste imagens P1;
+* liste imagens que exigirão versão mobile;
+* liste imagens que devem receber edição antes da publicação;
+* confirme que nenhuma imagem foi alterada.
+
+## 14. RESUMO NO TERMINAL
+
+Ao final, informe:
+
+* quantidade de imagens analisadas;
+* quantidade P1, P2, P3 e P4;
+* número de imagens aplicadas na homepage;
+* número de páginas com imagem principal exclusiva;
+* páginas com cobertura fraca ou ausente;
+* quantidade de imagens que exigem versão mobile;
+* quantidade de possíveis reutilizações;
+* quantidade de pendências recuperáveis;
+* localização dos quatro arquivos criados.
+
+Não implemente o site nesta etapa.
