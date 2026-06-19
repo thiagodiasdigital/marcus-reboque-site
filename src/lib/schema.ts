@@ -1,4 +1,4 @@
-import { faqItems } from "@/content/home";
+import { faqItems, services } from "@/content/home";
 import { siteImages } from "@/content/images";
 import { officialSocialProfiles, siteConfig } from "@/content/site";
 import { absoluteUrl } from "@/lib/site-url";
@@ -87,6 +87,61 @@ export function buildHomeJsonLd(): Record<string, unknown> {
             "@type": "Answer",
             text: item.answer,
           },
+        })),
+      },
+    ],
+  };
+}
+
+export function buildServicesHubJsonLd(): Record<string, unknown> {
+  const servicesUrl = absoluteUrl("/servicos");
+  const homeUrl = absoluteUrl("/");
+
+  return {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CollectionPage",
+        "@id": `${servicesUrl}#page`,
+        name: "Hub de serviços | Marcus Reboque",
+        url: servicesUrl,
+        description:
+          "Catálogo central de guincho, reboque e transporte da Marcus Reboque em Fortaleza.",
+        inLanguage: "pt-BR",
+        isPartOf: {
+          "@id": `${homeUrl}#website`,
+        },
+        mainEntity: {
+          "@id": `${servicesUrl}#service-item-list`,
+        },
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${servicesUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Início",
+            item: homeUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Serviços",
+            item: servicesUrl,
+          },
+        ],
+      },
+      {
+        "@type": "ItemList",
+        "@id": `${servicesUrl}#service-item-list`,
+        name: "Serviços da Marcus Reboque",
+        itemListElement: services.map((service, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: service.title,
+          url: `${servicesUrl}#${service.futureSlug.replace("/servicos/", "")}`,
         })),
       },
     ],

@@ -3,11 +3,20 @@ import { siteImages } from "@/content/images";
 import { siteConfig } from "@/content/site";
 import { absoluteUrl, getSiteUrl, isIndexable } from "@/lib/site-url";
 
-export function buildBaseMetadata(): Metadata {
+type PageMetadataOptions = {
+  title: string;
+  description: string;
+  canonicalPath: string;
+  image?: typeof siteImages.homepageHeroDesktop;
+};
+
+export function buildPageMetadata({
+  title,
+  description,
+  canonicalPath,
+  image = siteImages.homepageHeroDesktop,
+}: PageMetadataOptions): Metadata {
   const indexable = isIndexable();
-  const title = siteConfig.seoTitle;
-  const description = siteConfig.seoDescription;
-  const hero = siteImages.homepageHeroDesktop;
 
   return {
     metadataBase: getSiteUrl(),
@@ -15,7 +24,7 @@ export function buildBaseMetadata(): Metadata {
     description,
     applicationName: siteConfig.name,
     alternates: {
-      canonical: absoluteUrl("/"),
+      canonical: absoluteUrl(canonicalPath),
     },
     icons: {
       icon: siteImages.logo.src,
@@ -25,16 +34,16 @@ export function buildBaseMetadata(): Metadata {
     openGraph: {
       title,
       description,
-      url: absoluteUrl("/"),
+      url: absoluteUrl(canonicalPath),
       siteName: siteConfig.name,
       locale: "pt_BR",
       type: "website",
       images: [
         {
-          url: absoluteUrl(hero.src),
-          width: hero.width,
-          height: hero.height,
-          alt: hero.alt,
+          url: absoluteUrl(image.src),
+          width: image.width,
+          height: image.height,
+          alt: image.alt,
         },
       ],
     },
@@ -42,7 +51,7 @@ export function buildBaseMetadata(): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: [absoluteUrl(hero.src)],
+      images: [absoluteUrl(image.src)],
     },
     robots: {
       index: indexable,
@@ -54,4 +63,12 @@ export function buildBaseMetadata(): Metadata {
       },
     },
   };
+}
+
+export function buildBaseMetadata(): Metadata {
+  return buildPageMetadata({
+    title: siteConfig.seoTitle,
+    description: siteConfig.seoDescription,
+    canonicalPath: "/",
+  });
 }

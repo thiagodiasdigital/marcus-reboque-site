@@ -7,9 +7,10 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 type ServiceCardProps = {
   service: HomeService;
   index: number;
+  id?: string;
 };
 
-export function ServiceCard({ service, index }: ServiceCardProps) {
+export function ServiceCard({ service, index, id }: ServiceCardProps) {
   const image = service.imageKey ? siteImages[service.imageKey] : null;
   const whatsappHref = buildWhatsappUrl({
     origin: service.location,
@@ -18,7 +19,7 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
   });
 
   return (
-    <article className="service-card" data-future-slug={service.futureSlug}>
+    <article className="service-card" data-future-slug={service.futureSlug} id={id}>
       <div className="service-card__media">
         {image ? (
           <Image

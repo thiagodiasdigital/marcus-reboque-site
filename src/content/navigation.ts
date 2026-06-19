@@ -5,7 +5,6 @@ export type FutureRoute = {
 };
 
 export const futureRoutes: FutureRoute[] = [
-  { label: "Servicos", href: "/servicos", status: "future" },
   { label: "Guincho para motos", href: "/servicos/guincho-para-motos", status: "future" },
   { label: "Guincho para carros", href: "/servicos/guincho-para-carros", status: "future" },
   { label: "Guincho para caminhonetes", href: "/servicos/guincho-para-caminhonetes", status: "future" },
