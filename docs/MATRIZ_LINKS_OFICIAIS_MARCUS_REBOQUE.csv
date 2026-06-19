@@ -1,0 +1,9 @@
+tipo,nome,url,uso_no_site,validado_no_html,observacoes
+social,Instagram,https://www.instagram.com/marcus_reboque_oficial/,sim,sim,Incluido em `sameAs` e na secao de presenca oficial
+social,Facebook,https://www.facebook.com/marcusreboque/,sim,sim,Incluido em `sameAs` e na secao de presenca oficial
+social,YouTube,https://www.youtube.com/@MarcusReboqueFortaleza24h/shorts,sim,sim,Incluido em `sameAs` e na secao de presenca oficial
+social,X,https://x.com/Marcus_Reboque,sim,sim,Incluido em `sameAs` e na secao de presenca oficial
+social,LinkedIn,https://www.linkedin.com/in/marcus-reboque-fortaleza-24h-984450383/,sim,sim,Incluido em `sameAs` e na secao de presenca oficial
+social,TikTok,https://www.tiktok.com/@marcus_reboque_fortaleza,sim,sim,Incluido em `sameAs` e na secao de presenca oficial
+social,Pinterest,https://br.pinterest.com/marcusreboquefortaleza24h/,sim,sim,Incluido em `sameAs` e na secao de presenca oficial
+gbp,Google Business Profile,https://maps.app.goo.gl/Xxv9XfzphbuHkZGC9,sim,sim,Usado em `hasMap` e no CTA de avaliacao do Google
