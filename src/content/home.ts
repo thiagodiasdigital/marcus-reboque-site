@@ -47,7 +47,7 @@ export const services: HomeService[] = [
     imageKey: "serviceMoto",
     message: "Olá, preciso de guincho para moto em Fortaleza.",
     location: "servico-motos",
-    futureSlug: "/servicos/guincho-para-motos",
+    futureSlug: "/servicos/guincho-para-motos-fortaleza",
   },
   {
     title: "Guincho para carros",
@@ -56,7 +56,7 @@ export const services: HomeService[] = [
     imageKey: "serviceCarro",
     message: "Olá, preciso de guincho para carro em Fortaleza.",
     location: "servico-carros",
-    futureSlug: "/servicos/guincho-para-carros",
+    futureSlug: "/servicos/guincho-para-carros-fortaleza",
   },
   {
     title: "Guincho para caminhonetes",
@@ -65,7 +65,7 @@ export const services: HomeService[] = [
     imageKey: "serviceCaminhonete",
     message: "Olá, preciso de guincho para caminhonete em Fortaleza.",
     location: "servico-caminhonetes",
-    futureSlug: "/servicos/guincho-para-caminhonetes",
+    futureSlug: "/servicos/guincho-para-caminhonetes-fortaleza",
   },
   {
     title: "Guincho para vans",
@@ -74,7 +74,7 @@ export const services: HomeService[] = [
     imageKey: "serviceVan",
     message: "Olá, preciso de guincho para van em Fortaleza.",
     location: "servico-vans",
-    futureSlug: "/servicos/guincho-para-vans",
+    futureSlug: "/servicos/guincho-para-vans-fortaleza",
   },
   {
     title: "Transporte de utilitários",
@@ -83,7 +83,7 @@ export const services: HomeService[] = [
     imageKey: null,
     message: "Olá, preciso consultar transporte de utilitário em Fortaleza.",
     location: "servico-utilitarios",
-    futureSlug: "/servicos/transporte-de-utilitarios",
+    futureSlug: "/servicos/transporte-de-utilitarios-fortaleza",
   },
   {
     title: "Transporte de veículos especiais",
@@ -92,7 +92,7 @@ export const services: HomeService[] = [
     imageKey: "serviceVeiculoEspecial",
     message: "Olá, preciso consultar transporte de veículo especial.",
     location: "servico-veiculos-especiais",
-    futureSlug: "/servicos/veiculos-especiais",
+    futureSlug: "/servicos/transporte-de-veiculos-especiais-fortaleza",
   },
   {
     title: "Transporte de barcos e jet skis",
@@ -101,7 +101,7 @@ export const services: HomeService[] = [
     imageKey: "serviceBarco",
     message: "Olá, preciso consultar transporte de barco ou jet ski.",
     location: "servico-barcos",
-    futureSlug: "/servicos/barcos-e-jet-skis",
+    futureSlug: "/servicos/transporte-de-barcos-fortaleza",
   },
   {
     title: "Transporte de máquinas agrícolas",
@@ -110,7 +110,7 @@ export const services: HomeService[] = [
     imageKey: "serviceMaquinaAgricola",
     message: "Olá, preciso consultar transporte de máquina agrícola.",
     location: "servico-maquinas",
-    futureSlug: "/servicos/maquinas-agricolas",
+    futureSlug: "/servicos/transporte-de-maquinas-agricolas-fortaleza",
   },
   {
     title: "Transporte de veículos antigos",
@@ -119,7 +119,7 @@ export const services: HomeService[] = [
     imageKey: "serviceVeiculoAntigo",
     message: "Olá, preciso consultar transporte de veículo antigo.",
     location: "servico-veiculos-antigos",
-    futureSlug: "/servicos/veiculos-antigos",
+    futureSlug: "/servicos/transporte-de-veiculos-antigos-fortaleza",
   },
   {
     title: "Transporte de empilhadeiras",
@@ -128,7 +128,7 @@ export const services: HomeService[] = [
     imageKey: "serviceEmpilhadeira",
     message: "Olá, preciso consultar transporte de empilhadeira.",
     location: "servico-empilhadeiras",
-    futureSlug: "/servicos/empilhadeiras",
+    futureSlug: "/servicos/transporte-de-empilhadeiras-fortaleza",
   },
   {
     title: "Guincho para pequenos caminhões",
@@ -137,7 +137,7 @@ export const services: HomeService[] = [
     imageKey: "servicePequenoCaminhao",
     message: "Olá, preciso consultar guincho para pequeno caminhão.",
     location: "servico-pequenos-caminhoes",
-    futureSlug: "/servicos/pequenos-caminhoes",
+    futureSlug: "/servicos/guincho-para-pequenos-caminhoes-fortaleza",
   },
   {
     title: "Transporte de pequenas cargas",
@@ -146,7 +146,7 @@ export const services: HomeService[] = [
     imageKey: "servicePequenaCarga",
     message: "Olá, preciso consultar transporte de pequena carga.",
     location: "servico-pequenas-cargas",
-    futureSlug: "/servicos/pequenas-cargas",
+    futureSlug: "/servicos/transporte-de-pequenas-cargas-fortaleza",
   },
 ];
 

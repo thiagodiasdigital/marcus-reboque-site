@@ -8,6 +8,10 @@ import { SocialLinks } from "@/components/ui/SocialLinks";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
+  const footerLinks = [
+    { label: "Hub de serviços", href: "/servicos" },
+    ...headerLinks,
+  ];
   const whatsappHref = buildWhatsappUrl({
     origin: "footer",
     message: "Olá, preciso falar com a Marcus Reboque.",
@@ -35,7 +39,7 @@ export function Footer() {
         </div>
 
         <nav aria-label="Links do rodapé" className="site-footer__links">
-          {headerLinks.map((link) => (
+          {footerLinks.map((link) => (
             <a href={link.href} key={link.href}>
               {link.label}
             </a>
@@ -45,7 +49,9 @@ export function Footer() {
         <address className="site-footer__contact">
           <span>{siteConfig.location.address.label}</span>
           <span>{siteConfig.location.serviceAreaLabel}</span>
-          <a href={siteConfig.contact.phoneHref}>{siteConfig.contact.phoneFormatted}</a>
+          <a href={siteConfig.contact.phoneHref}>
+            {siteConfig.contact.phoneFormatted}
+          </a>
           <ButtonLink
             href={whatsappHref}
             icon="whatsapp"

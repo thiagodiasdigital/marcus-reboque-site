@@ -8,6 +8,10 @@ import { MobileMenu } from "@/components/layout/MobileMenu";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 
 export function Header() {
+  const navigationLinks = [
+    { label: "Hub de serviços", href: "/servicos" },
+    ...headerLinks,
+  ];
   const whatsappHref = buildWhatsappUrl({
     origin: "header",
     message: "Olá, preciso de atendimento da Marcus Reboque.",
@@ -34,7 +38,7 @@ export function Header() {
         </Link>
 
         <nav className="desktop-nav" aria-label="Principal">
-          {headerLinks.map((link) => (
+          {navigationLinks.map((link) => (
             <a href={link.href} key={link.href}>
               {link.label}
             </a>
@@ -60,7 +64,7 @@ export function Header() {
         </div>
 
         <MobileMenu
-          links={headerLinks}
+          links={navigationLinks}
           phoneHref={siteConfig.contact.phoneHref}
           phoneLabel={siteConfig.contact.phoneFormatted}
           whatsappHref={whatsappHref}

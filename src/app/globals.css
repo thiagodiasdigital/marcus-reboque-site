@@ -665,6 +665,33 @@ h1 {
   aspect-ratio: 1 / 1;
 }
 
+.service-breadcrumb {
+  padding: 18px 0 4px;
+}
+
+.service-breadcrumb__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.service-breadcrumb__list li + li::before {
+  margin-right: 8px;
+  color: var(--border);
+  content: "/";
+}
+
+.service-breadcrumb__list a {
+  color: var(--brand-primary);
+}
+
 .process-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

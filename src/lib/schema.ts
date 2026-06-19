@@ -142,7 +142,7 @@ export function buildServicesHubJsonLd(): Record<string, unknown> {
           "@type": "ListItem",
           position: index + 1,
           name: service.title,
-          url: `${servicesUrl}#${service.futureSlug.replace("/servicos/", "")}`,
+          url: absoluteUrl(service.futureSlug),
         })),
       },
     ],
@@ -152,6 +152,7 @@ export function buildServicesHubJsonLd(): Record<string, unknown> {
 export function buildServicePageJsonLd(
   service: HomeService,
   pathname: string,
+  faqItems: Array<{ question: string; answer: string }> = [],
 ): Record<string, unknown> {
   const pageUrl = absoluteUrl(pathname);
   const homeUrl = absoluteUrl("/");
@@ -211,6 +212,22 @@ export function buildServicePageJsonLd(
           },
         ],
       },
+      ...(faqItems.length
+        ? [
+            {
+              "@type": "FAQPage",
+              "@id": `${pageUrl}#faq`,
+              mainEntity: faqItems.map((item) => ({
+                "@type": "Question",
+                name: item.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: item.answer,
+                },
+              })),
+            },
+          ]
+        : []),
     ],
   };
 }
