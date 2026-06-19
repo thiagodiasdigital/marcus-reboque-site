@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { siteImages } from "@/content/images";
+import type { SiteImage } from "@/content/images";
 import { siteConfig } from "@/content/site";
 import { absoluteUrl, getSiteUrl, isIndexable } from "@/lib/site-url";
 
@@ -7,7 +8,7 @@ type PageMetadataOptions = {
   title: string;
   description: string;
   canonicalPath: string;
-  image?: typeof siteImages.homepageHeroDesktop;
+  image?: SiteImage;
 };
 
 export function buildPageMetadata({

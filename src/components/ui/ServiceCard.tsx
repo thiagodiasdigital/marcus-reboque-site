@@ -41,14 +41,19 @@ export function ServiceCard({ service, index, id }: ServiceCardProps) {
         <p className="service-card__number">{String(index + 1).padStart(2, "0")}</p>
         <h3>{service.title}</h3>
         <p>{service.description}</p>
-        <ButtonLink
-          href={whatsappHref}
-          icon="whatsapp"
-          variant="ghost"
-          {...conversionAttributes(service.location, service.title)}
-        >
-          Consultar no WhatsApp
-        </ButtonLink>
+        <div className="inline-actions">
+          <ButtonLink
+            href={whatsappHref}
+            icon="whatsapp"
+            variant="ghost"
+            {...conversionAttributes(service.location, service.title)}
+          >
+            Consultar no WhatsApp
+          </ButtonLink>
+          <ButtonLink href={service.futureSlug} icon="arrow" variant="dark">
+            Ver página
+          </ButtonLink>
+        </div>
       </div>
     </article>
   );
