@@ -5,7 +5,9 @@
 - Último commit de checkpoint: o commit local com mensagem `chore: checkpoint project before shutdown` marcado pela tag local de checkpoint.
 - Documento principal a ler: `docs/CHECKPOINT_PAUSA_MARCUS_REBOQUE.md`
 - Prompt de retomada: `docs/PROMPT_RETOMADA_CODEX_MARCUS_REBOQUE.md`
-- Tarefa a retomar: finalizar o fechamento técnico e visual da homepage V1.
+- Homepage V1: concluída e validada.
+- Tag local da fase: `homepage-v1-validated`.
+- Próximo estágio: arquitetura e implementação do hub `/servicos/`.
 - Primeiro comando de validação:
 
 ```powershell
