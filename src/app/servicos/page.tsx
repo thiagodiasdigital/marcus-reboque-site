@@ -39,7 +39,7 @@ export default function ServicesHubPage() {
               <h1>Catalogo de guincho, reboque e transporte em Fortaleza</h1>
               <p className="hero-section__lead">
                 Esta pagina organiza os servicos ja validados da Marcus Reboque
-                e reserva espaco para as proximas paginas especializadas do
+                e reserva espaco para as proximas paginas institucionais do
                 projeto.
               </p>
               <div className="inline-actions">
@@ -76,7 +76,7 @@ export default function ServicesHubPage() {
               <article className="process-item">
                 <span>{String(roadmapRoutes.length).padStart(2, "0")}</span>
                 <h3>Rotas planejadas</h3>
-                <p>Novas paginas especializadas estao preparadas para a proxima etapa.</p>
+                <p>Novas paginas institucionais estao preparadas para a proxima etapa.</p>
               </article>
             </div>
           </div>

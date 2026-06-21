@@ -41,6 +41,42 @@ export const heroSignals = [
 
 export const services: HomeService[] = [
   {
+    title: "Guincho e reboque 24h em Fortaleza",
+    description:
+      "Atendimento 24 horas para retirada de veiculos imobilizados em Fortaleza, com orientacao clara sobre acesso, destino e seguranca.",
+    imageKey: "finalTruck",
+    message: "Olá, preciso de guincho e reboque 24h em Fortaleza.",
+    location: "servico-guincho-reboque-24h",
+    futureSlug: "/servicos/guincho-reboque-24h-fortaleza",
+  },
+  {
+    title: "Auto socorro 24h em Fortaleza",
+    description:
+      "Apoio inicial para pane ou imobilizacao em Fortaleza, com triagem rapida e remocao segura, sem prometer reparo mecanico.",
+    imageKey: "operationNight",
+    message: "Olá, preciso de auto socorro 24h em Fortaleza.",
+    location: "servico-auto-socorro-24h",
+    futureSlug: "/servicos/auto-socorro-24h-fortaleza",
+  },
+  {
+    title: "Transporte emergencial em Fortaleza",
+    description:
+      "Saida prioritaria em Fortaleza quando o veiculo precisa deixar o local com urgencia e receber acompanhamento operacional.",
+    imageKey: "operationCarDamaged",
+    message: "Olá, preciso de transporte emergencial em Fortaleza.",
+    location: "servico-transporte-emergencial",
+    futureSlug: "/servicos/transporte-emergencial-fortaleza",
+  },
+  {
+    title: "Transporte programado em Fortaleza",
+    description:
+      "Agendamento para deslocamento seguro em Fortaleza, com avaliacao previa da rota, do ponto de embarque e da janela desejada.",
+    imageKey: "programmedCar",
+    message: "Olá, preciso de transporte programado em Fortaleza.",
+    location: "servico-transporte-programado",
+    futureSlug: "/servicos/transporte-programado-fortaleza",
+  },
+  {
     title: "Guincho para motos",
     description:
       "Remoção e transporte de motos com cuidado na amarração, em atendimento emergencial ou programado.",

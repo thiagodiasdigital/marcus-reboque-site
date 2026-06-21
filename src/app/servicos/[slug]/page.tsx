@@ -67,6 +67,84 @@ function buildFaqItems(
 
 function buildServiceSupportCopy(serviceSlug: string, serviceTitle: string): ServiceSupportCopy {
   const serviceLower = serviceTitle.toLowerCase();
+  const centralServiceCopies: Record<string, ServiceSupportCopy> = {
+    "/servicos/guincho-reboque-24h-fortaleza": {
+      whenToContract:
+        "Use quando o veiculo precisa sair do local com prioridade, esta imobilizado ou exige remocao a qualquer hora do dia.",
+      process:
+        "A triagem confirma localizacao, acesso, condicao de mobilidade e destino antes de liberar o embarque.",
+      care:
+        "Envie o ponto exato, fotos se possivel e avise se ha bloqueio de roda, direcao travada ou area de dificil acesso.",
+      budget:
+        "Horario, distancia, acesso, porte e complexidade do embarque influenciam a avaliacao.",
+      proof:
+        "A imagem principal reforca a operacao 24h e ajuda a alinhar a expectativa antes do atendimento.",
+      faqItems: buildFaqItems(
+        serviceTitle,
+        "Quando o veiculo precisa sair com prioridade, esta parado em local de risco ou nao pode aguardar atendimento posterior.",
+        "Informe localizacao, destino, tipo de veiculo e qualquer bloqueio de acesso ou movimentacao.",
+        "Horario, acesso, distancia e complexidade da remocao pesam na avaliacao.",
+      ),
+    },
+    "/servicos/auto-socorro-24h-fortaleza": {
+      whenToContract:
+        "Use quando o veiculo teve pane, nao consegue seguir rodando ou precisa de apoio inicial para remocao segura.",
+      process:
+        "A triagem identifica o tipo de pane, o nivel de imobilizacao e o melhor caminho para retirar o veiculo.",
+      care:
+        "Informe se a bateria descarregou, se ha pneu furado, roda travada ou qualquer restricao de manobra.",
+      budget:
+        "Tipo de pane, horario, acesso, distancia e necessidade de apoio adicional pesam na avaliacao.",
+      proof:
+        "A pagina deixa claro que o foco e a remocao e a orientacao inicial, nao o conserto mecanico.",
+      faqItems: buildFaqItems(
+        serviceTitle,
+        "Quando o veiculo apresentou pane, ficou imobilizado ou precisa de orientacao imediata para seguir a remocao.",
+        "Envie localizacao, sintomas da pane, tipo de veiculo e qualquer restricao de roda, direcao ou freio.",
+        "Pane, acesso, distancia e urgencia influenciam a avaliacao.",
+      ),
+    },
+    "/servicos/transporte-emergencial-fortaleza": {
+      whenToContract:
+        "Use quando o veiculo precisa deixar o local com urgencia, por seguranca, fluxo operacional ou restricao de permanencia.",
+      process:
+        "A confirmacao prioriza local, acesso, destino e a velocidade de retirada desejada antes da operacao.",
+      care:
+        "Avise sobre prazo interno, area de risco, carga adicional e qualquer detalhe que altere a retirada.",
+      budget:
+        "Urgencia, distancia, acesso e complexidade da retirada afetam a avaliacao.",
+      proof:
+        "O texto destaca prioridade operacional sem prometer prazo fixo ou condicao nao confirmada.",
+      faqItems: buildFaqItems(
+        serviceTitle,
+        "Quando a retirada nao pode esperar e o veiculo precisa sair do local com prioridade operacional.",
+        "Informe localizacao, destino, tipo de veiculo e qualquer restricao de seguranca ou acesso.",
+        "Urgencia, acesso, distancia e complexidade da operacao pesam na avaliacao.",
+      ),
+    },
+    "/servicos/transporte-programado-fortaleza": {
+      whenToContract:
+        "Use quando a retirada pode ser agendada em data combinada e exige planejamento previo.",
+      process:
+        "A confirmacao avalia agenda, rota, acesso e o ponto de embarque com antecedencia.",
+      care:
+        "Envie endereco, janela desejada, tipo de veiculo ou carga e restricoes do local.",
+      budget:
+        "Data, rota, acesso e tempo de espera entram na avaliacao.",
+      proof:
+        "A pagina reforca o planejamento previo e o alinhamento antes da saida.",
+      faqItems: buildFaqItems(
+        serviceTitle,
+        "Quando a remocao pode ser agendada e precisa de alinhamento previo de rota e horario.",
+        "Informe data desejada, local de retirada, destino e qualquer restricao de acesso.",
+        "Data, distancia, acesso e tempo de espera influenciam a avaliacao.",
+      ),
+    },
+  };
+
+  if (serviceSlug in centralServiceCopies) {
+    return centralServiceCopies[serviceSlug];
+  }
 
   switch (serviceSlug) {
     case "/servicos/guincho-para-motos-fortaleza":
