@@ -77,7 +77,13 @@ export function Footer() {
       </div>
       <div className="site-footer__bottom">
         <span>© {currentYear} {siteConfig.name}</span>
-        <span>Domínio oficial: marcusreboque.com.br</span>
+        <a
+          href="https://agenciadiasdigital.com.br/"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Powered by Agência Dias Digital
+        </a>
       </div>
     </footer>
   );
