@@ -18,85 +18,85 @@ export type InstitutionalPageContent = {
 
 export const institutionalPages = {
   areas: {
-    title: "Areas atendidas | Marcus Reboque",
+    title: "Áreas atendidas | Marcus Reboque",
     description:
-      "Cobertura em Fortaleza, Regiao Metropolitana e localidades sob consulta, com foco em acesso, rota e tipo de atendimento.",
+      "Cobertura em Fortaleza, Região Metropolitana e localidades sob consulta, com foco em acesso, rota e tipo de atendimento.",
     eyebrow: "Cobertura",
     intro:
-      "A Marcus Reboque atende Fortaleza e Regiao Metropolitana e avalia outras localidades caso a caso. O foco e confirmar rota, acesso e condicao de retirada antes de iniciar a operacao.",
+      "A Marcus Reboque atende Fortaleza e Região Metropolitana e avalia outras localidades caso a caso. O foco é confirmar rota, acesso e condição de retirada antes de iniciar a operação.",
     highlights: [
       {
         label: "Base",
-        title: "Fortaleza como referencia",
-        text: "A operacao parte de Fortaleza, com atendimento continuo para chamados urgentes e programados.",
+        title: "Fortaleza como referência",
+        text: "A operação parte de Fortaleza, com atendimento contínuo para chamados urgentes e programados.",
       },
       {
-        label: "Regiao",
-        title: "Regiao Metropolitana",
-        text: "Municipios proximos podem ser atendidos conforme rota, disponibilidade e tipo de veiculo.",
+        label: "Região",
+        title: "Região Metropolitana",
+        text: "Municípios próximos podem ser atendidos conforme rota, disponibilidade e tipo de veículo.",
       },
       {
         label: "Consulta",
         title: "Outras localidades",
-        text: "Chamados fora da area principal sao avaliados individualmente para evitar promessa nao confirmada.",
+        text: "Chamados fora da área principal são avaliados individualmente para evitar promessa não confirmada.",
       },
     ],
     links: [
       { label: "Falar no WhatsApp", href: "/servicos" },
-      { label: "Ver servicos", href: "/servicos" },
+      { label: "Ver serviços", href: "/servicos" },
     ],
   },
   about: {
     title: "Sobre a Marcus Reboque",
     description:
-      "Conheca a proposta operacional da Marcus Reboque, com foco em atendimento direto, informacao clara e transporte de veiculos.",
+      "Conheça a proposta operacional da Marcus Reboque, com foco em atendimento direto, informação clara e transporte de veículos.",
     eyebrow: "Quem somos",
     intro:
-      "A Marcus Reboque atua com foco em guincho, reboque e transporte de veiculos, priorizando comunicacao objetiva, avaliacao tecnica e transparência sobre o que pode ser atendido.",
+      "A Marcus Reboque atua com foco em guincho, reboque e transporte de veículos, priorizando comunicação objetiva, avaliação técnica e transparência sobre o que pode ser atendido.",
     highlights: [
       {
         label: "Atendimento",
         title: "Contato direto",
-        text: "WhatsApp e telefone sao os canais principais para confirmar local, veiculo, destino e urgencia.",
+        text: "WhatsApp e telefone são os canais principais para confirmar local, veículo, destino e urgência.",
       },
       {
-        label: "Operacao",
-        title: "Caminhao plataforma",
-        text: "O trabalho e orientado para transporte com fixacao e embarque avaliados antes da saida.",
+        label: "Operação",
+        title: "Caminhão plataforma",
+        text: "O trabalho é orientado para transporte com fixação e embarque avaliados antes da saída.",
       },
       {
-        label: "Conteudo",
+        label: "Conteúdo",
         title: "Sem exagero comercial",
-        text: "O site evita promessas nao confirmadas e descreve o que e possivel solicitar de forma realista.",
+        text: "O site evita promessas não confirmadas e descreve o que é possível solicitar de forma realista.",
       },
     ],
     links: [
-      { label: "Areas atendidas", href: "/areas-atendidas" },
+      { label: "Áreas atendidas", href: "/areas-atendidas" },
       { label: "Contato", href: "/contato" },
     ],
   },
   reviews: {
-    title: "Avaliacoes | Marcus Reboque",
+    title: "Avaliações | Marcus Reboque",
     description:
-      "Acesse o perfil oficial do Google para ver avaliacoes publicas da Marcus Reboque sem reproduzir notas dentro do site.",
-    eyebrow: "Reputacao",
+      "Acesse o perfil oficial do Google para ver avaliações públicas da Marcus Reboque sem reproduzir notas dentro do site.",
+    eyebrow: "Reputação",
     intro:
-      "As avaliacoes publicas sao consultadas no perfil oficial do Google Business Profile. Esta pagina direciona para a fonte externa confirmada e evita copiar depoimentos sem contexto.",
+      "As avaliações públicas são consultadas no perfil oficial do Google Business Profile. Esta página direciona para a fonte externa confirmada e evita copiar depoimentos sem contexto.",
     highlights: [
       {
         label: "Fonte",
         title: "Perfil oficial",
-        text: "As avaliacoes devem ser lidas diretamente no perfil oficial da empresa no Google.",
+        text: "As avaliações devem ser lidas diretamente no perfil oficial da empresa no Google.",
       },
       {
         label: "Contexto",
         title: "Sem nota inventada",
-        text: "O site nao reproduz media, quantidade de estrelas ou depoimentos isolados fora da fonte original.",
+        text: "O site não reproduz média, quantidade de estrelas ou depoimentos isolados fora da fonte original.",
       },
       {
         label: "Uso",
-        title: "Consulta publica",
-        text: "O objetivo e facilitar o acesso a reputacao publica sem misturar isso com a pagina de vendas.",
+        title: "Consulta pública",
+        text: "O objetivo é facilitar o acesso à reputação pública sem misturar isso com a página de vendas.",
       },
     ],
     links: [
@@ -110,22 +110,22 @@ export const institutionalPages = {
       "Fale com a Marcus Reboque por WhatsApp, telefone ou redes oficiais para solicitar guincho, reboque e transporte.",
     eyebrow: "Contato",
     intro:
-      "Para atendimento rapido, envie localizacao, tipo de veiculo, destino e qualquer restricao de acesso. O contato humano e o centro da operacao.",
+      "Para atendimento rápido, envie localização, tipo de veículo, destino e qualquer restrição de acesso. O contato humano é o centro da operação.",
     highlights: [
       {
         label: "Telefone",
         title: "(85) 98600-7392",
-        text: "Ligacao direta para confirmar disponibilidade e detalhes do servico.",
+        text: "Ligação direta para confirmar disponibilidade e detalhes do serviço.",
       },
       {
         label: "WhatsApp",
         title: "Canal principal",
-        text: "Envie mensagem com local, veiculo, destino e fotos quando possivel.",
+        text: "Envie mensagem com local, veículo, destino e fotos quando possível.",
       },
       {
         label: "Perfil",
         title: "Redes oficiais",
-        text: "As redes confirmadas e o Google Business Profile concentram a presenca externa da empresa.",
+        text: "As redes confirmadas e o Google Business Profile concentram a presença externa da empresa.",
       },
     ],
     links: [
@@ -136,30 +136,30 @@ export const institutionalPages = {
   guides: {
     title: "Guias | Marcus Reboque",
     description:
-      "Guia rapido com orientacoes praticas para pedir guincho, reboque e transporte com mais clareza.",
+      "Guia rápido com orientações práticas para pedir guincho, reboque e transporte com mais clareza.",
     eyebrow: "Guias",
     intro:
-      "Esta area reune orientacoes curtas para quem precisa enviar uma solicitacao mais clara e acelerar a triagem operacional.",
+      "Esta área reúne orientações curtas para quem precisa enviar uma solicitação mais clara e acelerar a triagem operacional.",
     highlights: [
       {
         label: "Antes",
         title: "O que enviar",
-        text: "Localizacao, destino, tipo de veiculo e fotos ajudam a reduzir retrabalho.",
+        text: "Localização, destino, tipo de veículo e fotos ajudam a reduzir retrabalho.",
       },
       {
         label: "Durante",
         title: "Como informar",
-        text: "Descreva pane, bloqueio de roda, altura, carga ou qualquer restricao de acesso.",
+        text: "Descreva pane, bloqueio de roda, altura, carga ou qualquer restrição de acesso.",
       },
       {
         label: "Depois",
-        title: "Confirmacao",
-        text: "Apos a triagem, a operacao avanca com orientacao clara sobre embarque e destino.",
+        title: "Confirmação",
+        text: "Após a triagem, a operação avança com orientação clara sobre embarque e destino.",
       },
     ],
     links: [
       { label: "Ir para contato", href: "/contato" },
-      { label: "Ver servicos", href: "/servicos" },
+      { label: "Ver serviços", href: "/servicos" },
     ],
   },
 } satisfies Record<string, InstitutionalPageContent>;

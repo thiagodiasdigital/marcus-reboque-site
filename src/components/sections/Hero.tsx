@@ -8,8 +8,7 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 export function Hero() {
   const whatsappHref = buildWhatsappUrl({
     origin: "hero",
-    message:
-      "Olá, preciso de guincho, reboque ou auto socorro 24h em Fortaleza.",
+    message: "Olá, preciso de guincho, reboque ou auto socorro 24h em Fortaleza.",
   });
 
   return (

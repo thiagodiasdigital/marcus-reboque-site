@@ -43,7 +43,7 @@ export const services: HomeService[] = [
   {
     title: "Guincho e reboque 24h em Fortaleza",
     description:
-      "Atendimento 24 horas para retirada de veiculos imobilizados em Fortaleza, com orientacao clara sobre acesso, destino e seguranca.",
+      "Atendimento 24 horas para remoção de veículos imobilizados em Fortaleza e Região Metropolitana, com orientação sobre acesso, destino e condições de embarque.",
     imageKey: "finalTruck",
     message: "Olá, preciso de guincho e reboque 24h em Fortaleza.",
     location: "servico-guincho-reboque-24h",
@@ -52,7 +52,7 @@ export const services: HomeService[] = [
   {
     title: "Auto socorro 24h em Fortaleza",
     description:
-      "Apoio inicial para pane ou imobilizacao em Fortaleza, com triagem rapida e remocao segura, sem prometer reparo mecanico.",
+      "Apoio inicial para pane, veículo parado ou necessidade de remoção segura em Fortaleza, com triagem rápida e foco em transporte, não em conserto mecânico.",
     imageKey: "operationNight",
     message: "Olá, preciso de auto socorro 24h em Fortaleza.",
     location: "servico-auto-socorro-24h",
@@ -61,7 +61,7 @@ export const services: HomeService[] = [
   {
     title: "Transporte emergencial em Fortaleza",
     description:
-      "Saida prioritaria em Fortaleza quando o veiculo precisa deixar o local com urgencia e receber acompanhamento operacional.",
+      "Saída prioritária quando o veículo precisa deixar o local com urgência, por risco, pane, colisão ou bloqueio operacional.",
     imageKey: "operationCarDamaged",
     message: "Olá, preciso de transporte emergencial em Fortaleza.",
     location: "servico-transporte-emergencial",
@@ -70,7 +70,7 @@ export const services: HomeService[] = [
   {
     title: "Transporte programado em Fortaleza",
     description:
-      "Agendamento para deslocamento seguro em Fortaleza, com avaliacao previa da rota, do ponto de embarque e da janela desejada.",
+      "Agendamento para deslocamento seguro em Fortaleza, com avaliação prévia da rota, do ponto de embarque e do destino desejado.",
     imageKey: "programmedCar",
     message: "Olá, preciso de transporte programado em Fortaleza.",
     location: "servico-transporte-programado",
@@ -79,7 +79,7 @@ export const services: HomeService[] = [
   {
     title: "Guincho para motos",
     description:
-      "Remoção e transporte de motos com cuidado na amarração, em atendimento emergencial ou programado.",
+      "Remoção e transporte de motos com cuidado na amarração, atenção a guidão, rodas, acessórios e condições de retirada.",
     imageKey: "serviceMoto",
     message: "Olá, preciso de guincho para moto em Fortaleza.",
     location: "servico-motos",
@@ -88,7 +88,7 @@ export const services: HomeService[] = [
   {
     title: "Guincho para carros",
     description:
-      "Reboque para carros em pane, colisão ou transporte programado, conforme acesso e condição do veículo.",
+      "Reboque para carros em pane, colisão ou transporte programado, conforme acesso, condição do veículo e destino.",
     imageKey: "serviceCarro",
     message: "Olá, preciso de guincho para carro em Fortaleza.",
     location: "servico-carros",
@@ -97,7 +97,7 @@ export const services: HomeService[] = [
   {
     title: "Guincho para caminhonetes",
     description:
-      "Atendimento para caminhonetes e picapes, com avaliação do porte, do destino e das condições de embarque.",
+      "Atendimento para caminhonetes e picapes, com avaliação de porte, peso, acesso, destino e condições de embarque.",
     imageKey: "serviceCaminhonete",
     message: "Olá, preciso de guincho para caminhonete em Fortaleza.",
     location: "servico-caminhonetes",
@@ -106,7 +106,7 @@ export const services: HomeService[] = [
   {
     title: "Guincho para vans",
     description:
-      "Transporte de vans sob análise de altura, peso, rota e ponto de acesso para operação em plataforma.",
+      "Transporte de vans sob análise de altura, peso, rota e ponto de acesso para operação em caminhão plataforma.",
     imageKey: "serviceVan",
     message: "Olá, preciso de guincho para van em Fortaleza.",
     location: "servico-vans",
@@ -115,7 +115,7 @@ export const services: HomeService[] = [
   {
     title: "Transporte de utilitários",
     description:
-      "Solução sob consulta para utilitários leves, com confirmação prévia do modelo e da viabilidade do embarque.",
+      "Solução sob consulta para utilitários leves, com confirmação prévia do modelo, dimensões, ponto de coleta e destino.",
     imageKey: null,
     message: "Olá, preciso consultar transporte de utilitário em Fortaleza.",
     location: "servico-utilitarios",
@@ -124,7 +124,7 @@ export const services: HomeService[] = [
   {
     title: "Transporte de veículos especiais",
     description:
-      "Remoção e deslocamento de veículos fora do padrão comum, sempre após avaliação da operação necessária.",
+      "Remoção e deslocamento de veículos fora do padrão comum, sempre após avaliação prévia de peso, altura, fixação e acesso.",
     imageKey: "serviceVeiculoEspecial",
     message: "Olá, preciso consultar transporte de veículo especial.",
     location: "servico-veiculos-especiais",
@@ -178,7 +178,7 @@ export const services: HomeService[] = [
   {
     title: "Transporte de pequenas cargas",
     description:
-      "Apoio para pequenas cargas compatíveis com plataforma, com amarração e rota avaliadas antes do transporte.",
+      "Apoio para pequenas cargas compatíveis com caminhão plataforma, com amarração, rota e condições de retirada avaliadas antes do transporte.",
     imageKey: "servicePequenaCarga",
     message: "Olá, preciso consultar transporte de pequena carga.",
     location: "servico-pequenas-cargas",
@@ -298,7 +298,7 @@ export const faqItems: FaqItem[] = [
   {
     question: "O serviço inclui conserto mecânico?",
     answer:
-      "Não há divulgação de conserto mecânico no site. O foco informado é guincho, reboque, remoção e transporte.",
+      "O foco divulgado no site é guincho, reboque, remoção e transporte. Reparos mecânicos no local não fazem parte da comunicação pública.",
   },
   {
     question: "Há preço fixo no site?",

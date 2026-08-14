@@ -17,7 +17,7 @@ export function EmergencyCta() {
       <div className="container emergency-band__inner">
         <div className="emergency-band__copy">
           <p className="eyebrow">Atendimento emergencial</p>
-          <h2 id="emergency-title">Precisa de guincho agora?</h2>
+          <h2 id="emergency-title">Precisa de guincho agora em Fortaleza?</h2>
           <p>
             Fale pelo WhatsApp ou telefone e envie as informações do veículo.
             A orientação depende da localização, do destino e das condições do

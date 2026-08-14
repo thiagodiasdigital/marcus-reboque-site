@@ -124,7 +124,10 @@ export const siteConfig = {
 
 export const officialSocialProfiles: OfficialSocialProfile[] =
   officialSocialOrder.map((key) => {
-    const labels: Record<OfficialSocialKey, Pick<OfficialSocialProfile, "label" | "shortLabel">> = {
+    const labels: Record<
+      OfficialSocialKey,
+      Pick<OfficialSocialProfile, "label" | "shortLabel">
+    > = {
       instagram: { label: "Instagram", shortLabel: "IG" },
       facebook: { label: "Facebook", shortLabel: "FB" },
       youtube: { label: "YouTube", shortLabel: "YT" },

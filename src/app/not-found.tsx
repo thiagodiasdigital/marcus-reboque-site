@@ -7,15 +7,15 @@ export default function NotFound() {
       <section className="technical-hero" aria-labelledby="not-found-title">
         <div className="technical-copy">
           <p className="technical-notice">
-            Fundacao tecnica, nao layout final.
+            Fundação técnica, não layout final.
           </p>
-          <h1 id="not-found-title">Pagina nao encontrada</h1>
+          <h1 id="not-found-title">Página não encontrada</h1>
           <p className="technical-summary">
-            O site da Marcus Reboque ainda esta em preparacao tecnica.
+            O site da Marcus Reboque ainda está em preparação técnica.
           </p>
           <div className="technical-actions">
             <Link className="technical-button secondary" href="/">
-              Voltar ao inicio
+              Voltar ao início
             </Link>
             <a className="technical-button primary" href={siteConfig.whatsapp.url}>
               WhatsApp

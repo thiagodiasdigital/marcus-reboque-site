@@ -6,9 +6,9 @@ import { buildPageMetadata } from "@/lib/metadata";
 import { siteConfig } from "@/content/site";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Avaliacoes | Marcus Reboque",
+  title: "Avaliações | Marcus Reboque",
   description:
-    "Acesse o perfil oficial do Google para ver avaliacoes publicas da Marcus Reboque.",
+    "Acesse o perfil oficial do Google para ver avaliações públicas da Marcus Reboque.",
   canonicalPath: "/avaliacoes",
 });
 
@@ -18,10 +18,10 @@ export default function AvaliacoesPage() {
       <section className="section section--dark">
         <div className="container split-layout">
           <div>
-            <p className="eyebrow">Reputacao</p>
-            <h1>Avaliacoes da Marcus Reboque</h1>
+            <p className="eyebrow">Reputação</p>
+            <h1>Avaliações da Marcus Reboque</h1>
             <p className="hero-section__lead">
-              As avaliacoes publicas ficam no perfil oficial do Google, sem
+              As avaliações públicas ficam no perfil oficial do Google, sem
               reproduzir notas ou depoimentos fora da fonte original.
             </p>
             <div className="inline-actions">
@@ -39,7 +39,7 @@ export default function AvaliacoesPage() {
               </ButtonLink>
             </div>
           </div>
-          <div className="process-grid" aria-label="Resumo das avaliacoes">
+          <div className="process-grid" aria-label="Resumo das avaliações">
             <article className="process-item">
               <span>Fonte</span>
               <h3>Perfil oficial</h3>
@@ -47,18 +47,18 @@ export default function AvaliacoesPage() {
             </article>
             <article className="process-item">
               <span>Nota</span>
-              <h3>Sem inventar media</h3>
-              <p>O site nao cria estrelas, contagem ou depoimentos.</p>
+              <h3>Sem inventar média</h3>
+              <p>O site não cria estrelas, contagem ou depoimentos.</p>
             </article>
             <article className="process-item">
               <span>Uso</span>
-              <h3>Consulta publica</h3>
-              <p>A pagina encaminha para a fonte real, sem misturar com a oferta.</p>
+              <h3>Consulta pública</h3>
+              <p>A página encaminha para a fonte real, sem misturar com a oferta.</p>
             </article>
             <article className="process-item">
               <span>Contexto</span>
               <h3>Sem recorte isolado</h3>
-              <p>O cliente ve a reputacao dentro do perfil oficial completo.</p>
+              <p>O cliente vê a reputação dentro do perfil oficial completo.</p>
             </article>
           </div>
         </div>
@@ -70,8 +70,8 @@ export default function AvaliacoesPage() {
         <div className="container">
           <SectionHeading
             eyebrow="Leitura"
-            title="Como interpretar as avaliacoes"
-            text="A melhor leitura e a que considera atendimento, clareza da resposta e compatibilidade com o tipo de servico procurado."
+            title="Como interpretar as avaliações"
+            text="A melhor leitura é a que considera atendimento, clareza da resposta e compatibilidade com o tipo de serviço procurado."
           />
         </div>
       </section>
