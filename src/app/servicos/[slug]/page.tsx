@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import Image from "next/image";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { JsonLd } from "@/components/seo/json-ld";
 import { ServiceCard } from "@/components/ui/ServiceCard";
@@ -42,358 +42,129 @@ function buildFaqItems(
   care: string,
   budget: string,
 ): ServiceFaqItem[] {
-  const serviceLower = serviceTitle.toLowerCase();
-
   return [
     {
-      question: `Quando contratar ${serviceLower}?`,
+      question: `Quando contratar ${serviceTitle.toLowerCase()}?`,
       answer: whenToContract,
     },
     {
-      question: `O que devo informar antes de pedir ${serviceLower}?`,
+      question: `O que devo informar antes de pedir ${serviceTitle.toLowerCase()}?`,
       answer:
-        "Envie a localização, o destino, o tipo de veículo, o estado atual e qualquer restrição de acesso ou manobra.",
+        "Envie a localização, o destino, o tipo de veículo, o estado atual e qualquer restrição de acesso ou manobra.",
     },
     {
-      question: `O que mais influencia o orçamento de ${serviceLower}?`,
+      question: `O que mais influencia o orçamento de ${serviceTitle.toLowerCase()}?`,
       answer: budget,
     },
     {
-      question: `Quais cuidados são importantes para ${serviceLower}?`,
+      question: `Quais cuidados são importantes para ${serviceTitle.toLowerCase()}?`,
       answer: care,
     },
   ];
 }
 
-function buildServiceSupportCopy(serviceSlug: string, serviceTitle: string): ServiceSupportCopy {
-  const serviceLower = serviceTitle.toLowerCase();
-  const centralServiceCopies: Record<string, ServiceSupportCopy> = {
+function buildServiceSupportCopy(
+  serviceSlug: string,
+  serviceTitle: string,
+): ServiceSupportCopy {
+  const title = serviceTitle.toLowerCase();
+
+  const presets: Record<string, ServiceSupportCopy> = {
     "/servicos/guincho-reboque-24h-fortaleza": {
       whenToContract:
-        "Use quando o veiculo precisa sair do local com prioridade, esta imobilizado ou exige remocao a qualquer hora do dia.",
+        "Use quando o veículo precisa sair com prioridade, está imobilizado ou exige remoção em qualquer horário.",
       process:
-        "A triagem confirma localizacao, acesso, condicao de mobilidade e destino antes de liberar o embarque.",
+        "A triagem confirma localização, acesso, condição de mobilidade e destino antes de liberar o embarque.",
       care:
-        "Envie o ponto exato, fotos se possivel e avise se ha bloqueio de roda, direcao travada ou area de dificil acesso.",
+        "Envie o ponto exato, fotos se possível e avise se há bloqueio de roda, direção travada ou área de difícil acesso.",
       budget:
-        "Horario, distancia, acesso, porte e complexidade do embarque influenciam a avaliacao.",
+        "Horário, distância, acesso, porte e complexidade do embarque influenciam a avaliação.",
       proof:
-        "A imagem principal reforca a operacao 24h e ajuda a alinhar a expectativa antes do atendimento.",
+        "A imagem principal reforça a operação 24h e ajuda a alinhar a expectativa antes do atendimento.",
       faqItems: buildFaqItems(
         serviceTitle,
-        "Quando o veiculo precisa sair com prioridade, esta parado em local de risco ou nao pode aguardar atendimento posterior.",
-        "Informe localizacao, destino, tipo de veiculo e qualquer bloqueio de acesso ou movimentacao.",
-        "Horario, acesso, distancia e complexidade da remocao pesam na avaliacao.",
+        "Quando o veículo está parado em local de risco, imobilizado ou precisa sair com prioridade.",
+        "Retire objetos soltos, confirme se há bloqueio de roda ou direção travada e envie o destino.",
+        "Horário, acesso, distância e complexidade da remoção pesam na avaliação.",
       ),
     },
     "/servicos/auto-socorro-24h-fortaleza": {
       whenToContract:
-        "Use quando o veiculo teve pane, nao consegue seguir rodando ou precisa de apoio inicial para remocao segura.",
+        "Use quando o veículo teve pane, não consegue seguir rodando ou precisa de apoio inicial para remoção segura.",
       process:
-        "A triagem identifica o tipo de pane, o nivel de imobilizacao e o melhor caminho para retirar o veiculo.",
+        "A triagem identifica o tipo de pane, o nível de imobilização e o melhor caminho para retirar o veículo.",
       care:
-        "Informe se a bateria descarregou, se ha pneu furado, roda travada ou qualquer restricao de manobra.",
+        "Informe se a bateria descarregou, se há pneu furado, roda travada ou qualquer restrição de manobra.",
       budget:
-        "Tipo de pane, horario, acesso, distancia e necessidade de apoio adicional pesam na avaliacao.",
+        "Tipo de pane, horário, acesso, distância e necessidade de apoio adicional pesam na avaliação.",
       proof:
-        "A pagina deixa claro que o foco e a remocao e a orientacao inicial, nao o conserto mecanico.",
+        "A página deixa claro que o foco é a remoção e a orientação inicial, não o conserto mecânico.",
       faqItems: buildFaqItems(
         serviceTitle,
-        "Quando o veiculo apresentou pane, ficou imobilizado ou precisa de orientacao imediata para seguir a remocao.",
-        "Envie localizacao, sintomas da pane, tipo de veiculo e qualquer restricao de roda, direcao ou freio.",
-        "Pane, acesso, distancia e urgencia influenciam a avaliacao.",
+        "Quando o veículo apresentou pane, ficou imobilizado ou precisa de orientação imediata para seguir a remoção.",
+        "Envie localização, sintomas da pane, tipo de veículo e qualquer restrição de roda, direção ou freio.",
+        "Pane, acesso, distância e urgência influenciam a avaliação.",
       ),
     },
     "/servicos/transporte-emergencial-fortaleza": {
       whenToContract:
-        "Use quando o veiculo precisa deixar o local com urgencia, por seguranca, fluxo operacional ou restricao de permanencia.",
+        "Use quando o veículo precisa deixar o local com urgência, por segurança, fluxo operacional ou restrição de permanência.",
       process:
-        "A confirmacao prioriza local, acesso, destino e a velocidade de retirada desejada antes da operacao.",
+        "A confirmação prioriza local, acesso, destino e a velocidade de retirada desejada antes da operação.",
       care:
-        "Avise sobre prazo interno, area de risco, carga adicional e qualquer detalhe que altere a retirada.",
+        "Avise sobre prazo interno, área de risco, carga adicional e qualquer detalhe que altere a retirada.",
       budget:
-        "Urgencia, distancia, acesso e complexidade da retirada afetam a avaliacao.",
+        "Urgência, distância, acesso e complexidade da retirada afetam a avaliação.",
       proof:
-        "O texto destaca prioridade operacional sem prometer prazo fixo ou condicao nao confirmada.",
+        "O texto destaca prioridade operacional sem prometer prazo fixo ou condição não confirmada.",
       faqItems: buildFaqItems(
         serviceTitle,
-        "Quando a retirada nao pode esperar e o veiculo precisa sair do local com prioridade operacional.",
-        "Informe localizacao, destino, tipo de veiculo e qualquer restricao de seguranca ou acesso.",
-        "Urgencia, acesso, distancia e complexidade da operacao pesam na avaliacao.",
+        "Quando a retirada não pode esperar e o veículo precisa sair do local com prioridade operacional.",
+        "Informe localização, destino, tipo de veículo e qualquer restrição de segurança ou acesso.",
+        "Urgência, acesso, distância e complexidade da operação pesam na avaliação.",
       ),
     },
     "/servicos/transporte-programado-fortaleza": {
       whenToContract:
-        "Use quando a retirada pode ser agendada em data combinada e exige planejamento previo.",
+        "Use quando a retirada pode ser agendada em data combinada e exige planejamento prévio.",
       process:
-        "A confirmacao avalia agenda, rota, acesso e o ponto de embarque com antecedencia.",
+        "A confirmação avalia agenda, rota, acesso e o ponto de embarque com antecedência.",
       care:
-        "Envie endereco, janela desejada, tipo de veiculo ou carga e restricoes do local.",
+        "Envie endereço, janela desejada, tipo de veículo ou carga e restrições do local.",
       budget:
-        "Data, rota, acesso e tempo de espera entram na avaliacao.",
+        "Data, rota, acesso e tempo de espera entram na avaliação.",
       proof:
-        "A pagina reforca o planejamento previo e o alinhamento antes da saida.",
+        "A página reforça o planejamento prévio e o alinhamento antes da saída.",
       faqItems: buildFaqItems(
         serviceTitle,
-        "Quando a remocao pode ser agendada e precisa de alinhamento previo de rota e horario.",
-        "Informe data desejada, local de retirada, destino e qualquer restricao de acesso.",
-        "Data, distancia, acesso e tempo de espera influenciam a avaliacao.",
+        "Quando a remoção pode ser agendada e precisa de alinhamento prévio de rota e horário.",
+        "Informe data desejada, local de retirada, destino e qualquer restrição de acesso.",
+        "Data, distância, acesso e tempo de espera influenciam a avaliação.",
       ),
     },
   };
 
-  if (serviceSlug in centralServiceCopies) {
-    return centralServiceCopies[serviceSlug];
+  const preset = presets[serviceSlug];
+  if (preset) {
+    return preset;
   }
 
-  switch (serviceSlug) {
-    case "/servicos/guincho-para-motos-fortaleza":
-      return {
-        whenToContract:
-          "Use quando a moto não liga, sofreu queda, está sem mobilidade ou precisa ir para oficina, pátio ou outro destino combinado.",
-        process:
-          "A operação começa com a confirmação do modelo, do ponto de coleta e do formato de fixação mais adequado para a moto.",
-        care:
-          "Retire objetos soltos, mantenha o guidão estabilizado e confirme se há acessórios que exigem atenção extra na amarração.",
-        budget:
-          "A avaliação considera rota, acesso, condição da moto, ponto de retirada e destino final.",
-        proof:
-          "A imagem principal mostra o contexto real do serviço para apoiar a triagem visual antes do atendimento.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "A moto precisa sair de um ponto de risco, não liga ou exige transporte até outro local.",
-          "A fixação precisa preservar roda, guidão, retrovisores e acessórios soltos.",
-          "Acesso, distância, condição da moto e destino influenciam o atendimento.",
-        ),
-      };
-    case "/servicos/guincho-para-carros-fortaleza":
-      return {
-        whenToContract:
-          "Use quando o carro está imobilizado por pane, colisão, falha mecânica ou precisa de transporte programado.",
-        process:
-          "Confirme se o carro roda, se a direção e o freio estão livres e informe onde o veículo deve ser entregue.",
-        care:
-          "Deixe chave, documentos e objetos de valor com a pessoa responsável e informe qualquer restrição de roda ou direção.",
-        budget:
-          "A operação varia conforme rota, acesso, tipo de pane, destino e condição do carro no momento da remoção.",
-        proof:
-          "O serviço usa imagem real da categoria para registrar a operação e reforçar a avaliação visual.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "O carro está parado, sem condições de seguir rodando ou precisa sair com prioridade do local.",
-          "Informe acesso, estado da direção, se o carro roda e o destino desejado.",
-          "Distância, acesso, condição do carro e necessidade de embarque influenciam a operação.",
-        ),
-      };
-    case "/servicos/guincho-para-caminhonetes-fortaleza":
-      return {
-        whenToContract:
-          "Use quando a caminhonete ou picape precisa sair de pane, colisão, oficina ou de um ponto com acesso limitado.",
-        process:
-          "A análise considera altura, largura, estado das rodas e a melhor forma de aproximação para o embarque.",
-        care:
-          "Verifique acessórios externos, carga no compartimento e qualquer detalhe que altere o balanço do veículo.",
-        budget:
-          "O preço depende de rota, porte do veículo, condição de acesso e destino da caminhonete.",
-        proof:
-          "A foto principal mostra o tipo de veículo atendido e ajuda na leitura prévia da operação.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "A caminhonete está imobilizada, precisa de transporte planejado ou não deve seguir rodando.",
-          "Informe modelo, porte, destino e eventuais obstáculos no acesso ao ponto de retirada.",
-          "Porte, acesso, rota e condição do veículo pesam na avaliação.",
-        ),
-      };
-    case "/servicos/guincho-para-vans-fortaleza":
-      return {
-        whenToContract:
-          "Use quando a van precisa ser removida, está parada em pane ou exige transporte programado para outro endereço.",
-        process:
-          "A operação depende da altura, do entre-eixos, do acesso ao local e da confirmação do ponto de entrega.",
-        care:
-          "Desative o que for possível no interior e avise se há carga, bancos adaptados ou peças que influenciem a manobra.",
-        budget:
-          "Altura, acesso, distância, porte e condição da van entram na avaliação antes da confirmação.",
-        proof:
-          "A imagem do serviço documenta a categoria atendida e reduz a necessidade de suposições na triagem.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "A van está sem condição de rodar, precisa sair do local ou será levada de forma programada.",
-          "Envie modelo, altura aproximada, local de retirada e destino.",
-          "Altura, acesso, rota e condição do veículo influenciam a operação.",
-        ),
-      };
-    case "/servicos/transporte-de-utilitarios-fortaleza":
-      return {
-        whenToContract:
-          "Use quando um utilitário leve precisa ser deslocado e o modelo deve ser avaliado antes do embarque.",
-        process:
-          "A confirmação depende do modelo exato, do ponto de carga e da viabilidade real de acesso ao veículo.",
-        care:
-          "Como não há imagem dedicada, a página usa tratamento institucional honesto e pede confirmação detalhada do utilitário.",
-        budget:
-          "Modelo, acesso, rota, porte e condição de embarque são os fatores principais para este atendimento.",
-        proof:
-          "Sem foto específica da categoria, o conteúdo deixa claro que a validação é técnica e não visualmente simulada.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "Quando o utilitário leve precisa sair com segurança e o modelo ainda precisa ser confirmado.",
-          "Informe o modelo, o destino, a localização e eventuais restrições de acesso.",
-          "Modelo, distância, acesso e necessidade de apoio na carga influenciam a avaliação.",
-        ),
-      };
-    case "/servicos/transporte-de-veiculos-especiais-fortaleza":
-      return {
-        whenToContract:
-          "Use quando o veículo foge do padrão comum e precisa de análise técnica antes do transporte.",
-        process:
-          "A avaliação considera dimensões, adaptações, ponto de fixação e a viabilidade do acesso ao local.",
-        care:
-          "Informe qualquer adaptação, peça solta, dificuldade de tração ou detalhe que exija atenção especial na operação.",
-        budget:
-          "Dimensões, acesso, complexidade da operação e destino influenciam a contratação.",
-        proof:
-          "A foto do serviço reforça que a análise é técnica e feita por categoria confirmada, não por suposição.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "Quando o veículo especial exige transporte sem improviso e com análise prévia da operação.",
-          "Envie fotos, medidas aproximadas, local de retirada e destino.",
-          "Dimensões, adaptação, acesso e complexidade operacional pesam na avaliação.",
-        ),
-      };
-    case "/servicos/transporte-de-barcos-fortaleza":
-      return {
-        whenToContract:
-          "Use quando barco ou jet ski precisa de deslocamento com apoio técnico antes da retirada.",
-        process:
-          "A operação depende de suporte, dimensões, acesso à marina, pátio ou residência e do ponto de entrega.",
-        care:
-          "Confirme pontos de fixação, peso aproximado, suporte disponível e qualquer proteção necessária para casco ou estrutura.",
-        budget:
-          "Suporte, rota, acesso, dimensões e destino são os fatores mais relevantes para este transporte.",
-        proof:
-          "A imagem principal mostra a categoria atendida e ajuda a diferenciar o serviço de um transporte terrestre comum.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "Quando a embarcação ou o jet ski precisa sair de um ponto específico e a operação deve ser planejada.",
-          "Informe medidas, acesso, ponto de retirada e destino final.",
-          "Dimensões, suporte, acesso e distância afetam a avaliação.",
-        ),
-      };
-    case "/servicos/transporte-de-maquinas-agricolas-fortaleza":
-      return {
-        whenToContract:
-          "Use quando a máquina agrícola precisa de deslocamento e a operação exige análise de peso, altura e acesso.",
-        process:
-          "A confirmação considera piso, ponto de entrada, altura total e condições de fixação da máquina.",
-        care:
-          "Informe se há implementos acoplados, rodas livres ou qualquer característica que altere o embarque.",
-        budget:
-          "Peso, altura, acesso, distância e tipo de máquina influenciam o atendimento.",
-        proof:
-          "A imagem do serviço registra a categoria atendida e ajuda a validar a operação antes do deslocamento.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "Quando a máquina precisa ser transportada com análise prévia e não apenas por remoção simples.",
-          "Envie tipo de máquina, local de retirada, destino e condições de acesso.",
-          "Peso, altura, piso e distância impactam a operação.",
-        ),
-      };
-    case "/servicos/transporte-de-veiculos-antigos-fortaleza":
-      return {
-        whenToContract:
-          "Use quando o veículo antigo ou colecionável precisa sair sem improviso e com atenção à conservação.",
-        process:
-          "A avaliação considera mobilidade, bateria, condição dos pneus, ponto de acesso e destino combinado.",
-        care:
-          "Avise se o veículo está parado há muito tempo, se tem baixa carga elétrica ou se há itens frágeis na carroceria.",
-        budget:
-          "Conservação, acesso, condição de mobilidade e distância influenciam a operação.",
-        proof:
-          "A foto principal reforça a categoria de veículo antigo e ajuda a evitar confusão com transporte comum.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "Quando o veículo antigo precisa de remoção cuidadosa para oficina, evento, garagem ou outro destino.",
-          "Informe o estado do veículo, se ele liga e quais cuidados de conservação são necessários.",
-          "Conservação, acesso e distância entram na avaliação.",
-        ),
-      };
-    case "/servicos/transporte-de-empilhadeiras-fortaleza":
-      return {
-        whenToContract:
-          "Use quando a empilhadeira precisa de deslocamento técnico e o local deve ser avaliado antes da operação.",
-        process:
-          "A confirmação considera piso, acesso, ponto de apoio, peso e a posição de embarque da máquina.",
-        care:
-          "Informe o centro de gravidade, o estado do piso e qualquer limitação que altere a movimentação da empilhadeira.",
-        budget:
-          "Peso, piso, acesso, distância e complexidade da manobra influenciam o atendimento.",
-        proof:
-          "A cobertura visual é mais limitada, então a página destaca a imagem aprovada e o texto técnico da operação.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "Quando a empilhadeira precisa ser transportada com avaliação de piso e acesso, sem improviso.",
-          "Envie peso aproximado, local de retirada, destino e condição do piso.",
-          "Peso, acesso e complexidade da manobra alteram a operação.",
-        ),
-      };
-    case "/servicos/guincho-para-pequenos-caminhoes-fortaleza":
-      return {
-        whenToContract:
-          "Use quando o pequeno caminhão precisa sair de pane, oficina ou de um ponto com acesso reduzido.",
-        process:
-          "A confirmação considera cabine, largura, condição mecânica e a área necessária para o embarque.",
-        care:
-          "Informe se há carga, bloqueio de roda, direção dura ou qualquer detalhe que altere a manobra.",
-        budget:
-          "A rota, o porte, a condição do veículo e o destino afetam o orçamento.",
-        proof:
-          "A foto principal mostra a categoria já validada e apoia a triagem do atendimento.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "Quando o pequeno caminhão não deve seguir rodando ou precisa de remoção programada.",
-          "Envie modelo, acesso, condição de mobilidade e destino.",
-          "Porte, distância, acesso e condição mecânica influenciam a operação.",
-        ),
-      };
-    case "/servicos/transporte-de-pequenas-cargas-fortaleza":
-      return {
-        whenToContract:
-          "Use quando a pequena carga precisa de transporte e a operação pode ser feita com plataforma e amarração.",
-        process:
-          "A carga deve ser avaliada pelo volume, pela distribuição e pela necessidade de fixação antes da saída.",
-        care:
-          "Embale o material, evite peças soltas e confirme se o peso e a distribuição cabem na operação de forma segura.",
-        budget:
-          "Volume, peso, acesso, rota e necessidade de fixação influenciam o serviço.",
-        proof:
-          "A foto principal reforça a categoria e ajuda a separar carga leve de transporte de veículo.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          "Quando a carga precisa de transporte com amarração e avaliação de segurança antes da saída.",
-          "Informe volume, peso aproximado, destino e necessidade de apoio adicional.",
-          "Peso, volume, rota e fixação alteram o orçamento.",
-        ),
-      };
-    default:
-      return {
-        whenToContract: `Use quando ${serviceLower} precisar sair de um ponto de risco, pane ou transporte programado.`,
-        process:
-          "A confirmação começa com localização, tipo de veículo, acesso e destino.",
-        care:
-          "Informe restrições de acesso, objetos soltos e qualquer detalhe que altere a operação.",
-        budget:
-          "Rota, acesso, porte, condição do veículo e destino influenciam a operação.",
-        proof:
-          "A imagem principal documenta a categoria e apoia a triagem visual.",
-        faqItems: buildFaqItems(
-          serviceTitle,
-          `Quando ${serviceLower} precisar sair de um ponto de risco, pane ou transporte programado.`,
-          "Informe localização, destino, estado do veículo e restrições de acesso.",
-          "Rota, acesso, porte, condição e destino influenciam o serviço.",
-        ),
-      };
-  }
+  return {
+    whenToContract: `Use quando ${title} precisar sair de um ponto de risco, pane ou transporte programado.`,
+    process:
+      "A confirmação começa com localização, tipo de veículo, acesso e destino.",
+    care:
+      "Informe restrições de acesso, objetos soltos e qualquer detalhe que altere a operação.",
+    budget:
+      "Rota, acesso, porte, condição do veículo e destino influenciam a operação.",
+    proof: "A imagem principal documenta a categoria e apoia a triagem visual.",
+    faqItems: buildFaqItems(
+      serviceTitle,
+      `Quando ${title} precisar sair de um ponto de risco, pane ou transporte programado.`,
+      "Informe localização, destino, estado do veículo e restrições de acesso.",
+      "Rota, acesso, porte, condição e destino influenciam o serviço.",
+    ),
+  };
 }
 
 export function generateStaticParams(): ServicePageParams[] {
@@ -554,11 +325,10 @@ export default async function ServicePage({
             </div>
             <div>
               <p className="eyebrow">Detalhes do serviço</p>
-              <h2 id="detalhes-title">O que considerar antes do atendimento</h2>
+              <h2 id="detalhes-title">Quando solicitar este serviço</h2>
               <p className="hero-section__lead">
-                A página organiza o serviço com base no catálogo validado da
-                homepage e mantém o foco em solicitação clara, operação segura e
-                cobertura regional.
+                A página apresenta o serviço com foco em solicitação clara,
+                operação segura e cobertura regional.
               </p>
               <div className="process-grid">
                 <article className="process-item">
@@ -590,12 +360,12 @@ export default async function ServicePage({
           <div className="container split-layout">
             <div>
               <p className="eyebrow">Prova operacional</p>
-              <h2 id="prova-title">Imagem e confirmação de atendimento</h2>
+              <h2 id="prova-title">Informações para confirmar o atendimento</h2>
               <p className="hero-section__lead">{supportCopy.proof}</p>
               <p>
                 Antes de avançar, envie localização, referência de acesso e uma
-                descrição objetiva do veículo ou carga para receber a orientação
-                adequada.
+                descrição objetiva do veículo ou carga para receber a
+                orientação adequada.
               </p>
             </div>
             <div className="process-grid">
@@ -629,8 +399,8 @@ export default async function ServicePage({
               <p className="eyebrow">FAQ</p>
               <h2 id="faq-title">Perguntas específicas do serviço</h2>
               <p className="hero-section__lead">
-                Respostas visíveis e coerentes com o serviço exibido nesta
-                página, sem copiar automaticamente a mesma FAQ da home.
+                Dúvidas comuns sobre este serviço em Fortaleza, com respostas
+                objetivas para ajudar na solicitação pelo WhatsApp.
               </p>
             </div>
             <div className="faq-list">

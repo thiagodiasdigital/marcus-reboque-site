@@ -13,8 +13,8 @@ export function Differentials() {
           <SectionHeading
             id="diferenciais-title"
             eyebrow="Diferenciais"
-            title="Operação prática, direta e sem promessa artificial"
-            text="A comunicação do site fica restrita ao que está confirmado: guincho, reboque, orientação e transporte."
+            title="Por que chamar a Marcus Reboque"
+            text="A Marcus Reboque prioriza orientação clara, avaliação antes do embarque e comunicação direta pelo WhatsApp."
           />
           <ul className="differentials-list">
             {differentials.map((item) => (

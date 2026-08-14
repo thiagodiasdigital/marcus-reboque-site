@@ -7,7 +7,11 @@ export function HowItWorks() {
   const image = siteImages.howItWorksCaminhonete;
 
   return (
-    <section className="section section--muted" id="como-funciona" aria-labelledby="como-funciona-title">
+    <section
+      className="section section--muted"
+      id="como-funciona"
+      aria-labelledby="como-funciona-title"
+    >
       <div className="container split-layout">
         <div>
           <SectionHeading

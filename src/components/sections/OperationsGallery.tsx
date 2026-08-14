@@ -10,7 +10,7 @@ export function OperationsGallery() {
         <SectionHeading
           id="galeria-title"
           eyebrow="Galeria"
-          title="Operações e transportes reais"
+          title="Registros reais de guincho e transporte"
           text="Seleção inicial com diversidade de motos, carros, embarcações, máquinas, veículos antigos e pequenas cargas."
         />
         <div className="gallery-grid">

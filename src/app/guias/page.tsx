@@ -7,26 +7,26 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "Guias | Marcus Reboque",
   description:
-    "Orientacoes praticas para pedir guincho, reboque e transporte com mais clareza.",
+    "Orientações práticas para pedir guincho, reboque e transporte com mais clareza.",
   canonicalPath: "/guias",
 });
 
 const guides = [
   {
     title: "Antes de chamar",
-    text: "Separe localizacao, modelo do veiculo, destino e uma descricao curta da situacao.",
+    text: "Separe localização, modelo do veículo, destino e uma descrição curta da situação.",
   },
   {
     title: "Se houver pane",
-    text: "Informe se o carro liga, se a direcao trava, se ha pneu furado ou bloqueio de roda.",
+    text: "Informe se o carro liga, se a direção trava, se há pneu furado ou bloqueio de roda.",
   },
   {
     title: "Se houver carga",
-    text: "Avise sobre peso aproximado, volume, amarracao e qualquer risco de deslocamento.",
+    text: "Avise sobre peso aproximado, volume, amarração e qualquer risco de deslocamento.",
   },
   {
     title: "Quando agendar",
-    text: "Defina data, janela de atendimento e o ponto de embarque com antecedencia.",
+    text: "Defina data, janela de atendimento e o ponto de embarque com antecedência.",
   },
 ];
 
@@ -37,9 +37,9 @@ export default function GuiasPage() {
         <div className="container split-layout">
           <div>
             <p className="eyebrow">Guias</p>
-            <h1>Orientacoes rapidas para solicitar atendimento</h1>
+            <h1>Orientações rápidas para solicitar atendimento</h1>
             <p className="hero-section__lead">
-              Estas instrucoes ajudam a enviar um pedido mais claro e agilizar
+              Estas instruções ajudam a enviar um pedido mais claro e agilizar
               a triagem do atendimento.
             </p>
             <div className="inline-actions">
@@ -47,30 +47,30 @@ export default function GuiasPage() {
                 Ir para contato
               </ButtonLink>
               <ButtonLink href="/servicos" icon="arrow" variant="secondary">
-                Ver catalogo
+                Ver catálogo
               </ButtonLink>
             </div>
           </div>
           <div className="process-grid" aria-label="Resumo dos guias">
             <article className="process-item">
               <span>Local</span>
-              <h3>Onde o veiculo esta</h3>
-              <p>Envie endereco, referencia e condicao de acesso.</p>
+              <h3>Onde o veículo está</h3>
+              <p>Envie endereço, referência e condição de acesso.</p>
             </article>
             <article className="process-item">
-              <span>Veiculo</span>
-              <h3>O que sera transportado</h3>
-              <p>Tipo, modelo e situacao atual sao os dados principais.</p>
+              <span>Veículo</span>
+              <h3>O que será transportado</h3>
+              <p>Tipo, modelo e situação atual são os dados principais.</p>
             </article>
             <article className="process-item">
               <span>Destino</span>
               <h3>Para onde vai</h3>
-              <p>Informe oficina, residencia, patio, empresa ou marina.</p>
+              <p>Informe oficina, residência, pátio, empresa ou marina.</p>
             </article>
             <article className="process-item">
               <span>Confirma</span>
-              <h3>Triagem e saida</h3>
-              <p>A resposta volta com orientacao sobre a melhor forma de avancar.</p>
+              <h3>Triagem e saída</h3>
+              <p>A resposta volta com orientação sobre a melhor forma de avançar.</p>
             </article>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function GuiasPage() {
           <SectionHeading
             eyebrow="Checklist"
             title="O que enviar no primeiro contato"
-            text="Quanto mais objetiva for a mensagem, mais rapida fica a analise do atendimento."
+            text="Quanto mais objetiva for a mensagem, mais rápida fica a análise do atendimento."
           />
           <div className="process-grid">
             {guides.map((guide) => (
@@ -97,14 +97,14 @@ export default function GuiasPage() {
 
       <section className="section">
         <div className="container">
-          <p className="eyebrow">Acesso rapido</p>
+          <p className="eyebrow">Acesso rápido</p>
           <h2>Pronto para pedir atendimento?</h2>
           <div className="inline-actions">
             <ButtonLink href="/contato" icon="whatsapp" variant="primary">
               Abrir contato
             </ButtonLink>
             <Link className="button-link button-link--secondary" href="/areas-atendidas">
-              <span>Ver areas atendidas</span>
+              <span>Ver áreas atendidas</span>
             </Link>
           </div>
         </div>

@@ -156,7 +156,9 @@ export function buildServicePageJsonLd(
 ): Record<string, unknown> {
   const pageUrl = absoluteUrl(pathname);
   const homeUrl = absoluteUrl("/");
-  const image = service.imageKey ? siteImages[service.imageKey] : siteImages.homepageHeroDesktop;
+  const image = service.imageKey
+    ? siteImages[service.imageKey]
+    : siteImages.homepageHeroDesktop;
 
   return {
     "@context": "https://schema.org",

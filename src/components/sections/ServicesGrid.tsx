@@ -14,12 +14,12 @@ export function ServicesGrid() {
         <SectionHeading
           id="servicos-title"
           eyebrow="Serviços"
-          title="Guincho e transporte para diferentes necessidades"
+          title="Serviços de guincho e transporte em Fortaleza"
           text="Atendimentos emergenciais e programados, sempre com avaliação do veículo, rota e condições de acesso."
         >
           <div className="inline-actions">
             <ButtonLink href="/servicos" icon="arrow" variant="dark">
-              Ver hub completo de serviços
+              Ver catálogo completo de serviços
             </ButtonLink>
           </div>
         </SectionHeading>

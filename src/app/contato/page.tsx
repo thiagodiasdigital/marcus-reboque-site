@@ -27,8 +27,8 @@ export default function ContatoPage() {
             <p className="eyebrow">Contato</p>
             <h1>Fale com a Marcus Reboque</h1>
             <p className="hero-section__lead">
-              Envie sua localizacao, o tipo de veiculo e o destino desejado
-              para receber a orientacao adequada.
+              Envie sua localização, o tipo de veículo e o destino desejado
+              para receber a orientação adequada.
             </p>
             <div className="inline-actions">
               <ButtonLink
@@ -47,21 +47,21 @@ export default function ContatoPage() {
             <article className="process-item">
               <span>WhatsApp</span>
               <h3>Canal principal</h3>
-              <p>Resposta rapida com orientacao operacional e confirmacao de demanda.</p>
+              <p>Resposta rápida com orientação operacional e confirmação de demanda.</p>
             </article>
             <article className="process-item">
               <span>Telefone</span>
-              <h3>Ligacao direta</h3>
+              <h3>Ligação direta</h3>
               <p>{siteConfig.contact.phoneFormatted}</p>
             </article>
             <article className="process-item">
               <span>Google</span>
               <h3>Perfil oficial</h3>
-              <p>Local e avaliacao publica da empresa na fonte confirmada.</p>
+              <p>Local e avaliação pública da empresa na fonte confirmada.</p>
             </article>
             <article className="process-item">
               <span>Redes</span>
-              <h3>Presenca oficial</h3>
+              <h3>Presença oficial</h3>
               <p>As contas confirmadas ficam concentradas nas redes e no site.</p>
             </article>
           </div>
@@ -74,29 +74,29 @@ export default function ContatoPage() {
             <SectionHeading
               eyebrow="Como enviar"
               title="O que informar no primeiro contato"
-              text="Esses dados aceleram a triagem e evitam idas e vindas desnecessarias."
+              text="Esses dados aceleram a triagem e evitam idas e vindas desnecessárias."
             />
           </div>
           <div className="process-grid">
             <article className="process-item">
               <span>01</span>
-              <h3>Localizacao</h3>
-              <p>Ponto exato, referencia e condicao de acesso.</p>
+              <h3>Localização</h3>
+              <p>Ponto exato, referência e condição de acesso.</p>
             </article>
             <article className="process-item">
               <span>02</span>
-              <h3>Veiculo</h3>
-              <p>Modelo, tipo, estado geral e restricoes de mobilidade.</p>
+              <h3>Veículo</h3>
+              <p>Modelo, tipo, estado geral e restrições de mobilidade.</p>
             </article>
             <article className="process-item">
               <span>03</span>
               <h3>Destino</h3>
-              <p>Oficina, residencia, empresa, patio ou outro ponto final.</p>
+              <p>Oficina, residência, empresa, pátio ou outro ponto final.</p>
             </article>
             <article className="process-item">
               <span>04</span>
               <h3>Fotos</h3>
-              <p>Imagens ajudam a entender a situacao antes da saida.</p>
+              <p>Imagens ajudam a entender a situação antes da saída.</p>
             </article>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function ContatoPage() {
 
       <section className="section">
         <div className="container">
-          <SectionHeading eyebrow="Redes oficiais" title="Presenca externa confirmada" />
+          <SectionHeading eyebrow="Redes oficiais" title="Presença externa confirmada" />
           <SocialLinks />
         </div>
       </section>

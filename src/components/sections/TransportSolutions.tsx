@@ -11,7 +11,7 @@ export function TransportSolutions() {
           id="solucoes-title"
           eyebrow="Soluções"
           title="Auto socorro e transporte sob medida"
-          text="A operação é direcionada para remoção e transporte. Serviços mecânicos não são divulgados no site."
+          text="A operação é direcionada para remoção e transporte. Reparos mecânicos no local não fazem parte da comunicação pública do site."
         />
         <div className="solutions-grid">
           {transportSolutions.map((solution) => {

@@ -7,22 +7,22 @@ import { buildPageMetadata } from "@/lib/metadata";
 export const metadata: Metadata = buildPageMetadata({
   title: "Sobre a Marcus Reboque | Fortaleza",
   description:
-    "Conheca a proposta operacional da Marcus Reboque para guincho, reboque e transporte em Fortaleza.",
+    "Conheça a proposta operacional da Marcus Reboque para guincho, reboque e transporte em Fortaleza.",
   canonicalPath: "/sobre",
 });
 
 const principles = [
   {
     title: "Atendimento direto",
-    text: "A conversa com o cliente acontece nos canais oficiais, sem intermediar o pedido com formulacoes vazias.",
+    text: "A conversa com o cliente acontece nos canais oficiais, sem intermediar o pedido com formulários vazios.",
   },
   {
-    title: "Operacao pratica",
-    text: "O foco fica em local, veiculo, destino e condicao de acesso para reduzir retrabalho antes da saida.",
+    title: "Operação prática",
+    text: "O foco fica em local, veículo, destino e condição de acesso para reduzir retrabalho antes da saída.",
   },
   {
-    title: "Transparencia",
-    text: "O site evita prometer prazo, valor ou servico mecanico que nao foi confirmado.",
+    title: "Transparência",
+    text: "O site evita prometer prazo, valor ou serviço mecânico que não foi confirmado.",
   },
 ];
 
@@ -36,7 +36,7 @@ export default function SobrePage() {
             <h1>Sobre a Marcus Reboque</h1>
             <p className="hero-section__lead">
               A Marcus Reboque atua com guincho, reboque e transporte de
-              veiculos em Fortaleza, com comunicacao objetiva e triagem tecnica.
+              veículos em Fortaleza, com comunicação objetiva e triagem técnica.
             </p>
             <div className="inline-actions">
               <ButtonLink href="/contato" icon="arrow" variant="primary">
@@ -51,17 +51,17 @@ export default function SobrePage() {
             <article className="process-item">
               <span>01</span>
               <h3>Clareza</h3>
-              <p>Informacao curta, direta e util para quem precisa acionar o servico.</p>
+              <p>Informação curta, direta e útil para quem precisa acionar o serviço.</p>
             </article>
             <article className="process-item">
               <span>02</span>
-              <h3>Seguranca</h3>
-              <p>Remocao e transporte sao tratados com avaliacao antes da operacao.</p>
+              <h3>Segurança</h3>
+              <p>Remoção e transporte são tratados com avaliação antes da operação.</p>
             </article>
             <article className="process-item">
               <span>03</span>
               <h3>Responsabilidade</h3>
-              <p>O site mostra apenas o que foi confirmado e publicado no catalogo.</p>
+              <p>O site mostra apenas o que foi confirmado e publicado no catálogo.</p>
             </article>
             <article className="process-item">
               <span>04</span>
@@ -75,9 +75,9 @@ export default function SobrePage() {
       <section className="section section--light">
         <div className="container">
           <SectionHeading
-            eyebrow="Principios"
+            eyebrow="Princípios"
             title="O que orienta o trabalho"
-            text="A pagina resume a postura da empresa sem transformar isso em discurso genrico."
+            text="A página resume a postura da empresa sem transformar isso em discurso genérico."
           />
           <div className="process-grid">
             {principles.map((item) => (

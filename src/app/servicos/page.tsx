@@ -12,9 +12,9 @@ import { buildServicesHubJsonLd } from "@/lib/schema";
 import { buildWhatsappUrl, conversionAttributes } from "@/lib/whatsapp";
 
 export const metadata: Metadata = buildPageMetadata({
-  title: "Hub de servicos | Marcus Reboque",
+  title: "Serviços de Guincho e Reboque em Fortaleza | Marcus Reboque",
   description:
-    "Catalogo central de guincho, reboque e transporte da Marcus Reboque em Fortaleza, com rotas preparadas para expansao.",
+    "Catálogo de serviços da Marcus Reboque: guincho 24h, auto socorro, transporte emergencial, transporte programado, motos, carros, caminhonetes, vans e cargas compatíveis em Fortaleza.",
   canonicalPath: "/servicos",
   image: siteImages.homepageHeroDesktop,
 });
@@ -23,7 +23,7 @@ export default function ServicesHubPage() {
   const whatsappHref = buildWhatsappUrl({
     origin: "hub-servicos",
     message:
-      "Olá, preciso conhecer o catalogo de servicos da Marcus Reboque em Fortaleza.",
+      "Olá, preciso conhecer o catálogo de serviços da Marcus Reboque em Fortaleza.",
   });
 
   const roadmapRoutes = futureRoutes.filter((route) => route.href !== "/servicos");
@@ -35,12 +35,12 @@ export default function ServicesHubPage() {
         <section className="section section--dark">
           <div className="container split-layout">
             <div>
-              <p className="eyebrow">Hub de servicos</p>
-              <h1>Catalogo de guincho, reboque e transporte em Fortaleza</h1>
+              <p className="eyebrow">Hub de serviços</p>
+              <h1>Catálogo de guincho, reboque e transporte em Fortaleza</h1>
               <p className="hero-section__lead">
-                Esta pagina organiza os servicos ja validados da Marcus Reboque
-                e reserva espaco para as proximas paginas institucionais do
-                projeto.
+                Conheça os serviços de guincho 24h, reboque, auto socorro e
+                transporte programado oferecidos pela Marcus Reboque em
+                Fortaleza e Região Metropolitana.
               </p>
               <div className="inline-actions">
                 <ButtonLink
@@ -60,23 +60,23 @@ export default function ServicesHubPage() {
             <div className="process-grid" aria-label="Resumo do hub">
               <article className="process-item">
                 <span>{String(services.length).padStart(2, "0")}</span>
-                <h3>Servicos catalogados</h3>
-                <p>Atendimento imediato e transporte sob consulta.</p>
+                <h3>16 tipos de atendimento</h3>
+                <p>Guincho, reboque e transporte sob consulta.</p>
               </article>
               <article className="process-item">
                 <span>07</span>
-                <h3>Perfis oficiais</h3>
-                <p>As redes oficiais seguem consolidadas em uma base unica.</p>
+                <h3>Presença oficial</h3>
+                <p>Consulte os canais oficiais da Marcus Reboque para confirmar informações públicas.</p>
               </article>
               <article className="process-item">
                 <span>24h</span>
                 <h3>Disponibilidade</h3>
-                <p>O atendimento divulgado permanece continuo para Fortaleza.</p>
+                <p>O atendimento divulgado permanece contínuo para Fortaleza.</p>
               </article>
               <article className="process-item">
                 <span>{String(roadmapRoutes.length).padStart(2, "0")}</span>
-                <h3>Rotas planejadas</h3>
-                <p>Novas paginas institucionais estao preparadas para a proxima etapa.</p>
+                <h3>Atendimento local</h3>
+                <p>Fortaleza e Região Metropolitana como base principal de atendimento.</p>
               </article>
             </div>
           </div>
@@ -86,9 +86,9 @@ export default function ServicesHubPage() {
           <div className="container">
             <SectionHeading
               id="catalogo-title"
-              eyebrow="Catalogo"
-              title="Servicos validados na homepage V1"
-              text="Os servicos abaixo ja compoem a vitrine principal e servem como base para o hub e para as futuras paginas especializadas."
+              eyebrow="Catálogo"
+              title="Serviços de guincho e transporte disponíveis para consulta"
+              text="Escolha o tipo de atendimento mais próximo da sua necessidade e fale pelo WhatsApp para confirmar viabilidade, rota, acesso e destino."
             />
             <div className="services-grid">
               {services.map((service, index) => {
@@ -111,16 +111,16 @@ export default function ServicesHubPage() {
           <div className="container">
             <SectionHeading
               id="roadmap-title"
-              eyebrow="Proximas paginas"
-              title="Estrutura preparada para expansao do hub"
-              text="O proximo estagio do projeto usa esta lista como mapa de implementacao, sem misturar o que ja esta publicado com o que ainda nao existe."
+              eyebrow="Informações complementares"
+              title="Conteúdo institucional para apoio à consulta"
+              text="Esta área reúne links institucionais e conteúdos complementares que ajudam o usuário a entender atendimento, reputação, áreas atendidas e formas de contato da Marcus Reboque."
             />
             <div className="process-grid">
               {roadmapRoutes.map((route) => (
                 <article className="process-item" key={route.href}>
                   <span>{route.href}</span>
                   <h3>{route.label}</h3>
-                  <p>Pagina prevista para a expansao do hub de servicos.</p>
+                  <p>Link institucional disponível no site.</p>
                 </article>
               ))}
             </div>
@@ -133,20 +133,20 @@ export default function ServicesHubPage() {
               <article className="process-item">
                 <span>{siteConfig.location.city}</span>
                 <h3>Base operacional</h3>
-                <p>Atendimento orientado para Fortaleza e Regiao Metropolitana.</p>
+                <p>Atendimento orientado para Fortaleza e Região Metropolitana.</p>
               </article>
               <article className="process-item">
                 <span>{siteConfig.service.hoursLabel}</span>
                 <h3>Janela de atendimento</h3>
-                <p>Modelo continuo para acionamentos emergenciais e programados.</p>
+                <p>Modelo contínuo para acionamentos emergenciais e programados.</p>
               </article>
             </div>
             <div>
               <SectionHeading
                 id="hub-cta-title"
-                eyebrow="Proxima acao"
+                eyebrow="Próxima ação"
                 title="Quer atendimento agora?"
-                text="Use o WhatsApp para solicitar orientacao imediata ou volte para a homepage para revisar a apresentacao principal."
+                text="Use o WhatsApp para solicitar orientação imediata ou volte para a homepage para revisar a apresentação principal."
               >
                 <div className="inline-actions">
                   <ButtonLink
@@ -158,7 +158,7 @@ export default function ServicesHubPage() {
                     Solicitar atendimento
                   </ButtonLink>
                   <ButtonLink href="/" icon="arrow" variant="secondary">
-                    Voltar ao inicio
+                    Voltar ao início
                   </ButtonLink>
                 </div>
               </SectionHeading>
